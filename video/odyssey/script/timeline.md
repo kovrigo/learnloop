@@ -1,4 +1,4 @@
-# 时间轴（elevenlabs · JBFqnCBsd6RMkjVDRZzb eleven_multilingual_v2，共 9893 帧 = 329.8s，898 词，语速 3.31 词/s）
+# 时间轴（elevenlabs · JBFqnCBsd6RMkjVDRZzb eleven_multilingual_v2，共 12649 帧 = 421.6s，1136 词，语速 3.27 词/s）
 
 | 句 | 章 | 帧 from–to | 时长 | 末块 | 段末 | 文本（| 为字幕切分） |
 |---|---|---|---|---|---|---|
@@ -92,12 +92,37 @@
 | S88 | 4 | 9568–9704 | 4.6s | 68 |  | When the suitors' families come for revenge,｜Athena makes both sides swear peace. |
 | S89 | 4 | 9715–9752 | 1.3s | 38 |  | The poem ends there. |
 | S90 | 4 | 9763–9793 | 1.0s | 31⚠ | ¶ | The story doesn't. |
+| S91 | 5 | 9849–9894 | 1.5s | 46 |  | It moved into our language. |
+| S92 | 5 | 9905–10066 | 5.4s | 93 |  | A long, hard journey is an odyssey,｜a meaning English has used since the late 1800s. |
+| S93 | 5 | 10077–10186 | 3.7s | 54 | ¶ | Stuck between two dangers?｜You're between Scylla and Charybdis. |
+| S94 | 5 | 10217–10382 | 5.5s | 22 |  | In 2017, Emily Wilson published｜the first English translation of the poem｜by a woman. |
+| S95 | 5 | 10393–10485 | 3.1s | 93 |  | Her first line: Tell me about a complicated man. |
+| S96 | 5 | 10496–10582 | 2.9s | 41⚠ | ¶ | The Greek word means, roughly,｜a man of many turns. |
+| S97 | 5 | 10613–10749 | 4.6s | 82 |  | This summer, Christopher Nolan's film｜took in about 1.77 billion dollars. |
+| S98 | 5 | 10760–10958 | 6.6s | 72 |  | And by mid-July, before it even opened,｜US print sales of the poem｜were up 76 percent year to date. |
+| S99 | 5 | 10969–11110 | 4.7s | 68 | ¶ | Just know the film skips the Nobody trick,｜and on screen, Athena is the only god. |
+| S100 | 5 | 11141–11190 | 1.7s | 50 |  | Quick game: real or fake? |
+| S101 | 5 | 11201–11272 | 2.4s | 72 |  | One: the Trojan Horse is in the Odyssey. |
+| S102 | 5 | 11283–11395 | 3.8s | 35 |  | Two: Odysseus's dog recognizes him｜after twenty years. |
+| S103 | 5 | 11406–11519 | 3.8s | 38⚠ | ¶ | Three: Homer says the Cyclops has one eye｜in the middle of his forehead. |
+| S104 | 5 | 11610–11651 | 1.4s | 42 |  | The fake is number three. |
+| S105 | 5 | 11662–11777 | 3.9s | 46 |  | Homer only mentions his eye, singular,｜and never says where it is. |
+| S106 | 5 | 11788–11889 | 3.4s | 51 |  | The forehead comes from Hesiod,｜describing different Cyclopes. |
+| S107 | 5 | 11900–11935 | 1.2s | 36 |  | The horse is real. |
+| S108 | 5 | 11946–12033 | 2.9s | 37⚠ | ¶ | It's in the Odyssey three times,｜and never in the Iliad. |
+| S109 | 5 | 12064–12130 | 2.2s | 67 |  | So why did a trip home take ten years? |
+| S110 | 5 | 12141–12239 | 3.3s | 44 |  | One boast, one angry sea god,｜and some very long visits. |
+| S111 | 5 | 12250–12332 | 2.8s | 32⚠ | ¶ | Next time you post where you are,｜think of Odysseus. |
+| S112 | 5 | 12363–12425 | 2.1s | 63 |  | But why was he at Troy in the first place? |
+| S113 | 5 | 12436–12474 | 1.3s | 39 |  | Blame a golden apple. |
+| S114 | 5 | 12485–12548 | 2.1s | 64 | ¶ | That's a later myth, and our next video. |
 
 ## 章节起始帧
 - 第1章 The Cyclops：f86
 - 第2章 Stops at Sea：f3167
 - 第3章 Home in Ithaca：f5768
 - 第4章 The Return：f7565
+- 第5章 Odyssey Today：f9849
 
 段末 ¶ = narration.txt 里空行/章界前的那句（一个镜头讲完，画面在这里停 1–1.5 s 再切；段内句只隔 10 帧，不停顿）。
 末块 = 末尾字幕块的帧数（段末句 ⚠ <45：末拍元素 22 帧入场 + 8 帧离场后停不满 30 帧）。补法：该句后加 `## gap 15–30` 重跑（缓存命中），或分镜时把末拍元素前挂到上一块。

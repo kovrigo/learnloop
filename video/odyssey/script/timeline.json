@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "total_frames": 9893,
+ "total_frames": 12649,
  "engine": "elevenlabs",
  "voice": "JBFqnCBsd6RMkjVDRZzb",
  "rate": "eleven_multilingual_v2",
@@ -30,6 +30,11 @@
    "n": 4,
    "title": "The Return",
    "from": 7565
+  },
+  {
+   "n": 5,
+   "title": "Odyssey Today",
+   "from": 9849
   }
  ],
  "sentences": [
@@ -1687,9 +1692,449 @@
      "text": "The story doesn't."
     }
    ]
+  },
+  {
+   "id": "S91",
+   "chapter": 5,
+   "from": 9849,
+   "to": 9894,
+   "text": "It moved into our language.",
+   "para": false,
+   "subs": [
+    {
+     "from": 9849,
+     "to": 9894,
+     "text": "It moved into our language."
+    }
+   ]
+  },
+  {
+   "id": "S92",
+   "chapter": 5,
+   "from": 9905,
+   "to": 10066,
+   "text": "A long, hard journey is an odyssey, a meaning English has used since the late 1800s.",
+   "para": false,
+   "subs": [
+    {
+     "from": 9905,
+     "to": 9973,
+     "text": "A long, hard journey is an odyssey,"
+    },
+    {
+     "from": 9974,
+     "to": 10066,
+     "text": "a meaning English has used since the late 1800s."
+    }
+   ]
+  },
+  {
+   "id": "S93",
+   "chapter": 5,
+   "from": 10077,
+   "to": 10186,
+   "text": "Stuck between two dangers? You're between Scylla and Charybdis.",
+   "para": true,
+   "subs": [
+    {
+     "from": 10077,
+     "to": 10132,
+     "text": "Stuck between two dangers?"
+    },
+    {
+     "from": 10133,
+     "to": 10186,
+     "text": "You're between Scylla and Charybdis."
+    }
+   ]
+  },
+  {
+   "id": "S94",
+   "chapter": 5,
+   "from": 10217,
+   "to": 10382,
+   "text": "In 2017, Emily Wilson published the first English translation of the poem by a woman.",
+   "para": false,
+   "subs": [
+    {
+     "from": 10217,
+     "to": 10298,
+     "text": "In 2017, Emily Wilson published"
+    },
+    {
+     "from": 10299,
+     "to": 10360,
+     "text": "the first English translation of the poem"
+    },
+    {
+     "from": 10361,
+     "to": 10382,
+     "text": "by a woman."
+    }
+   ]
+  },
+  {
+   "id": "S95",
+   "chapter": 5,
+   "from": 10393,
+   "to": 10485,
+   "text": "Her first line: Tell me about a complicated man.",
+   "para": false,
+   "subs": [
+    {
+     "from": 10393,
+     "to": 10485,
+     "text": "Her first line: Tell me about a complicated man."
+    }
+   ]
+  },
+  {
+   "id": "S96",
+   "chapter": 5,
+   "from": 10496,
+   "to": 10582,
+   "text": "The Greek word means, roughly, a man of many turns.",
+   "para": true,
+   "subs": [
+    {
+     "from": 10496,
+     "to": 10541,
+     "text": "The Greek word means, roughly,"
+    },
+    {
+     "from": 10542,
+     "to": 10582,
+     "text": "a man of many turns."
+    }
+   ]
+  },
+  {
+   "id": "S97",
+   "chapter": 5,
+   "from": 10613,
+   "to": 10749,
+   "text": "This summer, Christopher Nolan's film took in about 1.77 billion dollars.",
+   "para": false,
+   "subs": [
+    {
+     "from": 10613,
+     "to": 10667,
+     "text": "This summer, Christopher Nolan's film"
+    },
+    {
+     "from": 10668,
+     "to": 10749,
+     "text": "took in about 1.77 billion dollars."
+    }
+   ]
+  },
+  {
+   "id": "S98",
+   "chapter": 5,
+   "from": 10760,
+   "to": 10958,
+   "text": "And by mid-July, before it even opened, US print sales of the poem were up 76 percent year to date.",
+   "para": false,
+   "subs": [
+    {
+     "from": 10760,
+     "to": 10839,
+     "text": "And by mid-July, before it even opened,"
+    },
+    {
+     "from": 10840,
+     "to": 10886,
+     "text": "US print sales of the poem"
+    },
+    {
+     "from": 10887,
+     "to": 10958,
+     "text": "were up 76 percent year to date."
+    }
+   ]
+  },
+  {
+   "id": "S99",
+   "chapter": 5,
+   "from": 10969,
+   "to": 11110,
+   "text": "Just know the film skips the Nobody trick, and on screen, Athena is the only god.",
+   "para": true,
+   "subs": [
+    {
+     "from": 10969,
+     "to": 11042,
+     "text": "Just know the film skips the Nobody trick,"
+    },
+    {
+     "from": 11043,
+     "to": 11110,
+     "text": "and on screen, Athena is the only god."
+    }
+   ]
+  },
+  {
+   "id": "S100",
+   "chapter": 5,
+   "from": 11141,
+   "to": 11190,
+   "text": "Quick game: real or fake?",
+   "para": false,
+   "subs": [
+    {
+     "from": 11141,
+     "to": 11190,
+     "text": "Quick game: real or fake?"
+    }
+   ]
+  },
+  {
+   "id": "S101",
+   "chapter": 5,
+   "from": 11201,
+   "to": 11272,
+   "text": "One: the Trojan Horse is in the Odyssey.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11201,
+     "to": 11272,
+     "text": "One: the Trojan Horse is in the Odyssey."
+    }
+   ]
+  },
+  {
+   "id": "S102",
+   "chapter": 5,
+   "from": 11283,
+   "to": 11395,
+   "text": "Two: Odysseus's dog recognizes him after twenty years.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11283,
+     "to": 11360,
+     "text": "Two: Odysseus's dog recognizes him"
+    },
+    {
+     "from": 11361,
+     "to": 11395,
+     "text": "after twenty years."
+    }
+   ]
+  },
+  {
+   "id": "S103",
+   "chapter": 5,
+   "from": 11406,
+   "to": 11519,
+   "text": "Three: Homer says the Cyclops has one eye in the middle of his forehead.",
+   "para": true,
+   "subs": [
+    {
+     "from": 11406,
+     "to": 11481,
+     "text": "Three: Homer says the Cyclops has one eye"
+    },
+    {
+     "from": 11482,
+     "to": 11519,
+     "text": "in the middle of his forehead."
+    }
+   ]
+  },
+  {
+   "id": "S104",
+   "chapter": 5,
+   "from": 11610,
+   "to": 11651,
+   "text": "The fake is number three.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11610,
+     "to": 11651,
+     "text": "The fake is number three."
+    }
+   ]
+  },
+  {
+   "id": "S105",
+   "chapter": 5,
+   "from": 11662,
+   "to": 11777,
+   "text": "Homer only mentions his eye, singular, and never says where it is.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11662,
+     "to": 11731,
+     "text": "Homer only mentions his eye, singular,"
+    },
+    {
+     "from": 11732,
+     "to": 11777,
+     "text": "and never says where it is."
+    }
+   ]
+  },
+  {
+   "id": "S106",
+   "chapter": 5,
+   "from": 11788,
+   "to": 11889,
+   "text": "The forehead comes from Hesiod, describing different Cyclopes.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11788,
+     "to": 11838,
+     "text": "The forehead comes from Hesiod,"
+    },
+    {
+     "from": 11839,
+     "to": 11889,
+     "text": "describing different Cyclopes."
+    }
+   ]
+  },
+  {
+   "id": "S107",
+   "chapter": 5,
+   "from": 11900,
+   "to": 11935,
+   "text": "The horse is real.",
+   "para": false,
+   "subs": [
+    {
+     "from": 11900,
+     "to": 11935,
+     "text": "The horse is real."
+    }
+   ]
+  },
+  {
+   "id": "S108",
+   "chapter": 5,
+   "from": 11946,
+   "to": 12033,
+   "text": "It's in the Odyssey three times, and never in the Iliad.",
+   "para": true,
+   "subs": [
+    {
+     "from": 11946,
+     "to": 11996,
+     "text": "It's in the Odyssey three times,"
+    },
+    {
+     "from": 11997,
+     "to": 12033,
+     "text": "and never in the Iliad."
+    }
+   ]
+  },
+  {
+   "id": "S109",
+   "chapter": 5,
+   "from": 12064,
+   "to": 12130,
+   "text": "So why did a trip home take ten years?",
+   "para": false,
+   "subs": [
+    {
+     "from": 12064,
+     "to": 12130,
+     "text": "So why did a trip home take ten years?"
+    }
+   ]
+  },
+  {
+   "id": "S110",
+   "chapter": 5,
+   "from": 12141,
+   "to": 12239,
+   "text": "One boast, one angry sea god, and some very long visits.",
+   "para": false,
+   "subs": [
+    {
+     "from": 12141,
+     "to": 12195,
+     "text": "One boast, one angry sea god,"
+    },
+    {
+     "from": 12196,
+     "to": 12239,
+     "text": "and some very long visits."
+    }
+   ]
+  },
+  {
+   "id": "S111",
+   "chapter": 5,
+   "from": 12250,
+   "to": 12332,
+   "text": "Next time you post where you are, think of Odysseus.",
+   "para": true,
+   "subs": [
+    {
+     "from": 12250,
+     "to": 12300,
+     "text": "Next time you post where you are,"
+    },
+    {
+     "from": 12301,
+     "to": 12332,
+     "text": "think of Odysseus."
+    }
+   ]
+  },
+  {
+   "id": "S112",
+   "chapter": 5,
+   "from": 12363,
+   "to": 12425,
+   "text": "But why was he at Troy in the first place?",
+   "para": false,
+   "subs": [
+    {
+     "from": 12363,
+     "to": 12425,
+     "text": "But why was he at Troy in the first place?"
+    }
+   ]
+  },
+  {
+   "id": "S113",
+   "chapter": 5,
+   "from": 12436,
+   "to": 12474,
+   "text": "Blame a golden apple.",
+   "para": false,
+   "subs": [
+    {
+     "from": 12436,
+     "to": 12474,
+     "text": "Blame a golden apple."
+    }
+   ]
+  },
+  {
+   "id": "S114",
+   "chapter": 5,
+   "from": 12485,
+   "to": 12548,
+   "text": "That's a later myth, and our next video.",
+   "para": true,
+   "subs": [
+    {
+     "from": 12485,
+     "to": 12548,
+     "text": "That's a later myth, and our next video."
+    }
+   ]
   }
  ],
- "chars": 3734,
- "words": 898,
- "speech_sec": 271.09
+ "chars": 4748,
+ "words": 1136,
+ "speech_sec": 347.44
 }

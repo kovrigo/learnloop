@@ -1,10 +1,11 @@
 // 自动生成：scripts/tts_build.py。帧号 1 起含端点。
-export const TOTAL_FRAMES = 9893;
+export const TOTAL_FRAMES = 12649;
 export const CHAPTER_STARTS: Array<{n: number; title: string; from: number}> = [
   {n: 1, title: "The Cyclops", from: 86},
   {n: 2, title: "Stops at Sea", from: 3167},
   {n: 3, title: "Home in Ithaca", from: 5768},
   {n: 4, title: "The Return", from: 7565},
+  {n: 5, title: "Odyssey Today", from: 9849},
 ];
 export type Sentence = {id: string; chapter: number; from: number; to: number; text: string};
 export const SENTENCES: Sentence[] = [
@@ -98,4 +99,28 @@ export const SENTENCES: Sentence[] = [
   {id: "S88", chapter: 4, from: 9568, to: 9704, text: "When the suitors' families come for revenge, Athena makes both sides swear peace."},
   {id: "S89", chapter: 4, from: 9715, to: 9752, text: "The poem ends there."},
   {id: "S90", chapter: 4, from: 9763, to: 9793, text: "The story doesn't."},
+  {id: "S91", chapter: 5, from: 9849, to: 9894, text: "It moved into our language."},
+  {id: "S92", chapter: 5, from: 9905, to: 10066, text: "A long, hard journey is an odyssey, a meaning English has used since the late 1800s."},
+  {id: "S93", chapter: 5, from: 10077, to: 10186, text: "Stuck between two dangers? You're between Scylla and Charybdis."},
+  {id: "S94", chapter: 5, from: 10217, to: 10382, text: "In 2017, Emily Wilson published the first English translation of the poem by a woman."},
+  {id: "S95", chapter: 5, from: 10393, to: 10485, text: "Her first line: Tell me about a complicated man."},
+  {id: "S96", chapter: 5, from: 10496, to: 10582, text: "The Greek word means, roughly, a man of many turns."},
+  {id: "S97", chapter: 5, from: 10613, to: 10749, text: "This summer, Christopher Nolan's film took in about 1.77 billion dollars."},
+  {id: "S98", chapter: 5, from: 10760, to: 10958, text: "And by mid-July, before it even opened, US print sales of the poem were up 76 percent year to date."},
+  {id: "S99", chapter: 5, from: 10969, to: 11110, text: "Just know the film skips the Nobody trick, and on screen, Athena is the only god."},
+  {id: "S100", chapter: 5, from: 11141, to: 11190, text: "Quick game: real or fake?"},
+  {id: "S101", chapter: 5, from: 11201, to: 11272, text: "One: the Trojan Horse is in the Odyssey."},
+  {id: "S102", chapter: 5, from: 11283, to: 11395, text: "Two: Odysseus's dog recognizes him after twenty years."},
+  {id: "S103", chapter: 5, from: 11406, to: 11519, text: "Three: Homer says the Cyclops has one eye in the middle of his forehead."},
+  {id: "S104", chapter: 5, from: 11610, to: 11651, text: "The fake is number three."},
+  {id: "S105", chapter: 5, from: 11662, to: 11777, text: "Homer only mentions his eye, singular, and never says where it is."},
+  {id: "S106", chapter: 5, from: 11788, to: 11889, text: "The forehead comes from Hesiod, describing different Cyclopes."},
+  {id: "S107", chapter: 5, from: 11900, to: 11935, text: "The horse is real."},
+  {id: "S108", chapter: 5, from: 11946, to: 12033, text: "It's in the Odyssey three times, and never in the Iliad."},
+  {id: "S109", chapter: 5, from: 12064, to: 12130, text: "So why did a trip home take ten years?"},
+  {id: "S110", chapter: 5, from: 12141, to: 12239, text: "One boast, one angry sea god, and some very long visits."},
+  {id: "S111", chapter: 5, from: 12250, to: 12332, text: "Next time you post where you are, think of Odysseus."},
+  {id: "S112", chapter: 5, from: 12363, to: 12425, text: "But why was he at Troy in the first place?"},
+  {id: "S113", chapter: 5, from: 12436, to: 12474, text: "Blame a golden apple."},
+  {id: "S114", chapter: 5, from: 12485, to: 12548, text: "That's a later myth, and our next video."},
 ];
