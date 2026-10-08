@@ -9,7 +9,7 @@ import {S} from './Overlay';
  * LearnLoop sting between the cold open and S04 (storyboard G0): the map sky sheet stays; paper letters
  * L-E-A-R-N-L-O-O-P slap in 3 frames apart; a yellow loop arrow runs once around the word; a cream strip
  * "THE ODYSSEY · A TEN-YEAR TRIP HOME" lands below. Last 10 frames: the sheet slides up while the next
- * background (G1-02 terracotta) slides in. No voice.
+ * background (SC02 terracotta) slides in. No voice.
  */
 export const STING_RANGE: [number, number] = [S('S03').to + 3, S('S04').from - 9];
 

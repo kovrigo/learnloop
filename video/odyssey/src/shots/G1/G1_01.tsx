@@ -7,7 +7,7 @@ import {
 } from '../../paper';
 
 /**
- * G1-01 · frames 1–499 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
+ * SC01 · frames 1–499 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
  * (a) map: sea chart print, Odysseus in his boat sliding along a yellow dotted route, ETA card "3 DAYS" → "10 YEARS".
  * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR", HOUSEGUEST tag between them.
  * (c) Ithaca: house doors open on a long feast table of suitors, "+96" chip, counter card "GUESTS 108"; plates empty.

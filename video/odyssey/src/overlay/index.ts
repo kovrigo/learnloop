@@ -4,7 +4,7 @@ import {Sting, STING_RANGE} from './Sting';
 import {ChapterCard} from './ChapterCard';
 export {HudLayer} from './Hud';
 // Overlay (G0, maintained by the main session; shot groups do not draw these). Lowest layer (Main puts it first).
-// No template title card: G1-01 owns frames 1–S03.to+2. The LearnLoop HUD is drawn by Main via HudLayer (above the shots).
+// No template title card: SC01 owns frames 1–S03.to+2. The LearnLoop HUD is drawn by Main via HudLayer (above the shots).
 export const SHOTS_OVERLAY: ShotDef[] = [
   {id: 'OV-Sting', from: STING_RANGE[0], to: STING_RANGE[1], Comp: Sting},
   ...CHAPTER_CARDS.map((c) => ({id: `OV-Chapter${c.n}`, from: c.from, to: c.to, Comp: (() => ChapterCard({card: c})) as unknown as React.FC})),

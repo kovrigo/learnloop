@@ -5,7 +5,7 @@ import {CText, Pill, ArrowH, PURPLE, GREY, GREY_MID, WHITE, GLOW_PURPLE_S, fadeI
 import {VIDEO} from '../config';
 const clampFrames = (n: number, len: number) => clamp01(n / len);
 
-// LearnLoop paper style: no template title card (G1-01 starts at frame 1), no capsule HUD.
+// LearnLoop paper style: no template title card (SC01 starts at frame 1), no capsule HUD.
 // The sting, chapter cards and the HUD lines (LEARNLOOP / chapter tag / source label) are in Sting.tsx, ChapterCard.tsx and Hud.tsx.
 
 // ---------- 时间轴查询 ----------

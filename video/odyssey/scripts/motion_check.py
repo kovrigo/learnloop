@@ -7,6 +7,7 @@
      python3 scripts/motion_check.py --frames fin_frames        → 对成片逐帧目录（QC 用）
      选项 --shots index   镜头区间改从 src/shots/G*/index.ts 读（分镜表帧号与成片不一致时，如换配音后 retime 的片子；没有分镜表时自动用它）
           --root <项目根>  默认脚本所在项目
+          --exit-tail N    镜头以划纸离场、亮度不掉时用：每个镜头最后 N 帧算离场，hold 从其前最后一张采样帧往前数，不再扣 GLOW_OFF（默认 0 = 用亮度判离场）
 注意：组级（低分辨率渲染）读数偏松，成片 fin_frames 复测才是最终判据。
 「无大面积变化」= 320×180 采样灰度平均变化 <1.5（第五片成片实测：落位后只剩动词动作 / 慢推 / 呼吸的尾段 0.4–1.2，入场 / 22 帧滑入 / 33 帧推近 / 整组平移 2.5–15）。
 所以 hold 量的是「版面落定后停了多久」，不是「完全不动了多久」；离场前 6 帧灭光算离场，已从 hold 里扣掉。设计得很大的循环动作（摆动的大字、整框虚线行进）会让 hold 变小，那正是 §7 不许的「为动而动」。"""
@@ -29,6 +30,7 @@ def opt(name, default=None):
     return default
 ROOT = os.path.abspath(opt('--root', os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 shots_src = opt('--shots', 'auto')
+exit_tail = int(opt('--exit-tail', 0))
 if not args:
     raise SystemExit(__doc__)
 
@@ -109,13 +111,16 @@ for sid, a, b in shots:
     bright = [small[f].mean() for f in fs]
     ref = float(np.median(bright[-20:]))
     e = len(fs) - 1
-    while e > 0 and bright[e] < EXIT_K * ref:
-        e -= 1
-    exited = e < len(fs) - 1
+    if exit_tail > 0:
+        e = max(i for i, f in enumerate(fs) if f < b - exit_tail + 1)
+    else:
+        while e > 0 and bright[e] < EXIT_K * ref:
+            e -= 1
+    exited = e < len(fs) - 1 or exit_tail > 0
     hold = 0; k = e
     while k > 0 and diffs[fs[k]] < HOLD_THR:
         hold += STEP; k -= 1
-    if exited:
+    if exited and exit_tail == 0:
         hold = max(0, hold - GLOW_OFF)
     flags = []
     if longest > STILL_MAX_S:

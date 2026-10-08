@@ -22,7 +22,7 @@ export const VIDEO = {
    * 片头。中文片：big 用 Audiowide 宽体（缩写/英文词），rest 用 Noto 900（中文部分），en 是英文全称，tagline 一句话钩子。
    * 英文片：rest 留空 ''（不显示），big 放主词/缩写，en 放全称或副标，tagline 一句话钩子。
    */
-  // No template title card (cold open G1-01 starts at frame 1). These fields feed the LearnLoop sting strip: "THE ODYSSEY · A TEN-YEAR TRIP HOME".
+  // No template title card (cold open SC01 starts at frame 1). These fields feed the LearnLoop sting strip: "THE ODYSSEY · A TEN-YEAR TRIP HOME".
   title: {big: 'The Odyssey', rest: '', en: 'A Ten-Year Trip Home', tagline: ''},
   // 中英不要并排等大：big 与 rest 是"宽体缩写 + 中文词"（118 / 96px，字号差要看得出）；两个都是长词时只留一个，另一种语言落到 tagline。
   /** 片尾署名卡（内容压黑 + 末句字幕结束后 ≈2 s，aboveBar；不需要就设为 null）。

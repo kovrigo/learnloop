@@ -4,7 +4,7 @@ import {clamp01, easeOutCubic, easeInOutPow} from '../../common';
 import {SET, SHAPES, IMG, SHADOW, SHADOW_S, C, PaperBg, PaperWipe, PaperTag, DottedPath, PaperCharacter, Boat, Ship, Waves, slapCss, prog, rock, samplePath} from '../../paper';
 
 /**
- * G1-03 · frames 822–985 · S06 · source IN HOMER / BOOK 9.
+ * SC03 · frames 822–985 · S06 · source IN HOMER / BOOK 9.
  * Sea palette (V2 waves). The Cleveland warship dinos (1971.46) stands centre-left as a whole-object cut-out.
  * 830 Odysseus slaps in on his paper boat in front of it, name tag 3 frames later (beat window +3), head turns to the viewer.
  * 900 (S06.c2 −3) twelve paper ships peel off the vase every 3 frames and sail right along a dotted path;
@@ -22,7 +22,7 @@ const slotT = (i: number) => 0.97 - i * 0.074;
 
 export const G1_03: React.FC = () => {
   const N = useCurrentFrame() + F0;
-  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over G1-02's terracotta (822–829)
+  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over SC02's terracotta (822–829)
   const par = prog(N, B.s06b, 40, easeInOutPow(2.4)); // parallax slide left
   const shift: [number, number, number] = [-18 * par, -36 * par, -58 * par];
   const content = -30 * par;
@@ -33,7 +33,7 @@ export const G1_03: React.FC = () => {
   const headTilt = nO < 0 ? 0 : 5 * Math.sin(clamp01((nO - 4) / 18) * Math.PI) - 2;
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
-      {/* G1-02's background under the incoming sheet */}
+      {/* SC02's background under the incoming sheet */}
       {enter < 1 ? (
         <PaperBg color={SET.troy.bg}>
           <svg width={1280} height={720} style={{position: 'absolute', left: 0, top: 0}}>

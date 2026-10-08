@@ -4,7 +4,7 @@ import {clamp01, easeOutCubic} from '../../common';
 import {SET, SHAPES, IMG, SHADOW, PaperBg, PaperTag, PhotoPrint, peelCss} from '../../paper';
 
 /**
- * G1-02 · frames 610–821 · S04–S05. Terracotta table, sand shape at the bottom.
+ * SC02 · frames 610–821 · S04–S05. Terracotta table, sand shape at the bottom.
  * 618 Homer bust photograph slaps in (print, white border), slow push 1.0 → 1.05 begins; 660 tag "~2,700 YEARS";
  * 742 the Trojan Horse maiolica plate rolls in from the right edge like a coin and lands; its tag "10 YEARS OF WAR" slaps on it.
  * Hold: plate lands 764 → exit 813. Exit: peel left over the last 9 frames.
