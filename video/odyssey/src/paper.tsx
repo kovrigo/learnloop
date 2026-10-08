@@ -236,6 +236,8 @@ export type PaperCharacterProps = {
   /** head tilt in degrees, pivot at the neck; headTurn 0..1 squashes the head as if turning (1 = facing viewer) */
   head?: number;
   headTurn?: number;
+  /** 1 = photo as is, −1 = mirrored (head faces the other way); animate through 0 for a paper-puppet head flip */
+  headFlip?: number;
   /** arm swing in degrees, pivot at the shoulder (positive = outward) */
   armL?: number;
   armR?: number;
@@ -245,7 +247,7 @@ export type PaperCharacterProps = {
   style?: React.CSSProperties;
 };
 /** Photo head (clip path + white border) on a drawn paper body. Head and arms move on their own pivots. */
-export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h, head = 0, headTurn = 1, armL = 0, armR = 0, cropY = 540, shadow = true, style}) => {
+export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h, head = 0, headTurn = 1, headFlip = 1, armL = 0, armR = 0, cropY = 540, shadow = true, style}) => {
   const b = BODIES[variant];
   const id = usePaperId(`pc${variant}`);
   const w = (h * 380) / 540;
@@ -287,7 +289,7 @@ export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h,
           {arm(b.armR, armR, -1)}
           {b.neck}
         </g>
-        <g transform={`rotate(${head.toFixed(2)} ${nx} ${ny}) translate(${nx} ${ny}) scale(${(0.82 + 0.18 * headTurn).toFixed(3)} 1) translate(${-nx} ${-ny})`}>
+        <g transform={`rotate(${head.toFixed(2)} ${nx} ${ny}) translate(${nx} ${ny}) scale(${((0.82 + 0.18 * headTurn) * headFlip).toFixed(3)} 1) translate(${-nx} ${-ny})`}>
           <svg x={hs.x} y={hs.y} width={hs.w} height={hs.h} viewBox={`0 0 ${hs.vbW} ${hs.vbH}`} overflow="visible">
             <path d={hs.clip} fill="white" stroke="white" strokeWidth={hs.stroke} strokeLinejoin="bevel" />
             <image href={IMG(hs.file)} width={hs.vbW} height={hs.vbH} preserveAspectRatio="none" clipPath={`url(#${id}c)`} />

@@ -5,10 +5,11 @@ import type {ShotDef} from '../common';
 import {VIDEO} from '../config';
 import {FONT, C} from '../paper';
 import {S, CHAPTER_CARDS} from './Overlay';
+import {STING_RANGE} from './Sting';
 
 /**
  * LearnLoop HUD (storyboard G0), drawn above the shots and below the progress bar:
- * - "LEARNLOOP" at x 42, baseline 47, Inter Black 19, caps, spacing 2, white — frames 1–TOTAL;
+ * - "LEARNLOOP" at x 42, baseline 47, Inter Black 19, caps, spacing 2, white — frames 1–TOTAL, hidden during the sting (it shows the big word);
  * - chapter tag right-aligned at x 1238, baseline 47, Inter Black 18 — from config.chapterTagFromS, swaps at each chapter card's midpoint;
  * - source label (second line) at x 42, baseline 78, Inter Black 16, cream — read from each shot's ShotDef.source (its only source).
  */
@@ -37,6 +38,8 @@ export const HudLayer: React.FC<{shots: ShotDef[]}> = ({shots}) => {
     const op = Math.min(inOp, outOp);
     tags.push(hudText(1238, 47, 18, '#FFFFFF', 'end', op, t.text, `t${i}`));
   });
+  // LEARNLOOP: out 6 frames from the sting's first frame, back 8 frames from the next shot's first frame
+  const logoOp = 1 - clamp01((N - STING_RANGE[0] + 1) / 6) + clamp01((N - STING_RANGE[1]) / 8);
   // source label from the shot that owns frame N
   const src = shots.find((s) => s.source && N >= s.from && N <= s.to);
   let srcNode: React.ReactNode = null;
@@ -47,7 +50,7 @@ export const HudLayer: React.FC<{shots: ShotDef[]}> = ({shots}) => {
   }
   return (
     <svg width={1280} height={110} style={{position: 'absolute', left: 0, top: 0, pointerEvents: 'none', overflow: 'visible'}}>
-      {hudText(42, 47, 19, '#FFFFFF', 'start', 1, 'LEARNLOOP')}
+      {hudText(42, 47, 19, '#FFFFFF', 'start', logoOp, 'LEARNLOOP')}
       {tags}
       {srcNode}
     </svg>

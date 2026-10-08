@@ -9,7 +9,8 @@ import {
 /**
  * SC01 · frames 1–499 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
  * (a) map: sea chart print, Odysseus in his boat sliding along a yellow dotted route, ETA card "3 DAYS" → "10 YEARS".
- * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR", HOUSEGUEST tag between them.
+ * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR"; Odysseus with a suitcase stands between them,
+ *     HOUSEGUEST lands on his tunic as a badge; he looks to Calypso, then hops along a dotted arc toward Circe.
  * (c) Ithaca: house doors open on a long feast table of suitors, "+96" chip, counter card "GUESTS 108"; plates empty.
  * Exit: the sting's sky sheet drops over the frame in the last 9 frames.
  */
@@ -125,21 +126,108 @@ const EtaCard: React.FC<{N: number; t: number}> = ({N, t}) => {
   );
 };
 
-// ======================================================================== (b) booking cards
+// ======================================================================== (b) booking cards + Odysseus the houseguest
+// Odysseus stands world-fixed at the centre of station (b), suitcase in his left hand; HOUSEGUEST lands on his tunic as a badge.
+// PaperCharacter draws its 380×(cropY+20) viewBox into w × h·cropY/540, so 1 symbol unit = HB.sp px, centred horizontally (heroPt).
+const HB = (() => {
+  const h = 448, cropY = 540, bottom = 612; // bottom edge clear of the subtitle band (637)
+  const w = (h * 380) / 540, sp = (h / 540) * (cropY / (cropY + 20));
+  const y = bottom + (20 * h) / 540 - (h * cropY) / 540;
+  const x = 640 - (w - 380 * sp) / 2 - 195 * sp; // body centre (symbol x 195) at station x 640
+  return {h, cropY, w, sp, x, y, bottom};
+})();
+/** symbol (u, v) of the hero body → station px */
+const heroPt = (u: number, v: number) => ({x: HB.x + (HB.w - 380 * HB.sp) / 2 + u * HB.sp, y: HB.y - (20 * HB.h) / 540 + (v + 20) * HB.sp});
+const CHEST = heroPt(195, 404); // badge centre
+const GRIP = {u: 44, v: 508, pivot: [62, 350] as [number, number]}; // left fist, shoulder pivot (BODIES.hero.armL)
+const ARM_L = -46; // left arm held out so the suitcase hangs above the subtitle band
+const HOP = {a: B.s02c + 5, len: 14, dx: 70, h: 48}; // take-off 328, lands 342
+const BADGE_S = 0.58; // HOUSEGUEST size 36 → badge ≈ 21 px type
+/** damped swing kicked at frame f */
+const kick = (N: number, f: number, amp: number, period = 22, decay = 18) => (N >= f ? amp * Math.sin(((N - f) / period) * Math.PI * 2) * Math.exp(-(N - f) / decay) : 0);
+const bumpAt = (N: number, f: number, amp: number, len = 8) => (N >= f && N < f + len ? amp * Math.sin(((N - f) / len) * Math.PI) : 0);
+
 const StationB: React.FC<{N: number; p1: number; camX: number}> = ({N, p1, camX}) => {
-  // HOUSEGUEST: slaps on screen at the beat, the camera follows it to station (b), then it stays there (world-fixed)
-  const lead = 70 * Math.sin(Math.PI * p1);
-  const tagX = N < PAN1.a + PAN1.len ? camX + 640 + lead : ST_B.x + 640;
   const bump = (f: number) => (N >= f ? 2.2 * Math.sin(clamp01((N - f) / 12) * Math.PI * 2) * (1 - clamp01((N - f) / 12)) : 0);
   const tagJiggle = bump(B.s02b) + bump(B.s02c);
+  const ox = ST_B.x;
+
+  // ---- hop (S02.c3): anticipation dip 324–328, air 328–342 on a parabola, landing dip
+  const u = clamp01((N - HOP.a) / HOP.len);
+  const air = N >= HOP.a && N < HOP.a + HOP.len;
+  const hx = HOP.dx * u;
+  const hy = air ? -4 * HOP.h * u * (1 - u) : 0;
+  const antic = N >= HOP.a - 4 && N < HOP.a ? 4 * Math.sin(((N - HOP.a + 4) / 4) * (Math.PI / 2)) : N >= HOP.a && N < HOP.a + 3 ? 4 * (1 - (N - HOP.a) / 3) : 0;
+  const land = bumpAt(N, HOP.a + HOP.len, 3, 7);
+  const dy = hy + antic + land + bumpAt(N, PAN1.a + PAN1.len, 4, 7); // + jolt when the badge lands (226)
+  const lean = (N >= HOP.a - 4 && N < HOP.a ? (-1.5 * (N - HOP.a + 4)) / 4 : 0) + (air ? 5 * Math.sin(Math.PI * u) - 1.5 * Math.pow(1 - u, 3) : 0) + kick(N, HOP.a + HOP.len, -1.5, 16, 10);
+
+  // ---- head: mirrored (facing right) → flips to Calypso (left) at S02.c2 → flips back to Circe (right) at S02.c3
+  const f1 = prog(N, B.s02b + 1, 6, easeInOutPow(2));
+  const f2 = prog(N, B.s02c, 6, easeInOutPow(2));
+  const headFlip = -1 + 2 * f1 - 2 * f2;
+  const headTilt = -7 * f1 + 13 * f2 + bumpAt(N, 238, 3, 10) + bumpAt(N, 292, -3, 10) + kick(N, HOP.a + HOP.len, 3, 14, 10) + bumpAt(N, 354, 3, 10);
+  const headTurn = 0.8 + 0.2 * Math.abs(headFlip);
+
+  // ---- left arm with the suitcase: swings on speech beats; the case hangs plumb and lags (pendulum)
+  // negative = the case lifts first, so it never dips toward the subtitle band
+  const armBeats: Array<[number, number]> = [[PAN1.a, -5], [PAN1.a + PAN1.len, -4], [B.s02b, -7], [292, -4], [HOP.a + HOP.len, -4], [354, -4]];
+  const armL = ARM_L + armBeats.reduce((acc, [f, a]) => acc + kick(N, f, a), 0);
+  const swing = armBeats.reduce((acc, [f, a]) => acc + kick(N, f + 3, -1.6 * a), 0) + kick(N, HOP.a, 14, 18, 16) + kick(N, HOP.a + HOP.len, -8, 18, 20);
+  const ar = (-armL * Math.PI) / 180; // PaperCharacter rotates armL by −armL (SVG, clockwise +)
+  const gu = GRIP.pivot[0] + (GRIP.u - GRIP.pivot[0]) * Math.cos(ar) - (GRIP.v - GRIP.pivot[1]) * Math.sin(ar);
+  const gv = GRIP.pivot[1] + (GRIP.u - GRIP.pivot[0]) * Math.sin(ar) + (GRIP.v - GRIP.pivot[1]) * Math.cos(ar);
+  const grip = heroPt(gu, gv);
+
+  // ---- HOUSEGUEST: slaps at S02.c1 right of the boat (clear of station a's figure), rides pan 1 (position, height and scale
+  //      ease onto his chest), then sticks to the tunic
+  const riding = N < PAN1.a + PAN1.len;
+  const lead = 260 * (1 - p1) + 40 * Math.sin(Math.PI * p1);
+  const badge = (x: number, y: number, k: number) => (
+    <div style={{position: 'absolute', left: 0, top: 0, width: 0, height: 0, transform: `translate(${x}px, ${y}px) scale(${k})`}}>
+      <PaperTag text="HOUSEGUEST" x={0} y={0} rot={-6 + tagJiggle} size={36} n={N - B.s02a} bg={C.yellow} color={C.navy} />
+    </div>
+  );
+
+  // ---- hop arc: yellow dots above his head top, from where he stands to where he lands
+  const top = heroPt(195, -6).y - 22;
+  const a0: [number, number] = [ox + 640 - 26, top], a1: [number, number] = [ox + 640 + HOP.dx + 20, top];
+  const arc = `M${a0[0]} ${a0[1]}Q${(a0[0] + a1[0]) / 2} ${top - 2 * 62} ${a1[0]} ${a1[1]}`;
+  const back = Math.atan2(-124, -(a1[0] - a0[0]) / 2); // reverse end tangent of the quadratic
+  const tip = (k: number) => `${a1[0] + 18 * Math.cos(back + k)} ${a1[1] + 18 * Math.sin(back + k)}`;
+  const arrow = `M${tip(-0.52)}L${a1[0]} ${a1[1]}L${tip(0.52)}`;
+
   return (
     <>
-      <BookingCard x={ST_B.x + 95} y={135} rot={-4 + bump(B.s02c) * 0.6} n={N - B.s02b} dir={-1} img="calypso_rijks_RP-P-1975-75-49_crop.jpg" pos="50% 8%" title="CALYPSO'S ISLAND" big="7 YEARS" />
-      <BookingCard x={ST_B.x + 845} y={135} rot={4} n={N - B.s02c} dir={1} img="circe_met253627_crop.jpg" pos="70% 30%" title="CIRCE'S PALACE" big="1 YEAR" />
-      <PaperTag text="HOUSEGUEST" x={tagX} y={404} rot={-6 + tagJiggle} size={36} n={N - B.s02a} bg={C.yellow} color={C.navy} />
+      <BookingCard x={ox + 95} y={135} rot={-4 + bump(B.s02c) * 0.6} n={N - B.s02b} dir={-1} img="calypso_rijks_RP-P-1975-75-49_crop.jpg" pos="50% 8%" title="CALYPSO'S ISLAND" big="7 YEARS" />
+      <BookingCard x={ox + 845} y={135} rot={4} n={N - B.s02c} dir={1} img="circe_met253627_crop.jpg" pos="70% 30%" title="CIRCE'S PALACE" big="1 YEAR" />
+      <div style={{position: 'absolute', left: 0, top: 0}}>
+        <DottedPath d={arc} N={N} reveal={prog(N, B.s02c - 1, 10, easeOutCubic)} speed={0.5} width={7} arrow={arrow} />
+      </div>
+      <div style={{position: 'absolute', left: ox, top: 0, width: 1280, height: 720, transformOrigin: `640px ${CHEST.y}px`, transform: `translate(${hx}px, ${dy}px) rotate(${lean}deg)`}}>
+        <Suitcase x={grip.x} y={grip.y} rot={swing - lean} />
+        <PaperCharacter variant="hero" x={HB.x} y={HB.y} h={HB.h} cropY={HB.cropY} head={headTilt} headTurn={headTurn} headFlip={headFlip} armL={armL} armR={-3 + kick(N, B.s02b, 3, 26, 20) + kick(N, HOP.a, -5, 20, 14)} />
+        {riding ? null : badge(CHEST.x, CHEST.y, BADGE_S)}
+      </div>
+      {riding ? badge(camX + 640 + lead, 440 + (CHEST.y - 440) * p1, 1 + (BADGE_S - 1) * p1) : null}
     </>
   );
 };
+
+/** Small paper suitcase hanging from a fist at (x, y) (station px): terracotta case, cream straps, white paper border, hard shadow. */
+const Suitcase: React.FC<{x: number; y: number; rot: number}> = ({x, y, rot}) => (
+  <div style={{position: 'absolute', left: x - 50, top: y - 10, width: 100, height: 84, filter: SHADOW}}>
+    <svg width={100} height={84} viewBox="-50 -10 100 84" style={{position: 'absolute', left: 0, top: 0, overflow: 'visible', transform: `rotate(${rot}deg)`, transformOrigin: '50px 10px'}}>
+      <path d="M-12 22V4Q-12 -3 -5 -3H5Q12 -3 12 4V22" fill="none" stroke="#fff" strokeWidth={12} strokeLinejoin="round" />
+      <path d="M-12 22V4Q-12 -3 -5 -3H5Q12 -3 12 4V22" fill="none" stroke={C.navy} strokeWidth={5} strokeLinejoin="round" />
+      <rect x={-44} y={18} width={88} height={48} rx={8} fill={SET.troy.bg} stroke="#fff" strokeWidth={7} />
+      <rect x={-28} y={21} width={9} height={42} fill={C.cream2} />
+      <rect x={19} y={21} width={9} height={42} fill={C.cream2} />
+      <rect x={-40} y={38} width={80} height={3} fill={C.heroLine} opacity={0.35} />
+      <circle cx={0} cy={51} r={6.5} fill={C.yellow} stroke="#fff" strokeWidth={2.5} />
+    </svg>
+  </div>
+);
 
 const BookingCard: React.FC<{x: number; y: number; rot: number; n: number; dir: 1 | -1; img: string; pos: string; title: string; big: string}> = ({x, y, rot, n, dir, img, pos, title, big}) => {
   if (n < 0) return null;
