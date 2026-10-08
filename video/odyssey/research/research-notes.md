@@ -128,10 +128,13 @@
 
 ## Позднейшие мифы (LATER MYTH)
 
+Не путать: Троянский конь — IN HOMER, а не позднейший миф.
+
+- IN HOMER (Odyssey): Троянский конь. О нём рассказывают трижды: Менелай, певец Демодок и сам Одиссей ([Od. 4.271–289](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=4:card=271); [Od. 8.492–520](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=8:card=492); [Od. 11.523–532](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=11:card=523)). В «Илиаде» коня нет: она кончается похоронами Гектора ([Il. 24.804](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=24:card=804)). Более полный и поздний рассказ — у Вергилия в «Энеиде» ([Britannica](https://www.britannica.com/topic/Trojan-horse)).
+
 Это знают многие, но этого нет у Гомера:
 
 - Притворное безумие, чтобы не идти на войну. Источники: пересказ поэмы «Киприи» у Прокла, Гигин, Аполлодор ([Proclus, Cypria](https://www.livius.org/sources/content/epic-cycle/cypria/); [Hyginus, Fabulae 95](https://topostext.org/work/206); [Apollodorus, Epitome 3.7](https://www.theoi.com/Text/ApollodorusE.html)). У Гомера его просто долго уговаривали ([Od. 24.115–119](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=24:card=115)).
-- Троянский конь. В «Илиаде» его нет: она кончается похоронами Гектора ([Il. 24.804](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=24:card=804)). «Одиссея» упоминает коня трижды ([Od. 4.271–289](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=4:card=271); [Od. 8.492–520](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=8:card=492); [Od. 11.523–532](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=11:card=523)). Подробно его рассказывает Вергилий в «Энеиде» ([Britannica](https://www.britannica.com/topic/Trojan-horse)).
 - Ахиллесова пята. У Гомера Ахилл ранен в руку ([Il. 21.166–167](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=21:card=166)). Купание в Стиксе — у Стация, I век н. э. ([Statius, Achilleid 1](https://www.theoi.com/Text/StatiusAchilleid1A.html)).
 - Золотое яблоко раздора. Суд Париса в «Илиаде» упомянут одной строкой, без яблока ([Il. 24.25–30](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=24:card=25)). Яблоко — у Аполлодора и Гигина ([Apollodorus, Epitome 3.2](https://www.theoi.com/Text/ApollodorusE.html); [Hyginus, Fabulae 92](https://topostext.org/work/206)). Это касается крючка на следующий ролик.
 - Смерть Одиссея от руки Телегона, сына Цирцеи. Это поэма «Телегония» ([Proclus, Telegony](https://www.livius.org/sources/content/epic-cycle/telegony/)).
@@ -269,7 +272,7 @@
 - Фото бюста Гомера, Стивен Томпсон, 1851–1880 ([Rijksmuseum](https://www.rijksmuseum.nl/en/collection/RP-F-00-311)).
 - Античного бюста самого Одиссея в проверенных открытых коллекциях мы не нашли.
 
-Троя и конь (штамп LATER MYTH: подробно коня описывает Вергилий):
+Троя и конь (штамп IN HOMER: конь есть в «Одиссее»; в «Илиаде» его нет, подробнее рассказывает Вергилий):
 
 - Бонасоне по Приматиччо, «Троянцы ввозят коня», 1545 ([Rijksmuseum](https://www.rijksmuseum.nl/en/collection/RP-P-OB-38.967)).
 - Блюдо-майолика с Троянским конём, XVI век, цветное ([The Met](https://www.metmuseum.org/art/collection/search/202259)).

@@ -346,7 +346,7 @@
   - Hyginus, Fabulae 95: шапка, лошадь и вол в плуге, Palamedes кладёт младенца Telemachus перед плугом. Там же оракул: вернётся через двадцать лет, один. ([Hyginus, Fabulae 95, Topos Text](https://topostext.org/work/206)) ★★
   - Apollodorus, Epitome 3.7: то же. ([Apollodorus, Epitome 3.7](https://www.theoi.com/Text/ApollodorusE.html)) ★★
   - В Homer Agamemnon вспоминает: Odysseus едва удалось уговорить, на дорогу ушёл целый месяц. Про безумие ни слова. (([Od. 24.115–119](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=24:card=115)))
-- **Троянский конь есть в Iliad.** Вердикт: **фейк.**
+- **Троянский конь есть в Iliad.** Вердикт: **фейк для Iliad.** Это не позднейший миф: конь есть у Homer в Odyssey (IN HOMER), три рассказа ниже. Более полный поздний рассказ у Virgil.
   - Iliad заканчивается похоронами Hector, до падения Troy. (([Il. 24.804](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0134:book=24:card=804)))
   - Мой поиск по греческому тексту Iliad: слов «деревянный конь» нет 【не сверен с научным справочником】. Epeius, строитель коня в Odyssey, в Iliad только боксёр на играх. (([Il. (греч.) 23.664–667](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133:book=23:card=664)), ([Od. 8.492–495](http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0136:book=8:card=492)))
   - Odyssey рассказывает о коне трижды.
