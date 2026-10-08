@@ -1,9 +1,154 @@
-# 解说词模板：删掉本注释，按 reference/narration-storyboard.md 写。`# CHAPTER n 章名` 分章；一行一句；`|` 只切字幕块（每块中文 ≤16 字 / 英文 ≤48 字符；英文块之间自动补空格）。
-# **空行 = 段落分隔**：一段 = 一个镜头（2–4 句），段末画面停 1–1.5 s 再切；段内小句之间不停顿。别一句一段。
-# CHAPTER 1 第一章名
-第一段第一句|切成字幕块
-第一段第二句，和上一句同一个镜头
+# CHAPTER 1 The Cyclops
+The most famous trip home in history|took about ten years.
+He spent eight of them as a houseguest:|seven years with the nymph Calypso,|one with the witch Circe.
+And when he finally got home,|a hundred and eight houseguests|were eating his food.
 
-第二段第一句（空行之后 → 新镜头）
-# CHAPTER 2 第二章名
-第二章第一句
+## gap 90
+This is Homer's Odyssey,|a poem about 2,700 years old.
+Troy has just fallen after ten years of war.
+Odysseus, king of the island of Ithaca,|sets sail for home with twelve ships.
+
+Waiting at home are his wife, Penelope,|and a son who was a baby when he left.
+It should be a quick trip.
+It is not.
+
+The monsters come from one dinner party,|where Odysseus tells the story himself.
+So this is his version.
+
+Early on, his men walk into the cave|of a giant Cyclops called Polyphemus.
+He traps them inside|and eats six of the crew, two at a time.
+Odysseus tells the giant his name is Nobody.
+That night, while the giant sleeps,|they blind him with a stake|hardened in the fire.
+
+He screams for help,|and his neighbors ask who is hurting him.
+Nobody, he shouts.
+So they shrug and go home.
+At dawn, the men escape|under the bellies of his rams.
+
+A perfect escape, until Odysseus ruins it.
+From his ship, he shouts his real name,|his father's name,|and his home island.
+History's first case of sharing your location|with the wrong person.
+
+The Cyclops is a son of Poseidon,|god of the sea.
+He prays to his father:|let Odysseus get home late, alone,|on someone else's ship.
+Poseidon won't kill Odysseus,|but he'll keep him away from home.
+And between here and Ithaca,|there is a lot of sea.
+
+# CHAPTER 2 Stops at Sea
+From here on, every stop goes wrong.
+The keeper of the winds|gives him a bag|with the storm winds tied inside.
+For nine days they sail straight home,|and with Ithaca in sight, he falls asleep.
+
+His crew thinks the bag is full of gold.
+They open it,|and the winds blow them all the way back.
+Recalculating.
+
+Next, a tribe of giants|smashes every ship but his.
+Twelve ships left Troy.
+Now there is one.
+
+On the next island,|Circe turns his men into pigs.
+Pig bodies, human minds.
+Hermes gives Odysseus a herb|that blocks her magic.
+It works.
+He stays a year anyway.
+
+Then come the Sirens.
+In Homer there are just two,|and what they promise is knowledge.
+Odysseus plugs his crew's ears with wax|and has himself tied to the mast.
+Noise-cancelling for the crew,|a live concert for the captain.
+
+Next, a strait with two bad options.
+Scylla, a monster with six heads,|or Charybdis, a whirlpool|that swallows the sea three times a day.
+Scylla takes six of his men.
+
+On the island of the sun god,|the starving crew eats his sacred cattle.
+Zeus sinks the ship with a thunderbolt,|and only Odysseus survives.
+
+He washes up on Calypso's island.
+She keeps him for seven years,|and offers to make him immortal.
+He says no.
+He wants to go home,|where his wife has a problem of her own.
+
+# CHAPTER 3 Home in Ithaca
+So Odysseus is stuck on one island.
+Penelope is stuck on another.
+A hundred and eight men want to marry her,|and they won't leave until she picks one.
+
+Meanwhile, they party in the palace every day,|on his cattle, his sheep and his wine.
+They eat everything in sight,|and they'd still give the place one star.
+
+Penelope stalls.
+She'll choose a husband, she says,|once she finishes weaving a shroud|for Odysseus's father.
+She weaves it by day|and secretly unpicks it by night.
+For three years.
+
+In the fourth year, a maid gives her away.
+Meanwhile, their son, the baby from the start,|is grown up.
+He sails off to find news of his father,|guided by an old friend called Mentor.
+
+Mentor is really Athena in disguise,|and that's where our word mentor comes from.
+The suitors plan to ambush him on his way home.
+Now Penelope is out of excuses,|the suitors are out of patience,|and Odysseus is out of ships.
+
+# CHAPTER 4 The Return
+The gods finally order Calypso to let him go.
+A kingdom of sailors carries him|the rest of the way, fast asleep.
+
+Twenty years after he left,|Odysseus is home.
+Late, alone, on someone else's ship.
+Exactly what the Cyclops asked for.
+You have arrived.
+
+Athena disguises him as an old beggar,|so he can scout his own house.
+His old dog, Argos, knows him at once,|wags his tail one last time, and dies.
+His old nurse knows him by a scar on his leg.
+
+Then Penelope sets a test.
+Whoever strings Odysseus's old bow|and shoots an arrow through twelve axes|will be her husband.
+The suitors try and fail.
+The beggar strings it as easily as a lyre,|and shoots through all twelve.
+Then the rags come off,|and the suitors' very long party is over.
+
+Penelope still isn't sure,|so she asks a servant to move their bed.
+Odysseus is outraged: nobody can move that bed.
+One of its posts is an olive tree,|still rooted in the ground.
+Only the real Odysseus would know that.
+She has out-tricked the master trickster.
+
+When the suitors' families come for revenge,|Athena makes both sides swear peace.
+The poem ends there.
+The story doesn't.
+
+# CHAPTER 5 Odyssey Today
+It moved into our language.
+A long, hard journey is an odyssey,|a meaning English has used since the late 1800s.
+Stuck between two dangers?|You're between Scylla and Charybdis.
+
+In 2017, Emily Wilson published|the first English translation of the poem|by a woman.
+Her first line: Tell me about a complicated man.
+The Greek word means, roughly,|a man of many turns.
+
+This summer, Christopher Nolan's film|took in about 1.77 billion dollars.
+And by mid-July, before it even opened,|US print sales of the poem|were up 76 percent year to date.
+Just know the film skips the Nobody trick,|and on screen, Athena is the only god.
+
+Quick game: real or fake?
+One: the Trojan Horse is in the Odyssey.
+Two: Odysseus's dog recognizes him|after twenty years.
+Three: Homer says the Cyclops has one eye|in the middle of his forehead.
+
+## gap 60
+The fake is number three.
+Homer only mentions his eye, singular,|and never says where it is.
+The forehead comes from Hesiod,|describing different Cyclopes.
+The horse is real.
+It's in the Odyssey three times,|and never in the Iliad.
+
+So why did a trip home take ten years?
+One boast, one angry sea god,|and some very long visits.
+Next time you post where you are,|think of Odysseus.
+
+But why was he at Troy in the first place?
+Blame a golden apple.
+That's a later myth, and our next video.
