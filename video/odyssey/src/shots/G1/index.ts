@@ -1,6 +1,14 @@
 import type {ShotDef, BgSpec, FootageSpec} from '../../common';
-// 组 G1：镜头表 / 背景覆写 / 实拍层。数组顺序即层序（后者在上）。帧区间见 分镜表.md 与 script/timeline.md。
-// 镜头组件：const N = useCurrentFrame() + F0（F0 = 本镜头 from）；图元 import from '../../ui'，缓动/共用层 from '../../common'。
-export const SHOTS_G1: ShotDef[] = [];
+import {G1_01} from './G1_01';
+import {G1_02} from './G1_02';
+import {G1_03} from './G1_03';
+// G1 (pilot, first 30 s): cold open, Homer and Troy, Odysseus and twelve ships. Frames from 分镜表.md / script/timeline.md.
+// Shot components: N = useCurrentFrame() + F0 (F0 = the shot's from). Style library: '../../paper'.
+// source/beat feed the HUD's source label (src/overlay/Hud.tsx).
+export const SHOTS_G1: ShotDef[] = [
+  {id: 'G1-01', from: 1, to: 499, Comp: G1_01},
+  {id: 'G1-02', from: 610, to: 821, Comp: G1_02},
+  {id: 'G1-03', from: 822, to: 985, Comp: G1_03, source: 'IN HOMER / BOOK 9', beat: 830},
+];
 export const BG_G1: BgSpec[] = [];
 export const FOOTAGE_G1: FootageSpec[] = [];

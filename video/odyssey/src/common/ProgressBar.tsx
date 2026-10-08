@@ -1,6 +1,6 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {FONT_HEAVY, W, H, VERTICAL} from './lib';
+import {FONT_INTER, W, H, VERTICAL} from './lib';
 import {kf} from './easing';
 import {fitSize} from './textfit';
 import {TOTAL_FRAMES, CHAPTER_STARTS, SENTENCES} from './timeline';
@@ -10,8 +10,9 @@ import {TOTAL_FRAMES, CHAPTER_STARTS, SENTENCES} from './timeline';
  * 章节切换帧来自 timeline.ts（tts_build.py 自动生成），当前章高亮保持到片尾。章名 ≤6 字为宜。
  */
 export const PROGRESS_ALPHA = 0.52;
-export const FILL_RGBA = 'rgba(190,170,250,0.52)';
-export const TRACK_RGBA = 'rgba(243,243,243,0.32)';
+// LearnLoop: played part cream #FAF7EE at 70%, unplayed #16151F at 25%, white dividers (storyboard G0).
+export const FILL_RGBA = 'rgba(250,247,238,0.70)';
+export const TRACK_RGBA = 'rgba(22,21,31,0.25)';
 // 竖版（H > W）不画进度条（见组件）。
 export const BAR_TOP = H - 33;
 export const BAR_H = H - BAR_TOP;
@@ -26,11 +27,11 @@ const cardStart = (c: {n: number; from: number}) => {
 };
 export const CHAPTERS: Array<{text: string; cx: number; from: number}> = CHAPTER_STARTS.map((c, i) => ({text: c.title, cx: CENTERS[i] ?? W / 2, from: i === 0 ? c.from : cardStart(c)}));
 export const CHAPTER_HIGHLIGHT_END = TOTAL_FRAMES + 1;
-export const LABEL_SIZE = 24;
+export const LABEL_SIZE = 18;
 export const LABEL_SLOT_W = Math.round(W / NCH) - 30; // 章名不得压到分隔线上（英文章名长，自动缩到 17px 兜底）
-export const LABEL_SCALE_Y = 0.9;
-export const LABEL_TOP = BAR_TOP + 3.5;
-export const LABEL_SKEW = -10;
+export const LABEL_SCALE_Y = 1;
+export const LABEL_TOP = BAR_TOP + 7.5;
+export const LABEL_SKEW = 0;
 export const LABEL_DIM_ALPHA = 0.55;
 
 export const currentChapter = (N: number) => {
@@ -55,7 +56,7 @@ export const ProgressBar: React.FC<{dimKf?: Array<[number, number]>; frame?: num
         {dim < 0.999 ? <div style={{position: 'absolute', left: 0, top: 0, width: W, height: BAR_H, background: '#000', opacity: 1 - dim}} /> : null}
       </div>
       {DIVIDERS.map((x) => (
-        <div key={x} style={{position: 'absolute', left: x - DIVIDER_W / 2, top: 6, width: DIVIDER_W, height: 22, background: 'rgba(255,255,255,0.9)'}} />
+        <div key={x} style={{position: 'absolute', left: x - DIVIDER_W / 2, top: 6, width: DIVIDER_W, height: 22, background: '#FFFFFF'}} />
       ))}
       {CHAPTERS.map((c, i) => (
         <div
@@ -63,8 +64,10 @@ export const ProgressBar: React.FC<{dimKf?: Array<[number, number]>; frame?: num
           style={{
             position: 'absolute', left: c.cx, top: LABEL_TOP - BAR_TOP,
             transform: `translateX(-50%) skewX(${LABEL_SKEW}deg) scaleY(${LABEL_SCALE_Y})`, transformOrigin: '50% 50%',
-            whiteSpace: 'nowrap', fontFamily: FONT_HEAVY, fontWeight: 900, fontSize: fitSize(c.text, LABEL_SLOT_W, LABEL_SIZE, 17), lineHeight: 1,
-            color: i === ch ? 'rgba(255,255,255,1)' : `rgba(255,255,255,${LABEL_DIM_ALPHA})`,
+            whiteSpace: 'nowrap', fontFamily: FONT_INTER, fontWeight: 900, fontSize: fitSize(c.text.toUpperCase(), LABEL_SLOT_W, LABEL_SIZE, 14, 1, 1.5), lineHeight: 1,
+            letterSpacing: 1.5, textTransform: 'uppercase',
+            color: '#FFFFFF', opacity: i === ch ? 1 : LABEL_DIM_ALPHA,
+            textShadow: '0 0 2px #16151F, 0 1px 2px #16151F, 0 0 4px rgba(22,21,31,0.6)',
           }}
         >
           {c.text}

@@ -1,14 +1,15 @@
 import React from 'react';
 import {AbsoluteFill, Sequence} from 'remotion';
 import {SUBS} from './subs';
-import {W, H, SAFE, SAFE_W, VERTICAL} from './lib';
+import {W, H, SAFE, SAFE_W, VERTICAL, FONT_INTER} from './lib';
 import {fitSize, textW} from './textfit';
 
 /**
  * 字幕：白 #FFF Noto Sans SC 700 44px、居中 x=W/2、CSS top 637（H−83，墨迹 y644–684；竖版：字幕底边落在安全区下沿 H−SAFE.bottom 之上）、黑描边 4px（16+8+4 方向 text-shadow 环，避免 -webkit-text-stroke 的尖角刺）、
  * 无底框（靠雾底衬托）、进出单帧硬切。条目由 scripts/tts_build.py 从配音词边界生成（每块中文 ≤16 字 / 英文 ≤48 字符）。
  */
-export const SUB_STYLE = {fontSize: 44, weight: 700, top: VERTICAL ? H - SAFE.bottom - 60 : H - 83, color: '#FFFFFF', stroke: 4, strokeColor: '#000000'};
+// LearnLoop: Inter Bold 44 px, white, dark outline #16151F (brandbook / storyboard G0).
+export const SUB_STYLE = {fontSize: 44, weight: 700, top: VERTICAL ? H - SAFE.bottom - 60 : H - 83, color: '#FFFFFF', stroke: 4, strokeColor: '#16151F'};
 export const SUB_MAX_W = SAFE_W; // = W − 2·SAFE.side（横版 1160 = 安全区 x60–1220）；超宽自动缩到 34px 兜底（中文 ≤16 字 / 英文 ≤48 字符本来就装得下）
 const ring = (r: number, k: number, col: string) => Array.from({length: k}, (_, i) => {
   const a = (i / k) * Math.PI * 2;
@@ -22,7 +23,7 @@ export const SubtitleLine: React.FC<{text: string; top?: number; left?: number; 
   // 这是兜底不是设计，tts_build.py 生成时已按安全区宽度打过 ⚠，正确做法是用 | 再切一刀。
   const size = fitSize(text, SUB_MAX_W, SUB_STYLE.fontSize, 34);
   const lh = 1.2;
-  const font: React.CSSProperties = {fontFamily: `'Noto Sans SC', 'PingFang SC', sans-serif`, fontWeight: SUB_STYLE.weight, fontSize: size, lineHeight: lh, color, textShadow: strokeShadow(stroke)};
+  const font: React.CSSProperties = {fontFamily: FONT_INTER, fontWeight: SUB_STYLE.weight, fontSize: size, lineHeight: lh, color, textShadow: strokeShadow(stroke)};
   if (textW(text, size) <= SUB_MAX_W) {
     return <div style={{position: 'absolute', left, top, transform: 'translateX(-50%)', whiteSpace: 'nowrap', ...font}}>{text}</div>;
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {AbsoluteFill, continueRender, delayRender, staticFile} from 'remotion';
+import {AbsoluteFill, cancelRender, continueRender, delayRender, staticFile} from 'remotion';
 import {VIDEO} from '../config';
 
 // 画布与帧号约定：默认 1280×720@30fps（横版）；帧号 N 从 1 起（N = useCurrentFrame() + F0，F0 = 镜头 ShotDef.from）。
@@ -78,21 +78,29 @@ export const SQUEEZE = LANG === 'en' ? 1 : 0.85;
 /** CJK 行盒 ascent 让墨迹比 top 低 3–7px，居中要预扣；拉丁不需要。 */
 export const TEXT_DY = LANG === 'en' ? 0 : -2;
 
+/** LearnLoop type: Inter (OFL, public/fonts/Inter[opsz,wght].ttf), declared with @font-face through staticFile. */
+export const FONT_INTER = `'Inter', 'Helvetica Neue', Arial, sans-serif`;
+const INTER_FACE = `@font-face{font-family:'Inter';src:url('${staticFile('fonts/Inter[opsz,wght].ttf')}') format('truetype');font-weight:100 900;font-style:normal;font-display:block;}`;
+
 /** 在 Main 顶层挂一次；用 delayRender 等字体就绪。 */
 export const Fonts: React.FC = () => {
   const [handle] = React.useState(() => delayRender('fonts'));
   React.useEffect(() => {
-    Promise.all([
+    // Inter is required: a missing face stops the render (no silent fallback to another font).
+    const inter = Promise.all([900, 800, 700].map((w) => document.fonts.load(`${w} 40px 'Inter'`))).then((rs) => {
+      if (rs.some((r) => r.length === 0)) throw new Error('Inter font did not load (public/fonts/Inter[opsz,wght].ttf)');
+    });
+    const template = Promise.all([
       new FontFace('Noto Sans SC', `url(${staticFile('fonts/NotoSansSC.ttf')})`, {weight: '100 900'} as FontFaceDescriptors).load(),
       new FontFace('Exo 2', `url(${staticFile('fonts/Exo2-Italic.ttf')})`, {weight: '100 900', style: 'italic'} as FontFaceDescriptors).load(),
       new FontFace('Audiowide', `url(${staticFile('fonts/Audiowide-Regular.ttf')})`).load(),
       new FontFace('Orbitron', `url(${staticFile('fonts/Orbitron[wght].ttf')})`, {weight: '400 900'} as FontFaceDescriptors).load(),
     ])
-      .then((fs) => {
-        fs.forEach((f) => (document.fonts as unknown as {add: (f: FontFace) => void}).add(f));
-        continueRender(handle);
-      })
-      .catch(() => continueRender(handle));
+      .then((fs) => fs.forEach((f) => (document.fonts as unknown as {add: (f: FontFace) => void}).add(f)))
+      .catch(() => undefined);
+    Promise.all([inter, template])
+      .then(() => continueRender(handle))
+      .catch((e) => cancelRender(e));
   }, [handle]);
-  return null;
+  return <style>{INTER_FACE}</style>;
 };

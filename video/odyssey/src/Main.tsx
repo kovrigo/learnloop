@@ -3,7 +3,7 @@ import {AbsoluteFill, Audio, Sequence, staticFile} from 'remotion';
 import {Fonts, BgTrack, DotFieldBg, FootageTrack, ProgressBar, Subtitles} from './common';
 import type {ShotDef, BgSpec, FootageSpec} from './common';
 import {VIDEO} from './config';
-import {SHOTS_OVERLAY, SHOTS_OVERLAY_TOP, BG_OVERLAY} from './overlay';
+import {SHOTS_OVERLAY, SHOTS_OVERLAY_TOP, BG_OVERLAY, HudLayer} from './overlay';
 import {SHOTS_G1, BG_G1, FOOTAGE_G1} from './shots/G1';
 import {SHOTS_G2, BG_G2, FOOTAGE_G2} from './shots/G2';
 import {SHOTS_G3, BG_G3, FOOTAGE_G3} from './shots/G3';
@@ -20,13 +20,16 @@ export const Stage: React.FC<{shots: ShotDef[]; bg: BgSpec[]; footage?: FootageS
   <AbsoluteFill style={{background: '#000'}}>
     <Fonts />
     {audio ? <Audio src={staticFile(`assets/${VIDEO.slug}/audio.wav`)} /> : null}
-    {VIDEO.bg === 'dots' ? <DotFieldBg specs={bg} /> : <BgTrack specs={bg} />}
+    {/* LearnLoop paper style: config.bg = 'none' turns the template backdrop off; shots paint their own backgrounds. */}
+    {VIDEO.bg === 'none' ? null : VIDEO.bg === 'dots' ? <DotFieldBg specs={bg} /> : <BgTrack specs={bg} />}
     <FootageTrack specs={footage} />
     {shots.filter((s) => s.layer !== 'aboveBar').map((s) => (
       <Sequence key={s.id} from={s.from - 1} durationInFrames={s.to - s.from + 1}>
         <s.Comp />
       </Sequence>
     ))}
+    {/* LearnLoop HUD (LEARNLOOP / chapter tag / source label) above the shots, below the progress bar. */}
+    <HudLayer shots={shots} />
     <ProgressBar />
     {shots.filter((s) => s.layer === 'aboveBar').map((s) => (
       <Sequence key={s.id} from={s.from - 1} durationInFrames={s.to - s.from + 1}>

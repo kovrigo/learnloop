@@ -16,12 +16,14 @@ export const VIDEO = {
    * 幕底：'dots' 点阵波（默认，`common/DotFieldBg.tsx`，video-talkcraft dot-field-wave 移植）｜'stars' 星点 + 雾底渐变（早期样片风格）。
    * 两者互斥；镜头里的 BG_Gn 覆写（`stars:'none'` 关幕底）对两种方案都生效。frame_metrics.py 会按这里的值抠掉幕底再统计。
    */
-  bg: 'dots' as 'stars' | 'dots',
+  // LearnLoop paper-collage style: template backdrop off for the whole video; every shot paints its own flat background + paper grain (src/paper.tsx).
+  bg: 'none' as 'stars' | 'dots' | 'none',
   /**
    * 片头。中文片：big 用 Audiowide 宽体（缩写/英文词），rest 用 Noto 900（中文部分），en 是英文全称，tagline 一句话钩子。
    * 英文片：rest 留空 ''（不显示），big 放主词/缩写，en 放全称或副标，tagline 一句话钩子。
    */
-  title: {big: 'TOPIC', rest: '', en: 'Full Name of the Topic', tagline: '一句话钩子'},
+  // No template title card (cold open G1-01 starts at frame 1). These fields feed the LearnLoop sting strip: "THE ODYSSEY · A TEN-YEAR TRIP HOME".
+  title: {big: 'The Odyssey', rest: '', en: 'A Ten-Year Trip Home', tagline: ''},
   // 中英不要并排等大：big 与 rest 是"宽体缩写 + 中文词"（118 / 96px，字号差要看得出）；两个都是长词时只留一个，另一种语言落到 tagline。
   /** 片尾署名卡（内容压黑 + 末句字幕结束后 ≈2 s，aboveBar；不需要就设为 null）。
    *  例：{kicker: 'BASED ON', title: '<论文 / 书 / 报告标题>', byline: '<作者 · 出处 · 年份>', note: 'all visuals drawn in code'} */
@@ -30,14 +32,15 @@ export const VIDEO = {
   builtBy: '',
   /** 章节英文副标（顺序对应 narration 的 CHAPTER 1..n；章节卡从第 2 章起显示；英文片可留空 '' 不渲染）。
    *  和章名一样是「说清讲什么」的标签，不是第二个创意标题；写这章的英文关键词或步骤序列（`Build · Run · Trace`）。 */
-  chapterTech: ['Chapter One', 'Chapter Two'],
+  chapterTech: ['', '', '', '', ''],
+  /** HUD right: chapter tag per chapter (storyboard G0). Shown from `chapterTagFromS`; swaps inside each chapter card. */
+  chapterTags: ['01 / THE CYCLOPS', '02 / STOPS AT SEA', '03 / HOME IN ITHACA', '04 / THE RETURN', '05 / ODYSSEY TODAY'],
+  chapterTagFromS: 'S04',
   /** 顶部 HUD 胶囊（当前小节名）：按句 id 区间；相邻条目之间自动无空档；跨章节卡自动淡出。下面两条对应模板 narration.txt 的两句，按本片重写。
    *  text 是导航标签：写「这一小节讲什么」的名词短语（`知识库构建` / `混合检索`），不要评价句或比喻（`感觉还行` / `两把尺子` 观众猜不出内容）。
    *  tech 是胶囊下面那行英文副标（灰色 22px 小字，`TechSub`）：只放真正需要露出的英文术语，中文能说清就别加——它是注脚，不是第二个标题。 */
-  hud: [
-    {fromS: 'S01', toS: 'S01', text: '第一节名'},
-    {fromS: 'S02', toS: 'S02', text: '第二节名', tech: 'Optional English'},
-  ] as HudEntry[],
+  // Template capsule HUD is not used: the LearnLoop HUD (LEARNLOOP / chapter tag / source label) lives in src/overlay/Hud.tsx.
+  hud: [] as HudEntry[],
   /** 流程轨（可选，只给真有先后顺序步骤的章；一章最多一条，五步以内）：y118–162，当前步紫、已过灰底、未到灰边；有轨的章内容主区 y175–620。
    *  例：{steps: ['第一步', '第二步', '第三步'], switchS: ['S12', 'S14', 'S16'], fromS: 'S12', toS: 'S18'} */
   rails: [] as RailSpec[],
