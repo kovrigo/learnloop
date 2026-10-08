@@ -1,6 +1,6 @@
 # Раскадровка: «The Odyssey: A Ten-Year Trip Home»
 
-Голос George. Длина с голосом ≈6:57, плюс финальная заставка 15–20 секунд. 34 сцены, по одной на абзац сценария.
+Голос George. Длина с голосом 7:02, плюс финальная заставка 15–20 секунд. 34 сцены, по одной на абзац сценария.
 
 Субтитры на английском, слово в слово с голосом. Блок до 48 знаков, деление — как в сценарии.
 
@@ -16,8 +16,6 @@
 Все музейные картинки — общественное достояние или CC0, с правом на коммерцию. Кадров из фильма нет.
 
 Метки IN HOMER, LATER MYTH, MOVIE ONLY, REAL и FAKE говорят, откуда факт. Вверху слева LEARNLOOP и метка, вверху справа глава.
-
-Время со знаком ≈ — оценка: глава 5 ещё не озвучена до конца.
 
 ## Глава 1. The Cyclops
 
@@ -281,7 +279,7 @@
 
 Перед главой — плашка с названием главы, 1,5 секунды без голоса.
 
-### 28. Слово odyssey · ≈5:28–5:38
+### 28. Слово odyssey · 5:28–5:40
 
 - Звучит: «It moved into our language. A long, hard journey is an odyssey, a meaning English has used since the late 1800s. Stuck between two dangers? You're between Scylla and Charybdis.»
 - Фон: светлая бумага, яркие акценты. Главная картинка: пример.
@@ -290,7 +288,7 @@
   - Словарная карточка: odyssey (n.) — долгий трудный путь, с конца 1800-х.
   - Вторая карточка: between Scylla and Charybdis — между двумя опасностями.
 
-### 29. Перевод Эмили Уилсон · ≈5:39–5:50
+### 29. Перевод Эмили Уилсон · 5:41–5:53
 
 - Звучит: «In 2017, Emily Wilson published the first English translation of the poem by a woman. Her first line: Tell me about a complicated man. The Greek word means, roughly, a man of many turns.»
 - Фон: светлая бумага. Главная картинка: коллаж.
@@ -299,7 +297,7 @@
   - Строка печатается на бумажной странице: «Tell me about a complicated man.»
   - Одиссей-коллаж идёт по извилистой тропе. Подпись «a man of many turns».
 
-### 30. Фильм · ≈5:51–6:06
+### 30. Фильм · 5:54–6:10
 
 - Звучит: «This summer, Christopher Nolan's film took in about 1.77 billion dollars. And by mid-July, before it even opened, US print sales of the poem were up 76 percent year to date. Just know the film skips the Nobody trick, and on screen, Athena is the only god.»
 - Фон: кино: тёмно-синий и золотой. Главная картинка: пример.
@@ -309,7 +307,7 @@
   - Две карточки MOVIE ONLY: «Nobody trick: cut», «Gods on screen: Athena only».
   - Кадров, постеров и трейлера фильма нет.
 
-### 31. Real or fake? · ≈6:07–6:18
+### 31. Real or fake? · 6:11–6:24
 
 - Звучит: «Quick game: real or fake? One: the Trojan Horse is in the Odyssey. Two: Odysseus's dog recognizes him after twenty years. Three: Homer says the Cyclops has one eye in the middle of his forehead.»
 - Фон: игровое шоу: яркий синий. Главная картинка: мем.
@@ -317,7 +315,7 @@
   - Три карточки-утверждения с номерами 1, 2, 3 выезжают по одной.
   - Пауза на ответ, 2 секунды: тикает таймер.
 
-### 32. Ответы · ≈6:21–6:35
+### 32. Ответы · 6:27–6:41
 
 - Звучит: «The fake is number three. Homer only mentions his eye, singular, and never says where it is. The forehead comes from Hesiod, describing different Cyclopes. The horse is real. It's in the Odyssey three times, and never in the Iliad.»
 - Фон: игровое шоу. Главная картинка: мем.
@@ -327,7 +325,7 @@
   - Штамп REAL и метка IN HOMER на карточке 1: музейное блюдо с конём. Конь в «Одиссее» трижды, в «Илиаде» нет.
   - Штамп REAL на карточке 2: гравюра с псом.
 
-### 33. Почему десять лет · ≈6:36–6:45
+### 33. Почему десять лет · 6:42–6:51
 
 - Звучит: «So why did a trip home take ten years? One boast, one angry sea god, and some very long visits. Next time you post where you are, think of Odysseus.»
 - Фон: море: голубой. Главная картинка: коллаж.
@@ -335,7 +333,7 @@
   - Одиссей в лодке. Три бумажки-причины: одно хвастовство, один злой бог моря, долгие визиты.
   - Возвращается карточка «Location shared» из главы 1 — палец её выключает.
 
-### 34. Следующий ролик · ≈6:46–6:54
+### 34. Следующий ролик · 6:52–6:58
 
 - Звучит: «But why was he at Troy in the first place? Blame a golden apple. That's a later myth, and our next video.»
 - Фон: тёмная сцена: золотой. Главная картинка: мем.

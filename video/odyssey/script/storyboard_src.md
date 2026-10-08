@@ -2,7 +2,7 @@
 
 Frames are 1-based and inclusive. `python3 scripts/render_storyboard.py` fills the tokens from `script/timeline.json` into `分镜表.md`. Narration and subtitle blocks: `script/timeline.md`.
 
-Total frames {TOTAL} (30 fps). Chapter starts: C1 {C1} / C2 {C2} / C3 {C3} / C4 {C4}. Chapter 5 has no frames yet: its last 22 sentences are not voiced (task spend cap). Chapter 5 rows name sentence ids in plain text; turn them into tokens after the full voice run. Ids S100 and up never resolve: `render_storyboard.py` matches only two-digit ids (`S\d\d`). Read those frames from `src/common/timeline.ts`.
+Total frames {TOTAL} (30 fps). Chapter starts: C1 {C1} / C2 {C2} / C3 {C3} / C4 {C4} / C5 {C5}. Ids S100 and up never resolve in `render_storyboard.py` (it matches only two-digit ids, `S\d\d`), so G8 writes those frames as numbers taken from `script/timeline.json`.
 
 Style source: `brand/brandbook.md` and the approved frames `brand/examples/V1.png`, `V2.png`, `V3.png`. Approved frame code: `reference/mockups/make_scenes.py` and `make_revised.py` (clip paths, paper bodies, shadow and grain filters).
 
@@ -69,10 +69,10 @@ Museum object photos (all on the verified list in `research/sources/museum-image
 | HUD right: chapter tag | {S04.from}–{TOTAL} | "01 / THE CYCLOPS", "02 / STOPS AT SEA", "03 / HOME IN ITHACA", "04 / THE RETURN", "05 / ODYSSEY TODAY". Right-aligned at x 1238, baseline y 47, Inter Black 18 px. Changes inside each chapter card. Hidden during the cold open and the sting. |
 | Source label | per shot (Source column) | Second HUD line: x 42, baseline y 78, Inter Black 16 px, caps, spacing 2, cream #FFFDF3. Fades in 8 frames after the shot's first beat, out with the shot. Format "IN HOMER / BOOK 9". |
 | LearnLoop sting | {S03.to+3}–{S04.from-9} | Map background stays. Paper letters L-E-A-R-N-L-O-O-P slap in one by one (3 frames apart). A yellow loop arrow runs once around the word. Cream strip below: "THE ODYSSEY · A TEN-YEAR TRIP HOME". Last 10 frames: the whole sheet slides up as the next background slides in. No voice. |
-| Chapter cards ×4 | {S26.to+3}–{S27.from-9} / {S53.to+3}–{S54.from-9} / {S68.to+3}–{S69.from-9} / S90.to+3 – S91.from−9 | A new background sheet wipes in. Big paper tag with "02" and the chapter name, Inter Black. The chapter tag in the HUD swaps here. Chapter 5 card adds a small "THE LOOP" tag. |
+| Chapter cards ×4 | {S26.to+3}–{S27.from-9} / {S53.to+3}–{S54.from-9} / {S68.to+3}–{S69.from-9} / {S90.to+3}–{S91.from-9} | A new background sheet wipes in. Big paper tag with "02" and the chapter name, Inter Black. The chapter tag in the HUD swaps here. Chapter 5 card adds a small "THE LOOP" tag. |
 | Subtitles | from `subs.ts` | Inter Bold 44 px, white, dark outline #16151F, centred, CSS top 637. Replaces Noto Sans SC. |
 | Progress bar | 1–{TOTAL} | y 687–720. Played part cream #FAF7EE at 70%, unplayed #16151F at 25%, white dividers. Chapter names Inter Black 18 px caps, current chapter α 1, others .55. |
-| End screen | after S114 | Delivery stage. 15–20 s, no voice. Paper background with space for YouTube end-screen elements; Odysseus waves from his boat. |
+| End screen | after 12550 | Delivery stage. 15–20 s, no voice. Paper background with space for YouTube end-screen elements; Odysseus waves from his boat. |
 
 ## G1（cold open and opening, pilot, first 30 s: SC01–SC03）
 
@@ -132,30 +132,32 @@ Museum object photos (all on the verified list in `research/sources/museum-image
 | SC27 | {S83.from-8}–{S88.from-9} | {S83.c1} {S83.c2} {S84.c1} {S85.c1} {S85.c2} {S86.c1} {S87.c1} | Warm sand bedroom. Penelope points the maid to the bed. Security-question card "WHAT IS OUR BED MADE OF?" with answer "AN OLIVE TREE, STILL ROOTED". Drawn bed: one post is a living olive trunk with roots. Tag "OUT-TRICKED". | {S83.c2}: card slaps. {S84.c1}: Odysseus's head snaps toward the card. {S85.c1}: bed slides up, roots grow down. {S86.c1}: answer ticks green-cream. {S87.c1}: tag slaps by Penelope. Hold ≥30. | bed ≥360 px | IN HOMER / BOOK 23 |
 | SC28 | {S88.from-8}–{S90.to+2} | {S88.c1} {S88.c2} {S89.c1} {S90.c1}⚠ | Pale gold sky. Met 254648 Athena-with-owl statuette between two crowds of figures; weapons lower. A paper book closes; a yellow loop arrow runs over the cover. | {S88.c2}: statuette slaps, crowds lower weapons. {S89.c1}: book closes. {S90.c1} pre-hang: loop arrow starts at {S89.c1}+15 and keeps running (承接 into chapter 5). Hold ≥30. | statuette ≥380 px | IN HOMER / BOOK 24 |
 
-## G7（chapter 5, The Loop, frames after the full voice run: SC29–SC31）
+## G7（chapter 5, The Loop: SC29–SC31）
 
-| Shot | Sentences | Picture | Motion | Main subject · size | Source |
-|---|---|---|---|---|---|
-| SC29 | S91–S93 | Paper #EFE8DA. "THE LOOP" tag. Dictionary card "ODYSSEY (N.) a long, hard journey · since the late 1800s". Second card "BETWEEN SCYLLA AND CHARYBDIS". | Loop arrow from SC28 becomes the card border (承接). Cards slap on their beats. | card ≥300 px | none |
-| SC30 | S94–S96 | Paper. Tag "2017 · FIRST ENGLISH TRANSLATION BY A WOMAN". A page types "Tell me about a complicated man." Odysseus walks a winding dotted path, tag "A MAN OF MANY TURNS". No portrait of Emily Wilson, no book cover. | Typing on S95; walking path draws on S96. | page text ≥60 px; Odysseus ≥300 px | none |
-| SC31 | S97–S99 | Navy and gold. Our ticket counter rolls to "$1.77 BILLION". Bookstore receipt "+76%". Two MOVIE ONLY cards: "NOBODY TRICK: CUT", "GODS ON SCREEN: ATHENA ONLY". No film frames, posters or logos. | Counter on S97, receipt prints on S98, cards slap on S99. | counter word ≥96 px | MOVIE ONLY |
+| Shot | Frames | Beats | Picture | Motion | Main subject · size | Source |
+|---|---|---|---|---|---|---|
+| SC29 | {S91.from-8}–{S94.from-9} | {S91.c1} {S92.c1} {S92.c2} {S93.c1} {S93.c2} | The Loop paper #EFE8DA, ink #263C54. "THE LOOP" tag top left of the content area. Dictionary card "ODYSSEY (N.) · a long, hard journey · since the late 1800s". Second card "BETWEEN SCYLLA AND CHARYBDIS · stuck between two dangers", with two tiny cut-outs from the chapter 2 strait. | {S91.c1}: the loop arrow from SC28 runs once and becomes the first card's border (承接); "THE LOOP" tag slaps. {S92.c1}: card slaps. {S92.c2}: "since the late 1800s" line types in. {S93.c1}: second card slides in from the right, first card shifts left (整组平移, 36 frames). {S93.c2}: the two cut-outs slap on it. Continuous: loop arrow keeps circling slowly. Hold ≥30. | card ≥300 px | none |
+| SC30 | {S94.from-8}–{S97.from-9} | {S94.c1} {S94.c2} {S94.c3} {S95.c1} {S96.c1} {S96.c2}⚠ | Paper. Tag "2017". Tag "FIRST ENGLISH TRANSLATION BY A WOMAN". A paper page types "Tell me about a complicated man." Odysseus walks a winding dotted path; tag "A MAN OF MANY TURNS". No portrait of Emily Wilson, no book cover. | {S94.c1}: "2017" slaps. {S94.c2}–{S94.c3}: second tag slaps on {S94.c3}. {S95.c1}: page slides up, line types 2 frames per character. {S96.c1}: camera pans down to the path (36 frames); Odysseus starts walking, path draws ahead of him. {S96.c2} pre-hang: tag slaps at {S96.c1}+20. Hold ≥30. | page line ≥60 px; Odysseus ≥300 px | none |
+| SC31 | {S97.from-8}–11132 | {S97.c1} {S97.c2} {S98.c1} {S98.c2} {S98.c3} {S99.c1} {S99.c2} | Navy #2F3E5C and gold. Our ticket counter "BOX OFFICE" rolls to "$1.77 BILLION". Bookstore receipt "PRINT SALES, US, YEAR TO DATE · +76%". Two MOVIE ONLY cards: "NOBODY TRICK: CUT", "GODS ON SCREEN: ATHENA ONLY". No film frames, posters, titles in film lettering or logos. | {S97.c2}: counter slaps and rolls. {S98.c1}: receipt starts printing out of a slot. {S98.c3}: "+76%" lands on the receipt. {S99.c1}: first MOVIE ONLY card slaps. {S99.c2}: second card slaps. Camera: slow push 1.0 → 1.06 from {S97.c1} to {S98.c3}. Hold ≥30. | counter word ≥96 px | MOVIE ONLY |
 
 ## G8（chapter 5, game and ending: SC32–SC35）
 
-| Shot | Sentences | Picture | Motion | Main subject · size | Source |
-|---|---|---|---|---|---|
-| SC32 | S100–S103 + 60-frame pause | Game-show blue. Title "REAL OR FAKE?". Three statement cards 1, 2, 3. A paper timer ticks through the pause. Highlight moment of chapter 5. | Cards slide in on S101–S103. Timer runs through the gap. | title ≥96 px | none |
-| SC33 | S104–S108 | Same set. FAKE stamp on card 3: the Cyclops figure's eye slides up to the forehead and back. Tag "HESIOD · OTHER CYCLOPES". REAL stamp and IN HOMER on card 1 with the Met 202259 horse plate. REAL stamp on card 2 with the Flaxman Argos print. | Stamps hit on their beats (scale 1.3 → 1, 5 frames). | stamps ≥180 px | IN HOMER / BOOKS 4, 8, 11 |
-| SC34 | S109–S111 | Sea. Odysseus in his boat. Three tags: "ONE BOAST", "ONE ANGRY SEA GOD", "VERY LONG VISITS". The V2 location card returns; a finger switches it off. | Tags slap on S110 blocks. Card on S111. | Odysseus ≥330 px | none |
-| SC35 | S112–S114 | Dark stage with gold. Card "NEXT EPISODE: WHY WAS HE AT TROY?". A paper golden apple rolls in. LATER MYTH label. | Apple rolls on S113; label on S114. | apple ≥200 px | LATER MYTH |
+Frames for S100 and up are written as numbers: `render_storyboard.py` cannot resolve three-digit ids. They come from `script/timeline.json`.
+
+| Shot | Frames | Beats | Picture | Motion | Main subject · size | Source |
+|---|---|---|---|---|---|---|
+| SC32 | 11133–11601 | 11141 / 11201 / 11283 11361 / 11406 11482⚠; pause 11520–11609 | Game-show blue #2F6E8E with a paper spotlight. Title "REAL OR FAKE?". Three statement cards 1, 2, 3, each with a small picture: horse plate, Argos print, Cyclops figure. A paper timer ring. Highlight moment of chapter 5. | 11141: title slaps, spotlight sweeps once (no light sweep effect: a cream paper cone). 11201: card 1 slides in. 11283: card 2. 11406: card 3. 11482 pre-hang: card 3's picture already in at 11420. Pause 11520–11609: timer ring empties over 75 frames, then holds. Hold ≥30 before the exit. | title ≥96 px | none |
+| SC33 | 11602–12055 | 11610 / 11662 11732 / 11788 11839 / 11900 / 11946 11997⚠ | Same set (承接 from SC32, no clear). FAKE stamp on card 3: the Cyclops figure's eye slides up to the forehead, then back. Tag "HESIOD · OTHER CYCLOPES". REAL stamp and an IN HOMER tag on card 1. REAL stamp on card 2. | 11610: FAKE stamp hits card 3 (scale 1.3 → 1, 5 frames). 11662: card 3 grows to centre; eye band pulse. 11732: eye slides up and back. 11788: Hesiod tag slaps. 11900: card 3 shrinks back; REAL hits card 1. 11946: "IN HOMER ×3" tag on card 1. 11997 pre-hang: REAL hits card 2 at 11960. Hold ≥30. | stamps ≥180 px | IN HOMER / BOOKS 4, 8, 11 |
+| SC34 | 12056–12354 | 12064 / 12141 12196 / 12250 12301⚠ | Sea palette (V2), Odysseus in his boat (callback to SC01). Three tags: "ONE BOAST", "ONE ANGRY SEA GOD", "VERY LONG VISITS". The location card from SC08 returns; a paper finger switches it to "LOCATION SHARING: OFF". | 12064: boat slides in, head turns to camera. 12141: "ONE BOAST", "ONE ANGRY SEA GOD" slap 20 frames apart. 12196: "VERY LONG VISITS". 12250: location card slaps. 12301 pre-hang: the switch flips at 12270. Camera: parallax slide. Hold ≥30. | Odysseus ≥330 px | none |
+| SC35 | 12355–12550 | 12363 / 12436 / 12485 | Dark stage navy with gold. Card "NEXT EPISODE: WHY WAS HE AT TROY?". A paper golden apple rolls in from the left and stops at the card. LATER MYTH tag on the apple. | 12363: card slaps. 12436: apple rolls in (rotation follows distance). 12485: LATER MYTH tag slaps. Hold to 12542, then a paper wipe to the end screen. | apple ≥200 px | LATER MYTH |
 
 ## Global constraints
 
-Fact list — on-screen numbers and English allowed (each has a source in `script/script.md`): 10 YEARS, 3 DAYS (our joke ETA), 7 YEARS, 1 YEAR, 108, ~2,700 YEARS, 10 YEARS OF WAR, 12 SHIPS, 6, DAY 9, 12 → 1, 350 COWS, DAY 2,555, 3 YEARS LATER, YEAR 20 OF 20, 12 axes, 2017, $1.77 BILLION, +76%, ODYSSEUS / SON OF LAERTES / ITHACA, A DUET NOT A CHOIR, 6 HEADS, DRAINS 3× A DAY. Example cards (ETA, booking, chat, review, poll, navigator, receipt, ticket) are generic: no app names, logos or brand colours.
+Fact list — on-screen numbers and English allowed (each has a source in `script/script.md`): 10 YEARS, 3 DAYS (our joke ETA), 7 YEARS, 1 YEAR, 108, ~2,700 YEARS, 10 YEARS OF WAR, 12 SHIPS, 6, DAY 9, 12 → 1, 350 COWS, DAY 2,555, 3 YEARS LATER, YEAR 20 OF 20, 12 axes, 2017, $1.77 BILLION, +76%, ODYSSEUS / SON OF LAERTES / ITHACA, A DUET NOT A CHOIR, 6 HEADS, DRAINS 3× A DAY, BOX OFFICE, PRINT SALES, US, YEAR TO DATE, IN HOMER ×3, LOCATION SHARING: OFF (our joke). Example cards (ETA, booking, chat, review, poll, navigator, receipt, ticket) are generic: no app names, logos or brand colours.
 
 Highlight moments (one per chapter): SC06 NOBODY two-shot; SC14 Sirens; SC20 day/night weave; SC26 arrow through 12 axes; SC32 REAL OR FAKE.
 
-Camera moves (≥3 per chapter): ch1 SC01 two pans, SC02 slow push, SC03 parallax, SC04 push, SC06 push, SC08 follow pan, SC09 pull-back. Ch2 SC10 parallax, SC14 push, SC17 pan. Ch3 SC18 slide, plus push-ins in SC20 and SC21. Ch4 SC23 wipe, SC26 arrow follow, SC27 push. Ch5 to set with the frames.
+Camera moves (≥3 per chapter): ch1 SC01 two pans, SC02 slow push, SC03 parallax, SC04 push, SC06 push, SC08 follow pan, SC09 pull-back. Ch2 SC10 parallax, SC14 push, SC17 pan. Ch3 SC18 slide, plus push-ins in SC20 and SC21. Ch4 SC23 wipe, SC26 arrow follow, SC27 push. Ch5 SC29 group slide, SC30 pan down, SC31 slow push, SC34 parallax.
 
 Chapter seams:
 
@@ -164,7 +166,7 @@ Chapter seams:
 - 3 → 4: "out of ships" batteries → Calypso again in SC23, now with the gods' order.
 - 4 → 5: the loop arrow over the closed book in SC28 → the loop-arrow card border in SC29.
 
-Short last block (⚠, pre-hang the last element on the previous block): S03 33, S09 23, S11 39, S15 35, S22 34, S26 38, S32 31, S35 30, S40 42, S62 31, S74 31, S90 31 frames.
+Short last block (⚠, pre-hang the last element on the previous block): S03 33, S09 23, S11 39, S15 35, S22 34, S26 38, S32 31, S35 30, S40 42, S62 31, S74 31, S90 31, S96 41, S103 38, S108 37, S111 32 frames.
 
 Continuous motion and hold: no element fully still for more than 3 s; never add idle float or breathing; last beat landed → exit start 30–45 frames; no camera move in the last beat. Groups self-check with `python3 scripts/motion_check.py <Gn> --exit-tail 8`: shots leave by paper wipe, which keeps the brightness, so the exit is the last 8 frames of each shot.
 
