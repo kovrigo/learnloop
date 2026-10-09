@@ -21,7 +21,7 @@ const B = {s01a: 86, s01b: 139, s02a: 186, s02b: 252, s02c: 314, s03a: 365, s03b
 const PAN1 = {a: B.s02a, len: 40};
 const PAN2 = {a: B.s03a - 6, len: 36};
 const ST_B = {x: 1280, y: 0};
-const ST_C = {x: 2560, y: 300};
+const ST_C = {x: 2560, y: -300}; // up-right of (b): during pan 2 everything moves down-left, so nothing passes under the top-left HUD
 const EXIT = 478; // counter lands 433 → 45 frames hold
 
 // ---- station (a): chart print and route, chart-local coordinates (image 485×470 at screen 118,116, rotated −2.5°)
