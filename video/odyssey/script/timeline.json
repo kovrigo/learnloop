@@ -1,9 +1,16 @@
 {
  "fps": 30,
- "total_frames": 12649,
+ "total_frames": 12643,
  "engine": "elevenlabs",
  "voice": "JBFqnCBsd6RMkjVDRZzb",
  "rate": "eleven_multilingual_v2",
+ "voice_settings": {
+  "similarity_boost": 0.75,
+  "speed": 1.08,
+  "stability": 0.35,
+  "style": 0.35,
+  "use_speaker_boost": true
+ },
  "gap": 10,
  "para_gap": 20,
  "chapter_gap": 45,
@@ -19,22 +26,22 @@
   {
    "n": 2,
    "title": "Stops at Sea",
-   "from": 3167
+   "from": 3244
   },
   {
    "n": 3,
    "title": "Home in Ithaca",
-   "from": 5768
+   "from": 5807
   },
   {
    "n": 4,
    "title": "The Return",
-   "from": 7565
+   "from": 7532
   },
   {
    "n": 5,
    "title": "Odyssey Today",
-   "from": 9849
+   "from": 9760
   }
  ],
  "sentences": [
@@ -48,11 +55,11 @@
    "subs": [
     {
      "from": 86,
-     "to": 137,
+     "to": 138,
      "text": "The most famous trip home in history"
     },
     {
-     "from": 138,
+     "from": 139,
      "to": 175,
      "text": "took about ten years."
     }
@@ -62,23 +69,23 @@
    "id": "S02",
    "chapter": 1,
    "from": 186,
-   "to": 366,
+   "to": 354,
    "text": "He spent eight of them as a houseguest: seven years with the nymph Calypso, one with the witch Circe.",
    "para": false,
    "subs": [
     {
      "from": 186,
-     "to": 257,
+     "to": 251,
      "text": "He spent eight of them as a houseguest:"
     },
     {
-     "from": 258,
-     "to": 322,
+     "from": 252,
+     "to": 313,
      "text": "seven years with the nymph Calypso,"
     },
     {
-     "from": 323,
-     "to": 366,
+     "from": 314,
+     "to": 354,
      "text": "one with the witch Circe."
     }
    ]
@@ -86,24 +93,24 @@
   {
    "id": "S03",
    "chapter": 1,
-   "from": 377,
-   "to": 497,
+   "from": 365,
+   "to": 485,
    "text": "And when he finally got home, a hundred and eight houseguests were eating his food.",
    "para": true,
    "subs": [
     {
-     "from": 377,
-     "to": 422,
+     "from": 365,
+     "to": 410,
      "text": "And when he finally got home,"
     },
     {
-     "from": 423,
-     "to": 464,
+     "from": 411,
+     "to": 452,
      "text": "a hundred and eight houseguests"
     },
     {
-     "from": 465,
-     "to": 497,
+     "from": 453,
+     "to": 485,
      "text": "were eating his food."
     }
    ]
@@ -111,630 +118,635 @@
   {
    "id": "S04",
    "chapter": 1,
-   "from": 618,
-   "to": 731,
-   "text": "This is Homer's Odyssey, a poem about 2,700 years old.",
-   "para": false,
+   "from": 606,
+   "to": 724,
+   "text": "Hi, and welcome to LearnLoop, where old stories loop back to your life.",
+   "para": true,
    "subs": [
     {
-     "from": 618,
+     "from": 606,
      "to": 659,
-     "text": "This is Homer's Odyssey,"
+     "text": "Hi, and welcome to LearnLoop,"
     },
     {
      "from": 660,
-     "to": 731,
-     "text": "a poem about 2,700 years old."
+     "to": 724,
+     "text": "where old stories loop back to your life."
     }
    ]
   },
   {
    "id": "S05",
    "chapter": 1,
-   "from": 742,
-   "to": 819,
-   "text": "Troy has just fallen after ten years of war.",
+   "from": 755,
+   "to": 868,
+   "text": "This is Homer's Odyssey, a poem about 2,700 years old.",
    "para": false,
    "subs": [
     {
-     "from": 742,
-     "to": 819,
-     "text": "Troy has just fallen after ten years of war."
+     "from": 755,
+     "to": 796,
+     "text": "This is Homer's Odyssey,"
+    },
+    {
+     "from": 797,
+     "to": 868,
+     "text": "a poem about 2,700 years old."
     }
    ]
   },
   {
    "id": "S06",
    "chapter": 1,
-   "from": 830,
-   "to": 963,
-   "text": "Odysseus, king of the island of Ithaca, sets sail for home with twelve ships.",
-   "para": true,
+   "from": 879,
+   "to": 952,
+   "text": "Troy has just fallen after ten years of war.",
+   "para": false,
    "subs": [
     {
-     "from": 830,
-     "to": 902,
-     "text": "Odysseus, king of the island of Ithaca,"
-    },
-    {
-     "from": 903,
-     "to": 963,
-     "text": "sets sail for home with twelve ships."
+     "from": 879,
+     "to": 952,
+     "text": "Troy has just fallen after ten years of war."
     }
    ]
   },
   {
    "id": "S07",
    "chapter": 1,
-   "from": 994,
-   "to": 1126,
-   "text": "Waiting at home are his wife, Penelope, and a son who was a baby when he left.",
-   "para": false,
+   "from": 963,
+   "to": 1088,
+   "text": "Odysseus, king of the island of Ithaca, sets sail for home with twelve ships.",
+   "para": true,
    "subs": [
     {
-     "from": 994,
-     "to": 1063,
-     "text": "Waiting at home are his wife, Penelope,"
+     "from": 963,
+     "to": 1026,
+     "text": "Odysseus, king of the island of Ithaca,"
     },
     {
-     "from": 1064,
-     "to": 1126,
-     "text": "and a son who was a baby when he left."
+     "from": 1027,
+     "to": 1088,
+     "text": "sets sail for home with twelve ships."
     }
    ]
   },
   {
    "id": "S08",
    "chapter": 1,
-   "from": 1137,
-   "to": 1176,
-   "text": "It should be a quick trip.",
+   "from": 1119,
+   "to": 1241,
+   "text": "Waiting at home are his wife, Penelope, and a son who was a baby when he left.",
    "para": false,
    "subs": [
     {
-     "from": 1137,
-     "to": 1176,
-     "text": "It should be a quick trip."
+     "from": 1119,
+     "to": 1182,
+     "text": "Waiting at home are his wife, Penelope,"
+    },
+    {
+     "from": 1183,
+     "to": 1241,
+     "text": "and a son who was a baby when he left."
     }
    ]
   },
   {
    "id": "S09",
    "chapter": 1,
-   "from": 1187,
-   "to": 1209,
-   "text": "It is not.",
-   "para": true,
+   "from": 1252,
+   "to": 1291,
+   "text": "It should be a quick trip.",
+   "para": false,
    "subs": [
     {
-     "from": 1187,
-     "to": 1209,
-     "text": "It is not."
+     "from": 1252,
+     "to": 1291,
+     "text": "It should be a quick trip."
     }
    ]
   },
   {
    "id": "S10",
    "chapter": 1,
-   "from": 1240,
-   "to": 1373,
-   "text": "The monsters come from one dinner party, where Odysseus tells the story himself.",
-   "para": false,
+   "from": 1302,
+   "to": 1323,
+   "text": "It is not.",
+   "para": true,
    "subs": [
     {
-     "from": 1240,
-     "to": 1306,
-     "text": "The monsters come from one dinner party,"
-    },
-    {
-     "from": 1307,
-     "to": 1373,
-     "text": "where Odysseus tells the story himself."
+     "from": 1302,
+     "to": 1323,
+     "text": "It is not."
     }
    ]
   },
   {
    "id": "S11",
    "chapter": 1,
-   "from": 1384,
-   "to": 1422,
-   "text": "So this is his version.",
-   "para": true,
+   "from": 1354,
+   "to": 1489,
+   "text": "The monsters come from one dinner party, where Odysseus tells the story himself.",
+   "para": false,
    "subs": [
     {
-     "from": 1384,
-     "to": 1422,
-     "text": "So this is his version."
+     "from": 1354,
+     "to": 1419,
+     "text": "The monsters come from one dinner party,"
+    },
+    {
+     "from": 1420,
+     "to": 1489,
+     "text": "where Odysseus tells the story himself."
     }
    ]
   },
   {
    "id": "S12",
    "chapter": 1,
-   "from": 1453,
-   "to": 1584,
-   "text": "Early on, his men walk into the cave of a giant Cyclops called Polyphemus.",
-   "para": false,
+   "from": 1500,
+   "to": 1537,
+   "text": "So this is his version.",
+   "para": true,
    "subs": [
     {
-     "from": 1453,
-     "to": 1514,
-     "text": "Early on, his men walk into the cave"
-    },
-    {
-     "from": 1515,
-     "to": 1584,
-     "text": "of a giant Cyclops called Polyphemus."
+     "from": 1500,
+     "to": 1537,
+     "text": "So this is his version."
     }
    ]
   },
   {
    "id": "S13",
    "chapter": 1,
-   "from": 1595,
-   "to": 1687,
-   "text": "He traps them inside and eats six of the crew, two at a time.",
+   "from": 1568,
+   "to": 1696,
+   "text": "Early on, his men walk into the cave of a giant Cyclops called Polyphemus.",
    "para": false,
    "subs": [
     {
-     "from": 1595,
+     "from": 1568,
      "to": 1627,
-     "text": "He traps them inside"
+     "text": "Early on, his men walk into the cave"
     },
     {
      "from": 1628,
-     "to": 1687,
-     "text": "and eats six of the crew, two at a time."
+     "to": 1696,
+     "text": "of a giant Cyclops called Polyphemus."
     }
    ]
   },
   {
    "id": "S14",
    "chapter": 1,
-   "from": 1698,
-   "to": 1772,
-   "text": "Odysseus tells the giant his name is Nobody.",
+   "from": 1707,
+   "to": 1807,
+   "text": "He traps them inside and eats six of the crew, two at a time.",
    "para": false,
    "subs": [
     {
-     "from": 1698,
-     "to": 1772,
-     "text": "Odysseus tells the giant his name is Nobody."
+     "from": 1707,
+     "to": 1741,
+     "text": "He traps them inside"
+    },
+    {
+     "from": 1742,
+     "to": 1807,
+     "text": "and eats six of the crew, two at a time."
     }
    ]
   },
   {
    "id": "S15",
    "chapter": 1,
-   "from": 1783,
-   "to": 1915,
-   "text": "That night, while the giant sleeps, they blind him with a stake hardened in the fire.",
-   "para": true,
+   "from": 1818,
+   "to": 1892,
+   "text": "Odysseus tells the giant his name is Nobody.",
+   "para": false,
    "subs": [
     {
-     "from": 1783,
-     "to": 1839,
-     "text": "That night, while the giant sleeps,"
-    },
-    {
-     "from": 1840,
-     "to": 1880,
-     "text": "they blind him with a stake"
-    },
-    {
-     "from": 1881,
-     "to": 1915,
-     "text": "hardened in the fire."
+     "from": 1818,
+     "to": 1892,
+     "text": "Odysseus tells the giant his name is Nobody."
     }
    ]
   },
   {
    "id": "S16",
    "chapter": 1,
-   "from": 1946,
-   "to": 2045,
-   "text": "He screams for help, and his neighbors ask who is hurting him.",
-   "para": false,
+   "from": 1903,
+   "to": 2033,
+   "text": "That night, while the giant sleeps, they blind him with a stake hardened in the fire.",
+   "para": true,
    "subs": [
     {
-     "from": 1946,
-     "to": 1983,
-     "text": "He screams for help,"
+     "from": 1903,
+     "to": 1961,
+     "text": "That night, while the giant sleeps,"
     },
     {
-     "from": 1984,
-     "to": 2045,
-     "text": "and his neighbors ask who is hurting him."
+     "from": 1962,
+     "to": 2000,
+     "text": "they blind him with a stake"
+    },
+    {
+     "from": 2001,
+     "to": 2033,
+     "text": "hardened in the fire."
     }
    ]
   },
   {
    "id": "S17",
    "chapter": 1,
-   "from": 2056,
-   "to": 2090,
-   "text": "Nobody, he shouts.",
+   "from": 2064,
+   "to": 2160,
+   "text": "He screams for help, and his neighbors ask who is hurting him.",
    "para": false,
    "subs": [
     {
-     "from": 2056,
-     "to": 2090,
-     "text": "Nobody, he shouts."
+     "from": 2064,
+     "to": 2099,
+     "text": "He screams for help,"
+    },
+    {
+     "from": 2100,
+     "to": 2160,
+     "text": "and his neighbors ask who is hurting him."
     }
    ]
   },
   {
    "id": "S18",
    "chapter": 1,
-   "from": 2101,
-   "to": 2146,
-   "text": "So they shrug and go home.",
+   "from": 2171,
+   "to": 2204,
+   "text": "Nobody, he shouts.",
    "para": false,
    "subs": [
     {
-     "from": 2101,
-     "to": 2146,
-     "text": "So they shrug and go home."
+     "from": 2171,
+     "to": 2204,
+     "text": "Nobody, he shouts."
     }
    ]
   },
   {
    "id": "S19",
    "chapter": 1,
-   "from": 2157,
-   "to": 2246,
-   "text": "At dawn, the men escape under the bellies of his rams.",
-   "para": true,
+   "from": 2215,
+   "to": 2259,
+   "text": "So they shrug and go home.",
+   "para": false,
    "subs": [
     {
-     "from": 2157,
-     "to": 2199,
-     "text": "At dawn, the men escape"
-    },
-    {
-     "from": 2200,
-     "to": 2246,
-     "text": "under the bellies of his rams."
+     "from": 2215,
+     "to": 2259,
+     "text": "So they shrug and go home."
     }
    ]
   },
   {
    "id": "S20",
    "chapter": 1,
-   "from": 2277,
-   "to": 2357,
-   "text": "A perfect escape, until Odysseus ruins it.",
-   "para": false,
+   "from": 2270,
+   "to": 2354,
+   "text": "At dawn, the men escape under the bellies of his rams.",
+   "para": true,
    "subs": [
     {
-     "from": 2277,
-     "to": 2357,
-     "text": "A perfect escape, until Odysseus ruins it."
+     "from": 2270,
+     "to": 2310,
+     "text": "At dawn, the men escape"
+    },
+    {
+     "from": 2311,
+     "to": 2354,
+     "text": "under the bellies of his rams."
     }
    ]
   },
   {
    "id": "S21",
    "chapter": 1,
-   "from": 2368,
-   "to": 2497,
-   "text": "From his ship, he shouts his real name, his father's name, and his home island.",
+   "from": 2385,
+   "to": 2456,
+   "text": "A perfect escape, until Odysseus ruins it.",
    "para": false,
    "subs": [
     {
-     "from": 2368,
-     "to": 2433,
-     "text": "From his ship, he shouts his real name,"
-    },
-    {
-     "from": 2434,
-     "to": 2463,
-     "text": "his father's name,"
-    },
-    {
-     "from": 2464,
-     "to": 2497,
-     "text": "and his home island."
+     "from": 2385,
+     "to": 2456,
+     "text": "A perfect escape, until Odysseus ruins it."
     }
    ]
   },
   {
    "id": "S22",
    "chapter": 1,
-   "from": 2508,
-   "to": 2613,
-   "text": "History's first case of sharing your location with the wrong person.",
-   "para": true,
+   "from": 2467,
+   "to": 2589,
+   "text": "From his ship, he shouts his real name, his father's name, and his home island.",
+   "para": false,
    "subs": [
     {
-     "from": 2508,
-     "to": 2579,
-     "text": "History's first case of sharing your location"
+     "from": 2467,
+     "to": 2528,
+     "text": "From his ship, he shouts his real name,"
     },
     {
-     "from": 2580,
-     "to": 2613,
-     "text": "with the wrong person."
+     "from": 2529,
+     "to": 2555,
+     "text": "his father's name,"
+    },
+    {
+     "from": 2556,
+     "to": 2589,
+     "text": "and his home island."
     }
    ]
   },
   {
    "id": "S23",
    "chapter": 1,
-   "from": 2644,
-   "to": 2735,
-   "text": "The Cyclops is a son of Poseidon, god of the sea.",
-   "para": false,
+   "from": 2600,
+   "to": 2702,
+   "text": "History's first case of sharing your location with the wrong person.",
+   "para": true,
    "subs": [
     {
-     "from": 2644,
-     "to": 2706,
-     "text": "The Cyclops is a son of Poseidon,"
+     "from": 2600,
+     "to": 2669,
+     "text": "History's first case of sharing your location"
     },
     {
-     "from": 2707,
-     "to": 2735,
-     "text": "god of the sea."
+     "from": 2670,
+     "to": 2702,
+     "text": "with the wrong person."
     }
    ]
   },
   {
    "id": "S24",
    "chapter": 1,
-   "from": 2746,
-   "to": 2898,
-   "text": "He prays to his father: let Odysseus get home late, alone, on someone else's ship.",
+   "from": 2733,
+   "to": 2822,
+   "text": "The Cyclops is a son of Poseidon, god of the sea.",
    "para": false,
    "subs": [
     {
-     "from": 2746,
-     "to": 2792,
-     "text": "He prays to his father:"
+     "from": 2733,
+     "to": 2793,
+     "text": "The Cyclops is a son of Poseidon,"
     },
     {
-     "from": 2793,
-     "to": 2859,
-     "text": "let Odysseus get home late, alone,"
-    },
-    {
-     "from": 2860,
-     "to": 2898,
-     "text": "on someone else's ship."
+     "from": 2794,
+     "to": 2822,
+     "text": "god of the sea."
     }
    ]
   },
   {
    "id": "S25",
    "chapter": 1,
-   "from": 2909,
-   "to": 3012,
-   "text": "Poseidon won't kill Odysseus, but he'll keep him away from home.",
+   "from": 2833,
+   "to": 2980,
+   "text": "He prays to his father: let Odysseus get home late, alone, on someone else's ship.",
    "para": false,
    "subs": [
     {
-     "from": 2909,
-     "to": 2962,
-     "text": "Poseidon won't kill Odysseus,"
+     "from": 2833,
+     "to": 2873,
+     "text": "He prays to his father:"
     },
     {
-     "from": 2963,
-     "to": 3012,
-     "text": "but he'll keep him away from home."
+     "from": 2874,
+     "to": 2941,
+     "text": "let Odysseus get home late, alone,"
+    },
+    {
+     "from": 2942,
+     "to": 2980,
+     "text": "on someone else's ship."
     }
    ]
   },
   {
    "id": "S26",
    "chapter": 1,
-   "from": 3023,
-   "to": 3111,
-   "text": "And between here and Ithaca, there is a lot of sea.",
-   "para": true,
+   "from": 2991,
+   "to": 3092,
+   "text": "Poseidon won't kill Odysseus, but he'll keep him away from home.",
+   "para": false,
    "subs": [
     {
-     "from": 3023,
-     "to": 3073,
-     "text": "And between here and Ithaca,"
+     "from": 2991,
+     "to": 3044,
+     "text": "Poseidon won't kill Odysseus,"
     },
     {
-     "from": 3074,
-     "to": 3111,
-     "text": "there is a lot of sea."
+     "from": 3045,
+     "to": 3092,
+     "text": "but he'll keep him away from home."
     }
    ]
   },
   {
    "id": "S27",
-   "chapter": 2,
-   "from": 3167,
-   "to": 3236,
-   "text": "From here on, every stop goes wrong.",
-   "para": false,
+   "chapter": 1,
+   "from": 3103,
+   "to": 3188,
+   "text": "And between here and Ithaca, there is a lot of sea.",
+   "para": true,
    "subs": [
     {
-     "from": 3167,
-     "to": 3236,
-     "text": "From here on, every stop goes wrong."
+     "from": 3103,
+     "to": 3151,
+     "text": "And between here and Ithaca,"
+    },
+    {
+     "from": 3152,
+     "to": 3188,
+     "text": "there is a lot of sea."
     }
    ]
   },
   {
    "id": "S28",
    "chapter": 2,
-   "from": 3247,
-   "to": 3365,
-   "text": "The keeper of the winds gives him a bag with the storm winds tied inside.",
+   "from": 3244,
+   "to": 3303,
+   "text": "From here on, every stop goes wrong.",
    "para": false,
    "subs": [
     {
-     "from": 3247,
-     "to": 3282,
-     "text": "The keeper of the winds"
-    },
-    {
-     "from": 3283,
-     "to": 3307,
-     "text": "gives him a bag"
-    },
-    {
-     "from": 3308,
-     "to": 3365,
-     "text": "with the storm winds tied inside."
+     "from": 3244,
+     "to": 3303,
+     "text": "From here on, every stop goes wrong."
     }
    ]
   },
   {
    "id": "S29",
    "chapter": 2,
-   "from": 3376,
-   "to": 3510,
-   "text": "For nine days they sail straight home, and with Ithaca in sight, he falls asleep.",
-   "para": true,
+   "from": 3314,
+   "to": 3426,
+   "text": "The keeper of the winds gives him a bag with the storm winds tied inside.",
+   "para": false,
    "subs": [
     {
-     "from": 3376,
-     "to": 3439,
-     "text": "For nine days they sail straight home,"
+     "from": 3314,
+     "to": 3345,
+     "text": "The keeper of the winds"
     },
     {
-     "from": 3440,
-     "to": 3510,
-     "text": "and with Ithaca in sight, he falls asleep."
+     "from": 3346,
+     "to": 3368,
+     "text": "gives him a bag"
+    },
+    {
+     "from": 3369,
+     "to": 3426,
+     "text": "with the storm winds tied inside."
     }
    ]
   },
   {
    "id": "S30",
    "chapter": 2,
-   "from": 3541,
-   "to": 3601,
-   "text": "His crew thinks the bag is full of gold.",
-   "para": false,
+   "from": 3437,
+   "to": 3575,
+   "text": "For nine days they sail straight home, and with Ithaca in sight, he falls asleep.",
+   "para": true,
    "subs": [
     {
-     "from": 3541,
-     "to": 3601,
-     "text": "His crew thinks the bag is full of gold."
+     "from": 3437,
+     "to": 3501,
+     "text": "For nine days they sail straight home,"
+    },
+    {
+     "from": 3502,
+     "to": 3575,
+     "text": "and with Ithaca in sight, he falls asleep."
     }
    ]
   },
   {
    "id": "S31",
    "chapter": 2,
-   "from": 3612,
-   "to": 3700,
-   "text": "They open it, and the winds blow them all the way back.",
+   "from": 3606,
+   "to": 3671,
+   "text": "His crew thinks the bag is full of gold.",
    "para": false,
    "subs": [
     {
-     "from": 3612,
-     "to": 3638,
-     "text": "They open it,"
-    },
-    {
-     "from": 3639,
-     "to": 3700,
-     "text": "and the winds blow them all the way back."
+     "from": 3606,
+     "to": 3671,
+     "text": "His crew thinks the bag is full of gold."
     }
    ]
   },
   {
    "id": "S32",
    "chapter": 2,
-   "from": 3711,
-   "to": 3741,
-   "text": "Recalculating.",
-   "para": true,
+   "from": 3682,
+   "to": 3762,
+   "text": "They open it, and the winds blow them all the way back.",
+   "para": false,
    "subs": [
     {
-     "from": 3711,
-     "to": 3741,
-     "text": "Recalculating."
+     "from": 3682,
+     "to": 3704,
+     "text": "They open it,"
+    },
+    {
+     "from": 3705,
+     "to": 3762,
+     "text": "and the winds blow them all the way back."
     }
    ]
   },
   {
    "id": "S33",
    "chapter": 2,
-   "from": 3772,
-   "to": 3870,
-   "text": "Next, a tribe of giants smashes every ship but his.",
-   "para": false,
+   "from": 3773,
+   "to": 3803,
+   "text": "Recalculating.",
+   "para": true,
    "subs": [
     {
-     "from": 3772,
-     "to": 3818,
-     "text": "Next, a tribe of giants"
-    },
-    {
-     "from": 3819,
-     "to": 3870,
-     "text": "smashes every ship but his."
+     "from": 3773,
+     "to": 3803,
+     "text": "Recalculating."
     }
    ]
   },
   {
    "id": "S34",
    "chapter": 2,
-   "from": 3881,
-   "to": 3925,
-   "text": "Twelve ships left Troy.",
+   "from": 3834,
+   "to": 3927,
+   "text": "Next, a tribe of giants smashes every ship but his.",
    "para": false,
    "subs": [
     {
-     "from": 3881,
-     "to": 3925,
-     "text": "Twelve ships left Troy."
+     "from": 3834,
+     "to": 3876,
+     "text": "Next, a tribe of giants"
+    },
+    {
+     "from": 3877,
+     "to": 3927,
+     "text": "smashes every ship but his."
     }
    ]
   },
   {
    "id": "S35",
    "chapter": 2,
-   "from": 3936,
-   "to": 3965,
-   "text": "Now there is one.",
-   "para": true,
+   "from": 3938,
+   "to": 3980,
+   "text": "Twelve ships left Troy.",
+   "para": false,
    "subs": [
     {
-     "from": 3936,
-     "to": 3965,
-     "text": "Now there is one."
+     "from": 3938,
+     "to": 3980,
+     "text": "Twelve ships left Troy."
     }
    ]
   },
   {
    "id": "S36",
    "chapter": 2,
-   "from": 3996,
-   "to": 4083,
-   "text": "On the next island, Circe turns his men into pigs.",
-   "para": false,
+   "from": 3991,
+   "to": 4020,
+   "text": "Now there is one.",
+   "para": true,
    "subs": [
     {
-     "from": 3996,
-     "to": 4027,
-     "text": "On the next island,"
-    },
-    {
-     "from": 4028,
-     "to": 4083,
-     "text": "Circe turns his men into pigs."
+     "from": 3991,
+     "to": 4020,
+     "text": "Now there is one."
     }
    ]
   },
   {
    "id": "S37",
    "chapter": 2,
-   "from": 4094,
+   "from": 4051,
    "to": 4139,
-   "text": "Pig bodies, human minds.",
+   "text": "On the next island, Circe turns his men into pigs.",
    "para": false,
    "subs": [
     {
-     "from": 4094,
+     "from": 4051,
+     "to": 4084,
+     "text": "On the next island,"
+    },
+    {
+     "from": 4085,
      "to": 4139,
-     "text": "Pig bodies, human minds."
+     "text": "Circe turns his men into pigs."
     }
    ]
   },
@@ -742,1399 +754,1439 @@
    "id": "S38",
    "chapter": 2,
    "from": 4150,
-   "to": 4236,
-   "text": "Hermes gives Odysseus a herb that blocks her magic.",
+   "to": 4193,
+   "text": "Pig bodies, human minds.",
    "para": false,
    "subs": [
     {
      "from": 4150,
-     "to": 4200,
-     "text": "Hermes gives Odysseus a herb"
-    },
-    {
-     "from": 4201,
-     "to": 4236,
-     "text": "that blocks her magic."
+     "to": 4193,
+     "text": "Pig bodies, human minds."
     }
    ]
   },
   {
    "id": "S39",
    "chapter": 2,
-   "from": 4247,
-   "to": 4268,
-   "text": "It works.",
+   "from": 4204,
+   "to": 4291,
+   "text": "Hermes gives Odysseus a herb that blocks her magic.",
    "para": false,
    "subs": [
     {
-     "from": 4247,
-     "to": 4268,
-     "text": "It works."
+     "from": 4204,
+     "to": 4255,
+     "text": "Hermes gives Odysseus a herb"
+    },
+    {
+     "from": 4256,
+     "to": 4291,
+     "text": "that blocks her magic."
     }
    ]
   },
   {
    "id": "S40",
    "chapter": 2,
-   "from": 4279,
-   "to": 4320,
-   "text": "He stays a year anyway.",
-   "para": true,
+   "from": 4302,
+   "to": 4322,
+   "text": "It works.",
+   "para": false,
    "subs": [
     {
-     "from": 4279,
-     "to": 4320,
-     "text": "He stays a year anyway."
+     "from": 4302,
+     "to": 4322,
+     "text": "It works."
     }
    ]
   },
   {
    "id": "S41",
    "chapter": 2,
-   "from": 4351,
-   "to": 4390,
-   "text": "Then come the Sirens.",
-   "para": false,
+   "from": 4333,
+   "to": 4375,
+   "text": "He stays a year anyway.",
+   "para": true,
    "subs": [
     {
-     "from": 4351,
-     "to": 4390,
-     "text": "Then come the Sirens."
+     "from": 4333,
+     "to": 4375,
+     "text": "He stays a year anyway."
     }
    ]
   },
   {
    "id": "S42",
    "chapter": 2,
-   "from": 4401,
-   "to": 4496,
-   "text": "In Homer there are just two, and what they promise is knowledge.",
+   "from": 4406,
+   "to": 4442,
+   "text": "Then come the Sirens.",
    "para": false,
    "subs": [
     {
-     "from": 4401,
-     "to": 4448,
-     "text": "In Homer there are just two,"
-    },
-    {
-     "from": 4449,
-     "to": 4496,
-     "text": "and what they promise is knowledge."
+     "from": 4406,
+     "to": 4442,
+     "text": "Then come the Sirens."
     }
    ]
   },
   {
    "id": "S43",
    "chapter": 2,
-   "from": 4507,
-   "to": 4633,
-   "text": "Odysseus plugs his crew's ears with wax and has himself tied to the mast.",
+   "from": 4453,
+   "to": 4550,
+   "text": "In Homer there are just two, and what they promise is knowledge.",
    "para": false,
    "subs": [
     {
-     "from": 4507,
-     "to": 4578,
-     "text": "Odysseus plugs his crew's ears with wax"
+     "from": 4453,
+     "to": 4498,
+     "text": "In Homer there are just two,"
     },
     {
-     "from": 4579,
-     "to": 4633,
-     "text": "and has himself tied to the mast."
+     "from": 4499,
+     "to": 4550,
+     "text": "and what they promise is knowledge."
     }
    ]
   },
   {
    "id": "S44",
    "chapter": 2,
-   "from": 4644,
-   "to": 4745,
-   "text": "Noise-cancelling for the crew, a live concert for the captain.",
-   "para": true,
+   "from": 4561,
+   "to": 4689,
+   "text": "Odysseus plugs his crew's ears with wax and has himself tied to the mast.",
+   "para": false,
    "subs": [
     {
-     "from": 4644,
-     "to": 4694,
-     "text": "Noise-cancelling for the crew,"
+     "from": 4561,
+     "to": 4635,
+     "text": "Odysseus plugs his crew's ears with wax"
     },
     {
-     "from": 4695,
-     "to": 4745,
-     "text": "a live concert for the captain."
+     "from": 4636,
+     "to": 4689,
+     "text": "and has himself tied to the mast."
     }
    ]
   },
   {
    "id": "S45",
    "chapter": 2,
-   "from": 4776,
-   "to": 4844,
-   "text": "Next, a strait with two bad options.",
-   "para": false,
+   "from": 4700,
+   "to": 4795,
+   "text": "Noise-cancelling for the crew, a live concert for the captain.",
+   "para": true,
    "subs": [
     {
-     "from": 4776,
-     "to": 4844,
-     "text": "Next, a strait with two bad options."
+     "from": 4700,
+     "to": 4745,
+     "text": "Noise-cancelling for the crew,"
+    },
+    {
+     "from": 4746,
+     "to": 4795,
+     "text": "a live concert for the captain."
     }
    ]
   },
   {
    "id": "S46",
    "chapter": 2,
-   "from": 4855,
-   "to": 5034,
-   "text": "Scylla, a monster with six heads, or Charybdis, a whirlpool that swallows the sea three times a day.",
+   "from": 4826,
+   "to": 4892,
+   "text": "Next, a strait with two bad options.",
    "para": false,
    "subs": [
     {
-     "from": 4855,
-     "to": 4915,
-     "text": "Scylla, a monster with six heads,"
-    },
-    {
-     "from": 4916,
-     "to": 4967,
-     "text": "or Charybdis, a whirlpool"
-    },
-    {
-     "from": 4968,
-     "to": 5034,
-     "text": "that swallows the sea three times a day."
+     "from": 4826,
+     "to": 4892,
+     "text": "Next, a strait with two bad options."
     }
    ]
   },
   {
    "id": "S47",
    "chapter": 2,
-   "from": 5045,
-   "to": 5092,
-   "text": "Scylla takes six of his men.",
-   "para": true,
+   "from": 4903,
+   "to": 5079,
+   "text": "Scylla, a monster with six heads, or Charybdis, a whirlpool that swallows the sea three times a day.",
+   "para": false,
    "subs": [
     {
-     "from": 5045,
-     "to": 5092,
-     "text": "Scylla takes six of his men."
+     "from": 4903,
+     "to": 4964,
+     "text": "Scylla, a monster with six heads,"
+    },
+    {
+     "from": 4965,
+     "to": 5012,
+     "text": "or Charybdis, a whirlpool"
+    },
+    {
+     "from": 5013,
+     "to": 5079,
+     "text": "that swallows the sea three times a day."
     }
    ]
   },
   {
    "id": "S48",
    "chapter": 2,
-   "from": 5123,
-   "to": 5242,
-   "text": "On the island of the sun god, the starving crew eats his sacred cattle.",
-   "para": false,
+   "from": 5090,
+   "to": 5137,
+   "text": "Scylla takes six of his men.",
+   "para": true,
    "subs": [
     {
-     "from": 5123,
-     "to": 5170,
-     "text": "On the island of the sun god,"
-    },
-    {
-     "from": 5171,
-     "to": 5242,
-     "text": "the starving crew eats his sacred cattle."
+     "from": 5090,
+     "to": 5137,
+     "text": "Scylla takes six of his men."
     }
    ]
   },
   {
    "id": "S49",
    "chapter": 2,
-   "from": 5253,
-   "to": 5362,
-   "text": "Zeus sinks the ship with a thunderbolt, and only Odysseus survives.",
-   "para": true,
+   "from": 5168,
+   "to": 5285,
+   "text": "On the island of the sun god, the starving crew eats his sacred cattle.",
+   "para": false,
    "subs": [
     {
-     "from": 5253,
-     "to": 5314,
-     "text": "Zeus sinks the ship with a thunderbolt,"
+     "from": 5168,
+     "to": 5216,
+     "text": "On the island of the sun god,"
     },
     {
-     "from": 5315,
-     "to": 5362,
-     "text": "and only Odysseus survives."
+     "from": 5217,
+     "to": 5285,
+     "text": "the starving crew eats his sacred cattle."
     }
    ]
   },
   {
    "id": "S50",
    "chapter": 2,
-   "from": 5393,
-   "to": 5454,
-   "text": "He washes up on Calypso's island.",
-   "para": false,
+   "from": 5296,
+   "to": 5414,
+   "text": "Zeus sinks the ship with a thunderbolt, and only Odysseus survives.",
+   "para": true,
    "subs": [
     {
-     "from": 5393,
-     "to": 5454,
-     "text": "He washes up on Calypso's island."
+     "from": 5296,
+     "to": 5362,
+     "text": "Zeus sinks the ship with a thunderbolt,"
+    },
+    {
+     "from": 5363,
+     "to": 5414,
+     "text": "and only Odysseus survives."
     }
    ]
   },
   {
    "id": "S51",
    "chapter": 2,
-   "from": 5465,
-   "to": 5568,
-   "text": "She keeps him for seven years, and offers to make him immortal.",
+   "from": 5445,
+   "to": 5505,
+   "text": "He washes up on Calypso's island.",
    "para": false,
    "subs": [
     {
-     "from": 5465,
-     "to": 5518,
-     "text": "She keeps him for seven years,"
-    },
-    {
-     "from": 5519,
-     "to": 5568,
-     "text": "and offers to make him immortal."
+     "from": 5445,
+     "to": 5505,
+     "text": "He washes up on Calypso's island."
     }
    ]
   },
   {
    "id": "S52",
    "chapter": 2,
-   "from": 5579,
-   "to": 5604,
-   "text": "He says no.",
+   "from": 5516,
+   "to": 5612,
+   "text": "She keeps him for seven years, and offers to make him immortal.",
    "para": false,
    "subs": [
     {
-     "from": 5579,
-     "to": 5604,
-     "text": "He says no."
+     "from": 5516,
+     "to": 5564,
+     "text": "She keeps him for seven years,"
+    },
+    {
+     "from": 5565,
+     "to": 5612,
+     "text": "and offers to make him immortal."
     }
    ]
   },
   {
    "id": "S53",
    "chapter": 2,
-   "from": 5615,
-   "to": 5712,
-   "text": "He wants to go home, where his wife has a problem of her own.",
-   "para": true,
+   "from": 5623,
+   "to": 5650,
+   "text": "He says no.",
+   "para": false,
    "subs": [
     {
-     "from": 5615,
-     "to": 5652,
-     "text": "He wants to go home,"
-    },
-    {
-     "from": 5653,
-     "to": 5712,
-     "text": "where his wife has a problem of her own."
+     "from": 5623,
+     "to": 5650,
+     "text": "He says no."
     }
    ]
   },
   {
    "id": "S54",
-   "chapter": 3,
-   "from": 5768,
-   "to": 5829,
-   "text": "So Odysseus is stuck on one island.",
-   "para": false,
+   "chapter": 2,
+   "from": 5661,
+   "to": 5751,
+   "text": "He wants to go home, where his wife has a problem of her own.",
+   "para": true,
    "subs": [
     {
-     "from": 5768,
-     "to": 5829,
-     "text": "So Odysseus is stuck on one island."
+     "from": 5661,
+     "to": 5694,
+     "text": "He wants to go home,"
+    },
+    {
+     "from": 5695,
+     "to": 5751,
+     "text": "where his wife has a problem of her own."
     }
    ]
   },
   {
    "id": "S55",
    "chapter": 3,
-   "from": 5840,
-   "to": 5888,
-   "text": "Penelope is stuck on another.",
+   "from": 5807,
+   "to": 5870,
+   "text": "So Odysseus is stuck on one island.",
    "para": false,
    "subs": [
     {
-     "from": 5840,
-     "to": 5888,
-     "text": "Penelope is stuck on another."
+     "from": 5807,
+     "to": 5870,
+     "text": "So Odysseus is stuck on one island."
     }
    ]
   },
   {
    "id": "S56",
    "chapter": 3,
-   "from": 5899,
-   "to": 6029,
-   "text": "A hundred and eight men want to marry her, and they won't leave until she picks one.",
-   "para": true,
+   "from": 5881,
+   "to": 5928,
+   "text": "Penelope is stuck on another.",
+   "para": false,
    "subs": [
     {
-     "from": 5899,
-     "to": 5965,
-     "text": "A hundred and eight men want to marry her,"
-    },
-    {
-     "from": 5966,
-     "to": 6029,
-     "text": "and they won't leave until she picks one."
+     "from": 5881,
+     "to": 5928,
+     "text": "Penelope is stuck on another."
     }
    ]
   },
   {
    "id": "S57",
    "chapter": 3,
-   "from": 6060,
-   "to": 6208,
-   "text": "Meanwhile, they party in the palace every day, on his cattle, his sheep and his wine.",
-   "para": false,
+   "from": 5939,
+   "to": 6057,
+   "text": "A hundred and eight men want to marry her, and they won't leave until she picks one.",
+   "para": true,
    "subs": [
     {
-     "from": 6060,
-     "to": 6141,
-     "text": "Meanwhile, they party in the palace every day,"
+     "from": 5939,
+     "to": 5998,
+     "text": "A hundred and eight men want to marry her,"
     },
     {
-     "from": 6142,
-     "to": 6208,
-     "text": "on his cattle, his sheep and his wine."
+     "from": 5999,
+     "to": 6057,
+     "text": "and they won't leave until she picks one."
     }
    ]
   },
   {
    "id": "S58",
    "chapter": 3,
-   "from": 6219,
-   "to": 6336,
-   "text": "They eat everything in sight, and they'd still give the place one star.",
-   "para": true,
+   "from": 6088,
+   "to": 6225,
+   "text": "Meanwhile, they party in the palace every day, on his cattle, his sheep and his wine.",
+   "para": false,
    "subs": [
     {
-     "from": 6219,
-     "to": 6268,
-     "text": "They eat everything in sight,"
+     "from": 6088,
+     "to": 6163,
+     "text": "Meanwhile, they party in the palace every day,"
     },
     {
-     "from": 6269,
-     "to": 6336,
-     "text": "and they'd still give the place one star."
+     "from": 6164,
+     "to": 6225,
+     "text": "on his cattle, his sheep and his wine."
     }
    ]
   },
   {
    "id": "S59",
    "chapter": 3,
-   "from": 6367,
-   "to": 6402,
-   "text": "Penelope stalls.",
-   "para": false,
+   "from": 6236,
+   "to": 6345,
+   "text": "They eat everything in sight, and they'd still give the place one star.",
+   "para": true,
    "subs": [
     {
-     "from": 6367,
-     "to": 6402,
-     "text": "Penelope stalls."
+     "from": 6236,
+     "to": 6281,
+     "text": "They eat everything in sight,"
+    },
+    {
+     "from": 6282,
+     "to": 6345,
+     "text": "and they'd still give the place one star."
     }
    ]
   },
   {
    "id": "S60",
    "chapter": 3,
-   "from": 6413,
-   "to": 6567,
-   "text": "She'll choose a husband, she says, once she finishes weaving a shroud for Odysseus's father.",
+   "from": 6376,
+   "to": 6409,
+   "text": "Penelope stalls.",
    "para": false,
    "subs": [
     {
-     "from": 6413,
-     "to": 6473,
-     "text": "She'll choose a husband, she says,"
-    },
-    {
-     "from": 6474,
-     "to": 6525,
-     "text": "once she finishes weaving a shroud"
-    },
-    {
-     "from": 6526,
-     "to": 6567,
-     "text": "for Odysseus's father."
+     "from": 6376,
+     "to": 6409,
+     "text": "Penelope stalls."
     }
    ]
   },
   {
    "id": "S61",
    "chapter": 3,
-   "from": 6578,
-   "to": 6671,
-   "text": "She weaves it by day and secretly unpicks it by night.",
+   "from": 6420,
+   "to": 6560,
+   "text": "She'll choose a husband, she says, once she finishes weaving a shroud for Odysseus's father.",
    "para": false,
    "subs": [
     {
-     "from": 6578,
-     "to": 6613,
-     "text": "She weaves it by day"
+     "from": 6420,
+     "to": 6472,
+     "text": "She'll choose a husband, she says,"
     },
     {
-     "from": 6614,
-     "to": 6671,
-     "text": "and secretly unpicks it by night."
+     "from": 6473,
+     "to": 6521,
+     "text": "once she finishes weaving a shroud"
+    },
+    {
+     "from": 6522,
+     "to": 6560,
+     "text": "for Odysseus's father."
     }
    ]
   },
   {
    "id": "S62",
    "chapter": 3,
-   "from": 6682,
-   "to": 6712,
-   "text": "For three years.",
-   "para": true,
+   "from": 6571,
+   "to": 6665,
+   "text": "She weaves it by day and secretly unpicks it by night.",
+   "para": false,
    "subs": [
     {
-     "from": 6682,
-     "to": 6712,
-     "text": "For three years."
+     "from": 6571,
+     "to": 6607,
+     "text": "She weaves it by day"
+    },
+    {
+     "from": 6608,
+     "to": 6665,
+     "text": "and secretly unpicks it by night."
     }
    ]
   },
   {
    "id": "S63",
    "chapter": 3,
-   "from": 6743,
-   "to": 6814,
-   "text": "In the fourth year, a maid gives her away.",
-   "para": false,
+   "from": 6676,
+   "to": 6704,
+   "text": "For three years.",
+   "para": true,
    "subs": [
     {
-     "from": 6743,
-     "to": 6814,
-     "text": "In the fourth year, a maid gives her away."
+     "from": 6676,
+     "to": 6704,
+     "text": "For three years."
     }
    ]
   },
   {
    "id": "S64",
    "chapter": 3,
-   "from": 6825,
-   "to": 6928,
-   "text": "Meanwhile, their son, the baby from the start, is grown up.",
+   "from": 6735,
+   "to": 6797,
+   "text": "In the fourth year, a maid gives her away.",
    "para": false,
    "subs": [
     {
-     "from": 6825,
-     "to": 6901,
-     "text": "Meanwhile, their son, the baby from the start,"
-    },
-    {
-     "from": 6902,
-     "to": 6928,
-     "text": "is grown up."
+     "from": 6735,
+     "to": 6797,
+     "text": "In the fourth year, a maid gives her away."
     }
    ]
   },
   {
    "id": "S65",
    "chapter": 3,
-   "from": 6939,
-   "to": 7074,
-   "text": "He sails off to find news of his father, guided by an old friend called Mentor.",
-   "para": true,
+   "from": 6808,
+   "to": 6902,
+   "text": "Meanwhile, their son, the baby from the start, is grown up.",
+   "para": false,
    "subs": [
     {
-     "from": 6939,
-     "to": 7006,
-     "text": "He sails off to find news of his father,"
+     "from": 6808,
+     "to": 6879,
+     "text": "Meanwhile, their son, the baby from the start,"
     },
     {
-     "from": 7007,
-     "to": 7074,
-     "text": "guided by an old friend called Mentor."
+     "from": 6880,
+     "to": 6902,
+     "text": "is grown up."
     }
    ]
   },
   {
    "id": "S66",
    "chapter": 3,
-   "from": 7105,
-   "to": 7243,
-   "text": "Mentor is really Athena in disguise, and that's where our word mentor comes from.",
-   "para": false,
+   "from": 6913,
+   "to": 7047,
+   "text": "He sails off to find news of his father, guided by an old friend called Mentor.",
+   "para": true,
    "subs": [
     {
-     "from": 7105,
-     "to": 7175,
-     "text": "Mentor is really Athena in disguise,"
+     "from": 6913,
+     "to": 6982,
+     "text": "He sails off to find news of his father,"
     },
     {
-     "from": 7176,
-     "to": 7243,
-     "text": "and that's where our word mentor comes from."
+     "from": 6983,
+     "to": 7047,
+     "text": "guided by an old friend called Mentor."
     }
    ]
   },
   {
    "id": "S67",
    "chapter": 3,
-   "from": 7254,
-   "to": 7330,
-   "text": "The suitors plan to ambush him on his way home.",
+   "from": 7078,
+   "to": 7211,
+   "text": "Mentor is really Athena in disguise, and that's where our word mentor comes from.",
    "para": false,
    "subs": [
     {
-     "from": 7254,
-     "to": 7330,
-     "text": "The suitors plan to ambush him on his way home."
+     "from": 7078,
+     "to": 7140,
+     "text": "Mentor is really Athena in disguise,"
+    },
+    {
+     "from": 7141,
+     "to": 7211,
+     "text": "and that's where our word mentor comes from."
     }
    ]
   },
   {
    "id": "S68",
    "chapter": 3,
-   "from": 7341,
-   "to": 7509,
-   "text": "Now Penelope is out of excuses, the suitors are out of patience, and Odysseus is out of ships.",
-   "para": true,
+   "from": 7222,
+   "to": 7302,
+   "text": "The suitors plan to ambush him on his way home.",
+   "para": false,
    "subs": [
     {
-     "from": 7341,
-     "to": 7405,
-     "text": "Now Penelope is out of excuses,"
-    },
-    {
-     "from": 7406,
-     "to": 7458,
-     "text": "the suitors are out of patience,"
-    },
-    {
-     "from": 7459,
-     "to": 7509,
-     "text": "and Odysseus is out of ships."
+     "from": 7222,
+     "to": 7302,
+     "text": "The suitors plan to ambush him on his way home."
     }
    ]
   },
   {
    "id": "S69",
-   "chapter": 4,
-   "from": 7565,
-   "to": 7644,
-   "text": "The gods finally order Calypso to let him go.",
-   "para": false,
+   "chapter": 3,
+   "from": 7313,
+   "to": 7476,
+   "text": "Now Penelope is out of excuses, the suitors are out of patience, and Odysseus is out of ships.",
+   "para": true,
    "subs": [
     {
-     "from": 7565,
-     "to": 7644,
-     "text": "The gods finally order Calypso to let him go."
+     "from": 7313,
+     "to": 7375,
+     "text": "Now Penelope is out of excuses,"
+    },
+    {
+     "from": 7376,
+     "to": 7425,
+     "text": "the suitors are out of patience,"
+    },
+    {
+     "from": 7426,
+     "to": 7476,
+     "text": "and Odysseus is out of ships."
     }
    ]
   },
   {
    "id": "S70",
    "chapter": 4,
-   "from": 7655,
-   "to": 7762,
-   "text": "A kingdom of sailors carries him the rest of the way, fast asleep.",
-   "para": true,
+   "from": 7532,
+   "to": 7607,
+   "text": "The gods finally order Calypso to let him go.",
+   "para": false,
    "subs": [
     {
-     "from": 7655,
-     "to": 7702,
-     "text": "A kingdom of sailors carries him"
-    },
-    {
-     "from": 7703,
-     "to": 7762,
-     "text": "the rest of the way, fast asleep."
+     "from": 7532,
+     "to": 7607,
+     "text": "The gods finally order Calypso to let him go."
     }
    ]
   },
   {
    "id": "S71",
    "chapter": 4,
-   "from": 7793,
-   "to": 7874,
-   "text": "Twenty years after he left, Odysseus is home.",
-   "para": false,
+   "from": 7618,
+   "to": 7724,
+   "text": "A kingdom of sailors carries him the rest of the way, fast asleep.",
+   "para": true,
    "subs": [
     {
-     "from": 7793,
-     "to": 7838,
-     "text": "Twenty years after he left,"
+     "from": 7618,
+     "to": 7666,
+     "text": "A kingdom of sailors carries him"
     },
     {
-     "from": 7839,
-     "to": 7874,
-     "text": "Odysseus is home."
+     "from": 7667,
+     "to": 7724,
+     "text": "the rest of the way, fast asleep."
     }
    ]
   },
   {
    "id": "S72",
    "chapter": 4,
-   "from": 7885,
-   "to": 7951,
-   "text": "Late, alone, on someone else's ship.",
+   "from": 7755,
+   "to": 7836,
+   "text": "Twenty years after he left, Odysseus is home.",
    "para": false,
    "subs": [
     {
-     "from": 7885,
-     "to": 7951,
-     "text": "Late, alone, on someone else's ship."
+     "from": 7755,
+     "to": 7799,
+     "text": "Twenty years after he left,"
+    },
+    {
+     "from": 7800,
+     "to": 7836,
+     "text": "Odysseus is home."
     }
    ]
   },
   {
    "id": "S73",
    "chapter": 4,
-   "from": 7962,
-   "to": 8027,
-   "text": "Exactly what the Cyclops asked for.",
+   "from": 7847,
+   "to": 7909,
+   "text": "Late, alone, on someone else's ship.",
    "para": false,
    "subs": [
     {
-     "from": 7962,
-     "to": 8027,
-     "text": "Exactly what the Cyclops asked for."
+     "from": 7847,
+     "to": 7909,
+     "text": "Late, alone, on someone else's ship."
     }
    ]
   },
   {
    "id": "S74",
    "chapter": 4,
-   "from": 8038,
-   "to": 8068,
-   "text": "You have arrived.",
-   "para": true,
+   "from": 7920,
+   "to": 7984,
+   "text": "Exactly what the Cyclops asked for.",
+   "para": false,
    "subs": [
     {
-     "from": 8038,
-     "to": 8068,
-     "text": "You have arrived."
+     "from": 7920,
+     "to": 7984,
+     "text": "Exactly what the Cyclops asked for."
     }
    ]
   },
   {
    "id": "S75",
    "chapter": 4,
-   "from": 8099,
-   "to": 8213,
-   "text": "Athena disguises him as an old beggar, so he can scout his own house.",
-   "para": false,
+   "from": 7995,
+   "to": 8021,
+   "text": "You have arrived.",
+   "para": true,
    "subs": [
     {
-     "from": 8099,
-     "to": 8163,
-     "text": "Athena disguises him as an old beggar,"
-    },
-    {
-     "from": 8164,
-     "to": 8213,
-     "text": "so he can scout his own house."
+     "from": 7995,
+     "to": 8021,
+     "text": "You have arrived."
     }
    ]
   },
   {
    "id": "S76",
    "chapter": 4,
-   "from": 8224,
-   "to": 8376,
-   "text": "His old dog, Argos, knows him at once, wags his tail one last time, and dies.",
+   "from": 8052,
+   "to": 8167,
+   "text": "Athena disguises him as an old beggar, so he can scout his own house.",
    "para": false,
    "subs": [
     {
-     "from": 8224,
-     "to": 8300,
-     "text": "His old dog, Argos, knows him at once,"
+     "from": 8052,
+     "to": 8117,
+     "text": "Athena disguises him as an old beggar,"
     },
     {
-     "from": 8301,
-     "to": 8376,
-     "text": "wags his tail one last time, and dies."
+     "from": 8118,
+     "to": 8167,
+     "text": "so he can scout his own house."
     }
    ]
   },
   {
    "id": "S77",
    "chapter": 4,
-   "from": 8387,
-   "to": 8463,
-   "text": "His old nurse knows him by a scar on his leg.",
-   "para": true,
+   "from": 8178,
+   "to": 8328,
+   "text": "His old dog, Argos, knows him at once, wags his tail one last time, and dies.",
+   "para": false,
    "subs": [
     {
-     "from": 8387,
-     "to": 8463,
-     "text": "His old nurse knows him by a scar on his leg."
+     "from": 8178,
+     "to": 8254,
+     "text": "His old dog, Argos, knows him at once,"
+    },
+    {
+     "from": 8255,
+     "to": 8328,
+     "text": "wags his tail one last time, and dies."
     }
    ]
   },
   {
    "id": "S78",
    "chapter": 4,
-   "from": 8494,
-   "to": 8542,
-   "text": "Then Penelope sets a test.",
-   "para": false,
+   "from": 8339,
+   "to": 8412,
+   "text": "His old nurse knows him by a scar on his leg.",
+   "para": true,
    "subs": [
     {
-     "from": 8494,
-     "to": 8542,
-     "text": "Then Penelope sets a test."
+     "from": 8339,
+     "to": 8412,
+     "text": "His old nurse knows him by a scar on his leg."
     }
    ]
   },
   {
    "id": "S79",
    "chapter": 4,
-   "from": 8553,
-   "to": 8720,
-   "text": "Whoever strings Odysseus's old bow and shoots an arrow through twelve axes will be her husband.",
+   "from": 8443,
+   "to": 8489,
+   "text": "Then Penelope sets a test.",
    "para": false,
    "subs": [
     {
-     "from": 8553,
-     "to": 8617,
-     "text": "Whoever strings Odysseus's old bow"
-    },
-    {
-     "from": 8618,
-     "to": 8687,
-     "text": "and shoots an arrow through twelve axes"
-    },
-    {
-     "from": 8688,
-     "to": 8720,
-     "text": "will be her husband."
+     "from": 8443,
+     "to": 8489,
+     "text": "Then Penelope sets a test."
     }
    ]
   },
   {
    "id": "S80",
    "chapter": 4,
-   "from": 8731,
-   "to": 8776,
-   "text": "The suitors try and fail.",
+   "from": 8500,
+   "to": 8652,
+   "text": "Whoever strings Odysseus's old bow and shoots an arrow through twelve axes will be her husband.",
    "para": false,
    "subs": [
     {
-     "from": 8731,
-     "to": 8776,
-     "text": "The suitors try and fail."
+     "from": 8500,
+     "to": 8558,
+     "text": "Whoever strings Odysseus's old bow"
+    },
+    {
+     "from": 8559,
+     "to": 8620,
+     "text": "and shoots an arrow through twelve axes"
+    },
+    {
+     "from": 8621,
+     "to": 8652,
+     "text": "will be her husband."
     }
    ]
   },
   {
    "id": "S81",
    "chapter": 4,
-   "from": 8787,
-   "to": 8912,
-   "text": "The beggar strings it as easily as a lyre, and shoots through all twelve.",
+   "from": 8663,
+   "to": 8707,
+   "text": "The suitors try and fail.",
    "para": false,
    "subs": [
     {
-     "from": 8787,
-     "to": 8858,
-     "text": "The beggar strings it as easily as a lyre,"
-    },
-    {
-     "from": 8859,
-     "to": 8912,
-     "text": "and shoots through all twelve."
+     "from": 8663,
+     "to": 8707,
+     "text": "The suitors try and fail."
     }
    ]
   },
   {
    "id": "S82",
    "chapter": 4,
-   "from": 8923,
-   "to": 9029,
-   "text": "Then the rags come off, and the suitors' very long party is over.",
-   "para": true,
+   "from": 8718,
+   "to": 8842,
+   "text": "The beggar strings it as easily as a lyre, and shoots through all twelve.",
+   "para": false,
    "subs": [
     {
-     "from": 8923,
-     "to": 8960,
-     "text": "Then the rags come off,"
+     "from": 8718,
+     "to": 8790,
+     "text": "The beggar strings it as easily as a lyre,"
     },
     {
-     "from": 8961,
-     "to": 9029,
-     "text": "and the suitors' very long party is over."
+     "from": 8791,
+     "to": 8842,
+     "text": "and shoots through all twelve."
     }
    ]
   },
   {
    "id": "S83",
    "chapter": 4,
-   "from": 9060,
-   "to": 9177,
-   "text": "Penelope still isn't sure, so she asks a servant to move their bed.",
-   "para": false,
+   "from": 8853,
+   "to": 8957,
+   "text": "Then the rags come off, and the suitors' very long party is over.",
+   "para": true,
    "subs": [
     {
-     "from": 9060,
-     "to": 9111,
-     "text": "Penelope still isn't sure,"
+     "from": 8853,
+     "to": 8888,
+     "text": "Then the rags come off,"
     },
     {
-     "from": 9112,
-     "to": 9177,
-     "text": "so she asks a servant to move their bed."
+     "from": 8889,
+     "to": 8957,
+     "text": "and the suitors' very long party is over."
     }
    ]
   },
   {
    "id": "S84",
    "chapter": 4,
-   "from": 9188,
-   "to": 9281,
-   "text": "Odysseus is outraged: nobody can move that bed.",
+   "from": 8988,
+   "to": 9099,
+   "text": "Penelope still isn't sure, so she asks a servant to move their bed.",
    "para": false,
    "subs": [
     {
-     "from": 9188,
-     "to": 9281,
-     "text": "Odysseus is outraged: nobody can move that bed."
+     "from": 8988,
+     "to": 9035,
+     "text": "Penelope still isn't sure,"
+    },
+    {
+     "from": 9036,
+     "to": 9099,
+     "text": "so she asks a servant to move their bed."
     }
    ]
   },
   {
    "id": "S85",
    "chapter": 4,
-   "from": 9292,
-   "to": 9396,
-   "text": "One of its posts is an olive tree, still rooted in the ground.",
+   "from": 9110,
+   "to": 9197,
+   "text": "Odysseus is outraged: nobody can move that bed.",
    "para": false,
    "subs": [
     {
-     "from": 9292,
-     "to": 9352,
-     "text": "One of its posts is an olive tree,"
-    },
-    {
-     "from": 9353,
-     "to": 9396,
-     "text": "still rooted in the ground."
+     "from": 9110,
+     "to": 9197,
+     "text": "Odysseus is outraged: nobody can move that bed."
     }
    ]
   },
   {
    "id": "S86",
    "chapter": 4,
-   "from": 9407,
-   "to": 9466,
-   "text": "Only the real Odysseus would know that.",
+   "from": 9208,
+   "to": 9305,
+   "text": "One of its posts is an olive tree, still rooted in the ground.",
    "para": false,
    "subs": [
     {
-     "from": 9407,
-     "to": 9466,
-     "text": "Only the real Odysseus would know that."
+     "from": 9208,
+     "to": 9264,
+     "text": "One of its posts is an olive tree,"
+    },
+    {
+     "from": 9265,
+     "to": 9305,
+     "text": "still rooted in the ground."
     }
    ]
   },
   {
    "id": "S87",
    "chapter": 4,
-   "from": 9477,
-   "to": 9537,
-   "text": "She has out-tricked the master trickster.",
-   "para": true,
+   "from": 9316,
+   "to": 9373,
+   "text": "Only the real Odysseus would know that.",
+   "para": false,
    "subs": [
     {
-     "from": 9477,
-     "to": 9537,
-     "text": "She has out-tricked the master trickster."
+     "from": 9316,
+     "to": 9373,
+     "text": "Only the real Odysseus would know that."
     }
    ]
   },
   {
    "id": "S88",
    "chapter": 4,
-   "from": 9568,
-   "to": 9704,
-   "text": "When the suitors' families come for revenge, Athena makes both sides swear peace.",
-   "para": false,
+   "from": 9384,
+   "to": 9450,
+   "text": "She has out-tricked the master trickster.",
+   "para": true,
    "subs": [
     {
-     "from": 9568,
-     "to": 9636,
-     "text": "When the suitors' families come for revenge,"
-    },
-    {
-     "from": 9637,
-     "to": 9704,
-     "text": "Athena makes both sides swear peace."
+     "from": 9384,
+     "to": 9450,
+     "text": "She has out-tricked the master trickster."
     }
    ]
   },
   {
    "id": "S89",
    "chapter": 4,
-   "from": 9715,
-   "to": 9752,
-   "text": "The poem ends there.",
+   "from": 9481,
+   "to": 9616,
+   "text": "When the suitors' families come for revenge, Athena makes both sides swear peace.",
    "para": false,
    "subs": [
     {
-     "from": 9715,
-     "to": 9752,
-     "text": "The poem ends there."
+     "from": 9481,
+     "to": 9549,
+     "text": "When the suitors' families come for revenge,"
+    },
+    {
+     "from": 9550,
+     "to": 9616,
+     "text": "Athena makes both sides swear peace."
     }
    ]
   },
   {
    "id": "S90",
    "chapter": 4,
-   "from": 9763,
-   "to": 9793,
-   "text": "The story doesn't.",
-   "para": true,
+   "from": 9627,
+   "to": 9662,
+   "text": "The poem ends there.",
+   "para": false,
    "subs": [
     {
-     "from": 9763,
-     "to": 9793,
-     "text": "The story doesn't."
+     "from": 9627,
+     "to": 9662,
+     "text": "The poem ends there."
     }
    ]
   },
   {
    "id": "S91",
-   "chapter": 5,
-   "from": 9849,
-   "to": 9894,
-   "text": "It moved into our language.",
-   "para": false,
+   "chapter": 4,
+   "from": 9673,
+   "to": 9704,
+   "text": "The story doesn't.",
+   "para": true,
    "subs": [
     {
-     "from": 9849,
-     "to": 9894,
-     "text": "It moved into our language."
+     "from": 9673,
+     "to": 9704,
+     "text": "The story doesn't."
     }
    ]
   },
   {
    "id": "S92",
    "chapter": 5,
-   "from": 9905,
-   "to": 10066,
-   "text": "A long, hard journey is an odyssey, a meaning English has used since the late 1800s.",
+   "from": 9760,
+   "to": 9805,
+   "text": "It moved into our language.",
    "para": false,
    "subs": [
     {
-     "from": 9905,
-     "to": 9973,
-     "text": "A long, hard journey is an odyssey,"
-    },
-    {
-     "from": 9974,
-     "to": 10066,
-     "text": "a meaning English has used since the late 1800s."
+     "from": 9760,
+     "to": 9805,
+     "text": "It moved into our language."
     }
    ]
   },
   {
    "id": "S93",
    "chapter": 5,
-   "from": 10077,
-   "to": 10186,
-   "text": "Stuck between two dangers? You're between Scylla and Charybdis.",
-   "para": true,
+   "from": 9816,
+   "to": 9961,
+   "text": "A long, hard journey is an odyssey, a meaning English has used since the late 1800s.",
+   "para": false,
    "subs": [
     {
-     "from": 10077,
-     "to": 10132,
-     "text": "Stuck between two dangers?"
+     "from": 9816,
+     "to": 9877,
+     "text": "A long, hard journey is an odyssey,"
     },
     {
-     "from": 10133,
-     "to": 10186,
-     "text": "You're between Scylla and Charybdis."
+     "from": 9878,
+     "to": 9961,
+     "text": "a meaning English has used since the late 1800s."
     }
    ]
   },
   {
    "id": "S94",
    "chapter": 5,
-   "from": 10217,
-   "to": 10382,
-   "text": "In 2017, Emily Wilson published the first English translation of the poem by a woman.",
-   "para": false,
+   "from": 9972,
+   "to": 10079,
+   "text": "Stuck between two dangers? You're between Scylla and Charybdis.",
+   "para": true,
    "subs": [
     {
-     "from": 10217,
-     "to": 10298,
-     "text": "In 2017, Emily Wilson published"
+     "from": 9972,
+     "to": 10023,
+     "text": "Stuck between two dangers?"
     },
     {
-     "from": 10299,
-     "to": 10360,
-     "text": "the first English translation of the poem"
-    },
-    {
-     "from": 10361,
-     "to": 10382,
-     "text": "by a woman."
+     "from": 10024,
+     "to": 10079,
+     "text": "You're between Scylla and Charybdis."
     }
    ]
   },
   {
    "id": "S95",
    "chapter": 5,
-   "from": 10393,
-   "to": 10485,
-   "text": "Her first line: Tell me about a complicated man.",
+   "from": 10110,
+   "to": 10269,
+   "text": "In 2017, Emily Wilson published the first English translation of the poem by a woman.",
    "para": false,
    "subs": [
     {
-     "from": 10393,
-     "to": 10485,
-     "text": "Her first line: Tell me about a complicated man."
+     "from": 10110,
+     "to": 10185,
+     "text": "In 2017, Emily Wilson published"
+    },
+    {
+     "from": 10186,
+     "to": 10246,
+     "text": "the first English translation of the poem"
+    },
+    {
+     "from": 10247,
+     "to": 10269,
+     "text": "by a woman."
     }
    ]
   },
   {
    "id": "S96",
    "chapter": 5,
-   "from": 10496,
-   "to": 10582,
-   "text": "The Greek word means, roughly, a man of many turns.",
-   "para": true,
+   "from": 10280,
+   "to": 10366,
+   "text": "Her first line: Tell me about a complicated man.",
+   "para": false,
    "subs": [
     {
-     "from": 10496,
-     "to": 10541,
-     "text": "The Greek word means, roughly,"
-    },
-    {
-     "from": 10542,
-     "to": 10582,
-     "text": "a man of many turns."
+     "from": 10280,
+     "to": 10366,
+     "text": "Her first line: Tell me about a complicated man."
     }
    ]
   },
   {
    "id": "S97",
    "chapter": 5,
-   "from": 10613,
-   "to": 10749,
-   "text": "This summer, Christopher Nolan's film took in about 1.77 billion dollars.",
-   "para": false,
+   "from": 10377,
+   "to": 10471,
+   "text": "The Greek word means, roughly, a man of many turns.",
+   "para": true,
    "subs": [
     {
-     "from": 10613,
-     "to": 10667,
-     "text": "This summer, Christopher Nolan's film"
+     "from": 10377,
+     "to": 10429,
+     "text": "The Greek word means, roughly,"
     },
     {
-     "from": 10668,
-     "to": 10749,
-     "text": "took in about 1.77 billion dollars."
+     "from": 10430,
+     "to": 10471,
+     "text": "a man of many turns."
     }
    ]
   },
   {
    "id": "S98",
    "chapter": 5,
-   "from": 10760,
-   "to": 10958,
-   "text": "And by mid-July, before it even opened, US print sales of the poem were up 76 percent year to date.",
+   "from": 10502,
+   "to": 10643,
+   "text": "This summer, Christopher Nolan's film took in about 1.77 billion dollars.",
    "para": false,
    "subs": [
     {
-     "from": 10760,
-     "to": 10839,
-     "text": "And by mid-July, before it even opened,"
+     "from": 10502,
+     "to": 10559,
+     "text": "This summer, Christopher Nolan's film"
     },
     {
-     "from": 10840,
-     "to": 10886,
-     "text": "US print sales of the poem"
-    },
-    {
-     "from": 10887,
-     "to": 10958,
-     "text": "were up 76 percent year to date."
+     "from": 10560,
+     "to": 10643,
+     "text": "took in about 1.77 billion dollars."
     }
    ]
   },
   {
    "id": "S99",
    "chapter": 5,
-   "from": 10969,
-   "to": 11110,
-   "text": "Just know the film skips the Nobody trick, and on screen, Athena is the only god.",
-   "para": true,
+   "from": 10654,
+   "to": 10844,
+   "text": "And by mid-July, before it even opened, US print sales of the poem were up 76 percent year to date.",
+   "para": false,
    "subs": [
     {
-     "from": 10969,
-     "to": 11042,
-     "text": "Just know the film skips the Nobody trick,"
+     "from": 10654,
+     "to": 10731,
+     "text": "And by mid-July, before it even opened,"
     },
     {
-     "from": 11043,
-     "to": 11110,
-     "text": "and on screen, Athena is the only god."
+     "from": 10732,
+     "to": 10776,
+     "text": "US print sales of the poem"
+    },
+    {
+     "from": 10777,
+     "to": 10844,
+     "text": "were up 76 percent year to date."
     }
    ]
   },
   {
    "id": "S100",
    "chapter": 5,
-   "from": 11141,
-   "to": 11190,
-   "text": "Quick game: real or fake?",
-   "para": false,
+   "from": 10855,
+   "to": 10985,
+   "text": "Just know the film skips the Nobody trick, and on screen, Athena is the only god.",
+   "para": true,
    "subs": [
     {
-     "from": 11141,
-     "to": 11190,
-     "text": "Quick game: real or fake?"
+     "from": 10855,
+     "to": 10921,
+     "text": "Just know the film skips the Nobody trick,"
+    },
+    {
+     "from": 10922,
+     "to": 10985,
+     "text": "and on screen, Athena is the only god."
     }
    ]
   },
   {
    "id": "S101",
    "chapter": 5,
-   "from": 11201,
-   "to": 11272,
-   "text": "One: the Trojan Horse is in the Odyssey.",
+   "from": 11016,
+   "to": 11065,
+   "text": "Quick game: real or fake?",
    "para": false,
    "subs": [
     {
-     "from": 11201,
-     "to": 11272,
-     "text": "One: the Trojan Horse is in the Odyssey."
+     "from": 11016,
+     "to": 11065,
+     "text": "Quick game: real or fake?"
     }
    ]
   },
   {
    "id": "S102",
    "chapter": 5,
-   "from": 11283,
-   "to": 11395,
-   "text": "Two: Odysseus's dog recognizes him after twenty years.",
+   "from": 11076,
+   "to": 11144,
+   "text": "One: the Trojan Horse is in the Odyssey.",
    "para": false,
    "subs": [
     {
-     "from": 11283,
-     "to": 11360,
-     "text": "Two: Odysseus's dog recognizes him"
-    },
-    {
-     "from": 11361,
-     "to": 11395,
-     "text": "after twenty years."
+     "from": 11076,
+     "to": 11144,
+     "text": "One: the Trojan Horse is in the Odyssey."
     }
    ]
   },
   {
    "id": "S103",
    "chapter": 5,
-   "from": 11406,
-   "to": 11519,
-   "text": "Three: Homer says the Cyclops has one eye in the middle of his forehead.",
-   "para": true,
+   "from": 11155,
+   "to": 11262,
+   "text": "Two: Odysseus's dog recognizes him after twenty years.",
+   "para": false,
    "subs": [
     {
-     "from": 11406,
-     "to": 11481,
-     "text": "Three: Homer says the Cyclops has one eye"
+     "from": 11155,
+     "to": 11229,
+     "text": "Two: Odysseus's dog recognizes him"
     },
     {
-     "from": 11482,
-     "to": 11519,
-     "text": "in the middle of his forehead."
+     "from": 11230,
+     "to": 11262,
+     "text": "after twenty years."
     }
    ]
   },
   {
    "id": "S104",
    "chapter": 5,
-   "from": 11610,
-   "to": 11651,
-   "text": "The fake is number three.",
-   "para": false,
+   "from": 11273,
+   "to": 11382,
+   "text": "Three: Homer says the Cyclops has one eye in the middle of his forehead.",
+   "para": true,
    "subs": [
     {
-     "from": 11610,
-     "to": 11651,
-     "text": "The fake is number three."
+     "from": 11273,
+     "to": 11345,
+     "text": "Three: Homer says the Cyclops has one eye"
+    },
+    {
+     "from": 11346,
+     "to": 11382,
+     "text": "in the middle of his forehead."
     }
    ]
   },
   {
    "id": "S105",
    "chapter": 5,
-   "from": 11662,
-   "to": 11777,
-   "text": "Homer only mentions his eye, singular, and never says where it is.",
+   "from": 11473,
+   "to": 11512,
+   "text": "The fake is number three.",
    "para": false,
    "subs": [
     {
-     "from": 11662,
-     "to": 11731,
-     "text": "Homer only mentions his eye, singular,"
-    },
-    {
-     "from": 11732,
-     "to": 11777,
-     "text": "and never says where it is."
+     "from": 11473,
+     "to": 11512,
+     "text": "The fake is number three."
     }
    ]
   },
   {
    "id": "S106",
    "chapter": 5,
-   "from": 11788,
-   "to": 11889,
-   "text": "The forehead comes from Hesiod, describing different Cyclopes.",
+   "from": 11523,
+   "to": 11632,
+   "text": "Homer only mentions his eye, singular, and never says where it is.",
    "para": false,
    "subs": [
     {
-     "from": 11788,
-     "to": 11838,
-     "text": "The forehead comes from Hesiod,"
+     "from": 11523,
+     "to": 11589,
+     "text": "Homer only mentions his eye, singular,"
     },
     {
-     "from": 11839,
-     "to": 11889,
-     "text": "describing different Cyclopes."
+     "from": 11590,
+     "to": 11632,
+     "text": "and never says where it is."
     }
    ]
   },
   {
    "id": "S107",
    "chapter": 5,
-   "from": 11900,
-   "to": 11935,
-   "text": "The horse is real.",
+   "from": 11643,
+   "to": 11746,
+   "text": "The forehead comes from Hesiod, describing different Cyclopes.",
    "para": false,
    "subs": [
     {
-     "from": 11900,
-     "to": 11935,
-     "text": "The horse is real."
+     "from": 11643,
+     "to": 11694,
+     "text": "The forehead comes from Hesiod,"
+    },
+    {
+     "from": 11695,
+     "to": 11746,
+     "text": "describing different Cyclopes."
     }
    ]
   },
   {
    "id": "S108",
    "chapter": 5,
-   "from": 11946,
-   "to": 12033,
-   "text": "It's in the Odyssey three times, and never in the Iliad.",
-   "para": true,
+   "from": 11757,
+   "to": 11790,
+   "text": "The horse is real.",
+   "para": false,
    "subs": [
     {
-     "from": 11946,
-     "to": 11996,
-     "text": "It's in the Odyssey three times,"
-    },
-    {
-     "from": 11997,
-     "to": 12033,
-     "text": "and never in the Iliad."
+     "from": 11757,
+     "to": 11790,
+     "text": "The horse is real."
     }
    ]
   },
   {
    "id": "S109",
    "chapter": 5,
-   "from": 12064,
-   "to": 12130,
-   "text": "So why did a trip home take ten years?",
-   "para": false,
+   "from": 11801,
+   "to": 11893,
+   "text": "It's in the Odyssey three times, and never in the Iliad.",
+   "para": true,
    "subs": [
     {
-     "from": 12064,
-     "to": 12130,
-     "text": "So why did a trip home take ten years?"
+     "from": 11801,
+     "to": 11853,
+     "text": "It's in the Odyssey three times,"
+    },
+    {
+     "from": 11854,
+     "to": 11893,
+     "text": "and never in the Iliad."
     }
    ]
   },
   {
    "id": "S110",
    "chapter": 5,
-   "from": 12141,
-   "to": 12239,
-   "text": "One boast, one angry sea god, and some very long visits.",
+   "from": 11924,
+   "to": 11989,
+   "text": "So why did a trip home take ten years?",
    "para": false,
    "subs": [
     {
-     "from": 12141,
-     "to": 12195,
-     "text": "One boast, one angry sea god,"
-    },
-    {
-     "from": 12196,
-     "to": 12239,
-     "text": "and some very long visits."
+     "from": 11924,
+     "to": 11989,
+     "text": "So why did a trip home take ten years?"
     }
    ]
   },
   {
    "id": "S111",
    "chapter": 5,
-   "from": 12250,
-   "to": 12332,
-   "text": "Next time you post where you are, think of Odysseus.",
-   "para": true,
+   "from": 12000,
+   "to": 12096,
+   "text": "One boast, one angry sea god, and some very long visits.",
+   "para": false,
    "subs": [
     {
-     "from": 12250,
-     "to": 12300,
-     "text": "Next time you post where you are,"
+     "from": 12000,
+     "to": 12054,
+     "text": "One boast, one angry sea god,"
     },
     {
-     "from": 12301,
-     "to": 12332,
-     "text": "think of Odysseus."
+     "from": 12055,
+     "to": 12096,
+     "text": "and some very long visits."
     }
    ]
   },
   {
    "id": "S112",
    "chapter": 5,
-   "from": 12363,
-   "to": 12425,
-   "text": "But why was he at Troy in the first place?",
-   "para": false,
+   "from": 12107,
+   "to": 12190,
+   "text": "Next time you post where you are, think of Odysseus.",
+   "para": true,
    "subs": [
     {
-     "from": 12363,
-     "to": 12425,
-     "text": "But why was he at Troy in the first place?"
+     "from": 12107,
+     "to": 12158,
+     "text": "Next time you post where you are,"
+    },
+    {
+     "from": 12159,
+     "to": 12190,
+     "text": "think of Odysseus."
     }
    ]
   },
   {
    "id": "S113",
    "chapter": 5,
-   "from": 12436,
-   "to": 12474,
-   "text": "Blame a golden apple.",
+   "from": 12221,
+   "to": 12280,
+   "text": "But why was he at Troy in the first place?",
    "para": false,
    "subs": [
     {
-     "from": 12436,
-     "to": 12474,
-     "text": "Blame a golden apple."
+     "from": 12221,
+     "to": 12280,
+     "text": "But why was he at Troy in the first place?"
     }
    ]
   },
   {
    "id": "S114",
    "chapter": 5,
-   "from": 12485,
-   "to": 12548,
+   "from": 12291,
+   "to": 12329,
+   "text": "Blame a golden apple.",
+   "para": false,
+   "subs": [
+    {
+     "from": 12291,
+     "to": 12329,
+     "text": "Blame a golden apple."
+    }
+   ]
+  },
+  {
+   "id": "S115",
+   "chapter": 5,
+   "from": 12340,
+   "to": 12402,
    "text": "That's a later myth, and our next video.",
    "para": true,
    "subs": [
     {
-     "from": 12485,
-     "to": 12548,
+     "from": 12340,
+     "to": 12402,
      "text": "That's a later myth, and our next video."
+    }
+   ]
+  },
+  {
+   "id": "S116",
+   "chapter": 5,
+   "from": 12433,
+   "to": 12542,
+   "text": "Thanks for watching. Subscribe so you don't miss it, and see you next time.",
+   "para": true,
+   "subs": [
+    {
+     "from": 12433,
+     "to": 12469,
+     "text": "Thanks for watching."
+    },
+    {
+     "from": 12470,
+     "to": 12511,
+     "text": "Subscribe so you don't miss it,"
+    },
+    {
+     "from": 12512,
+     "to": 12542,
+     "text": "and see you next time."
     }
    ]
   }
  ],
- "chars": 4748,
- "words": 1136,
- "speech_sec": 347.44
+ "chars": 4863,
+ "words": 1163,
+ "speech_sec": 345.24
 }

@@ -1,764 +1,784 @@
 1
-00:00:02,833 --> 00:00:04,567
+00:00:02,833 --> 00:00:04,600
 The most famous trip home in history
 
 2
-00:00:04,567 --> 00:00:05,833
+00:00:04,600 --> 00:00:05,833
 took about ten years.
 
 3
-00:00:06,167 --> 00:00:08,567
+00:00:06,167 --> 00:00:08,367
 He spent eight of them as a houseguest:
 
 4
-00:00:08,567 --> 00:00:10,733
+00:00:08,367 --> 00:00:10,433
 seven years with the nymph Calypso,
 
 5
-00:00:10,733 --> 00:00:12,200
+00:00:10,433 --> 00:00:11,800
 one with the witch Circe.
 
 6
-00:00:12,533 --> 00:00:14,067
+00:00:12,133 --> 00:00:13,667
 And when he finally got home,
 
 7
-00:00:14,067 --> 00:00:15,467
+00:00:13,667 --> 00:00:15,067
 a hundred and eight houseguests
 
 8
-00:00:15,467 --> 00:00:16,567
+00:00:15,067 --> 00:00:16,167
 were eating his food.
 
 9
-00:00:20,567 --> 00:00:21,967
-This is Homer's Odyssey,
+00:00:20,167 --> 00:00:21,967
+Hi, and welcome to LearnLoop,
 
 10
-00:00:21,967 --> 00:00:24,367
-a poem about 2,700 years old.
+00:00:21,967 --> 00:00:24,133
+where old stories loop back to your life.
 
 11
-00:00:24,700 --> 00:00:27,300
-Troy has just fallen after ten years of war.
+00:00:25,133 --> 00:00:26,533
+This is Homer's Odyssey,
 
 12
-00:00:27,633 --> 00:00:30,067
-Odysseus, king of the island of Ithaca,
+00:00:26,533 --> 00:00:28,933
+a poem about 2,700 years old.
 
 13
-00:00:30,067 --> 00:00:32,100
-sets sail for home with twelve ships.
+00:00:29,267 --> 00:00:31,733
+Troy has just fallen after ten years of war.
 
 14
-00:00:33,100 --> 00:00:35,433
-Waiting at home are his wife, Penelope,
+00:00:32,067 --> 00:00:34,200
+Odysseus, king of the island of Ithaca,
 
 15
-00:00:35,433 --> 00:00:37,533
-and a son who was a baby when he left.
+00:00:34,200 --> 00:00:36,267
+sets sail for home with twelve ships.
 
 16
-00:00:37,867 --> 00:00:39,200
-It should be a quick trip.
+00:00:37,267 --> 00:00:39,400
+Waiting at home are his wife, Penelope,
 
 17
-00:00:39,533 --> 00:00:40,300
-It is not.
+00:00:39,400 --> 00:00:41,367
+and a son who was a baby when he left.
 
 18
-00:00:41,300 --> 00:00:43,533
-The monsters come from one dinner party,
+00:00:41,700 --> 00:00:43,033
+It should be a quick trip.
 
 19
-00:00:43,533 --> 00:00:45,767
-where Odysseus tells the story himself.
+00:00:43,367 --> 00:00:44,100
+It is not.
 
 20
-00:00:46,100 --> 00:00:47,400
-So this is his version.
+00:00:45,100 --> 00:00:47,300
+The monsters come from one dinner party,
 
 21
-00:00:48,400 --> 00:00:50,467
-Early on, his men walk into the cave
+00:00:47,300 --> 00:00:49,633
+where Odysseus tells the story himself.
 
 22
-00:00:50,467 --> 00:00:52,800
-of a giant Cyclops called Polyphemus.
+00:00:49,967 --> 00:00:51,233
+So this is his version.
 
 23
-00:00:53,133 --> 00:00:54,233
-He traps them inside
+00:00:52,233 --> 00:00:54,233
+Early on, his men walk into the cave
 
 24
-00:00:54,233 --> 00:00:56,233
-and eats six of the crew, two at a time.
+00:00:54,233 --> 00:00:56,533
+of a giant Cyclops called Polyphemus.
 
 25
-00:00:56,567 --> 00:00:59,067
-Odysseus tells the giant his name is Nobody.
+00:00:56,867 --> 00:00:58,033
+He traps them inside
 
 26
-00:00:59,400 --> 00:01:01,300
-That night, while the giant sleeps,
+00:00:58,033 --> 00:01:00,233
+and eats six of the crew, two at a time.
 
 27
-00:01:01,300 --> 00:01:02,667
-they blind him with a stake
+00:01:00,567 --> 00:01:03,067
+Odysseus tells the giant his name is Nobody.
 
 28
-00:01:02,667 --> 00:01:03,833
-hardened in the fire.
+00:01:03,400 --> 00:01:05,367
+That night, while the giant sleeps,
 
 29
-00:01:04,833 --> 00:01:06,100
-He screams for help,
+00:01:05,367 --> 00:01:06,667
+they blind him with a stake
 
 30
-00:01:06,100 --> 00:01:08,167
-and his neighbors ask who is hurting him.
+00:01:06,667 --> 00:01:07,767
+hardened in the fire.
 
 31
-00:01:08,500 --> 00:01:09,667
-Nobody, he shouts.
+00:01:08,767 --> 00:01:09,967
+He screams for help,
 
 32
-00:01:10,000 --> 00:01:11,533
-So they shrug and go home.
+00:01:09,967 --> 00:01:12,000
+and his neighbors ask who is hurting him.
 
 33
-00:01:11,867 --> 00:01:13,300
-At dawn, the men escape
+00:01:12,333 --> 00:01:13,467
+Nobody, he shouts.
 
 34
-00:01:13,300 --> 00:01:14,867
-under the bellies of his rams.
+00:01:13,800 --> 00:01:15,300
+So they shrug and go home.
 
 35
-00:01:15,867 --> 00:01:18,567
-A perfect escape, until Odysseus ruins it.
+00:01:15,633 --> 00:01:17,000
+At dawn, the men escape
 
 36
-00:01:18,900 --> 00:01:21,100
-From his ship, he shouts his real name,
+00:01:17,000 --> 00:01:18,467
+under the bellies of his rams.
 
 37
-00:01:21,100 --> 00:01:22,100
-his father's name,
+00:01:19,467 --> 00:01:21,867
+A perfect escape, until Odysseus ruins it.
 
 38
-00:01:22,100 --> 00:01:23,233
-and his home island.
+00:01:22,200 --> 00:01:24,267
+From his ship, he shouts his real name,
 
 39
-00:01:23,567 --> 00:01:25,967
-History's first case of sharing your location
+00:01:24,267 --> 00:01:25,167
+his father's name,
 
 40
-00:01:25,967 --> 00:01:27,100
-with the wrong person.
+00:01:25,167 --> 00:01:26,300
+and his home island.
 
 41
-00:01:28,100 --> 00:01:30,200
-The Cyclops is a son of Poseidon,
+00:01:26,633 --> 00:01:28,967
+History's first case of sharing your location
 
 42
-00:01:30,200 --> 00:01:31,167
-god of the sea.
+00:01:28,967 --> 00:01:30,067
+with the wrong person.
 
 43
-00:01:31,500 --> 00:01:33,067
-He prays to his father:
+00:01:31,067 --> 00:01:33,100
+The Cyclops is a son of Poseidon,
 
 44
-00:01:33,067 --> 00:01:35,300
-let Odysseus get home late, alone,
+00:01:33,100 --> 00:01:34,067
+god of the sea.
 
 45
-00:01:35,300 --> 00:01:36,600
-on someone else's ship.
+00:01:34,400 --> 00:01:35,767
+He prays to his father:
 
 46
-00:01:36,933 --> 00:01:38,733
-Poseidon won't kill Odysseus,
+00:01:35,767 --> 00:01:38,033
+let Odysseus get home late, alone,
 
 47
-00:01:38,733 --> 00:01:40,400
-but he'll keep him away from home.
+00:01:38,033 --> 00:01:39,333
+on someone else's ship.
 
 48
-00:01:40,733 --> 00:01:42,433
-And between here and Ithaca,
+00:01:39,667 --> 00:01:41,467
+Poseidon won't kill Odysseus,
 
 49
-00:01:42,433 --> 00:01:43,700
-there is a lot of sea.
+00:01:41,467 --> 00:01:43,067
+but he'll keep him away from home.
 
 50
-00:01:45,533 --> 00:01:47,867
-From here on, every stop goes wrong.
+00:01:43,400 --> 00:01:45,033
+And between here and Ithaca,
 
 51
-00:01:48,200 --> 00:01:49,400
-The keeper of the winds
+00:01:45,033 --> 00:01:46,267
+there is a lot of sea.
 
 52
-00:01:49,400 --> 00:01:50,233
-gives him a bag
+00:01:48,100 --> 00:01:50,100
+From here on, every stop goes wrong.
 
 53
-00:01:50,233 --> 00:01:52,167
-with the storm winds tied inside.
+00:01:50,433 --> 00:01:51,500
+The keeper of the winds
 
 54
-00:01:52,500 --> 00:01:54,633
-For nine days they sail straight home,
+00:01:51,500 --> 00:01:52,267
+gives him a bag
 
 55
-00:01:54,633 --> 00:01:57,000
-and with Ithaca in sight, he falls asleep.
+00:01:52,267 --> 00:01:54,200
+with the storm winds tied inside.
 
 56
-00:01:58,000 --> 00:02:00,033
-His crew thinks the bag is full of gold.
+00:01:54,533 --> 00:01:56,700
+For nine days they sail straight home,
 
 57
-00:02:00,367 --> 00:02:01,267
-They open it,
+00:01:56,700 --> 00:01:59,167
+and with Ithaca in sight, he falls asleep.
 
 58
-00:02:01,267 --> 00:02:03,333
-and the winds blow them all the way back.
+00:02:00,167 --> 00:02:02,367
+His crew thinks the bag is full of gold.
 
 59
-00:02:03,667 --> 00:02:04,700
-Recalculating.
+00:02:02,700 --> 00:02:03,467
+They open it,
 
 60
-00:02:05,700 --> 00:02:07,267
-Next, a tribe of giants
+00:02:03,467 --> 00:02:05,400
+and the winds blow them all the way back.
 
 61
-00:02:07,267 --> 00:02:09,000
-smashes every ship but his.
+00:02:05,733 --> 00:02:06,767
+Recalculating.
 
 62
-00:02:09,333 --> 00:02:10,833
-Twelve ships left Troy.
+00:02:07,767 --> 00:02:09,200
+Next, a tribe of giants
 
 63
-00:02:11,167 --> 00:02:12,167
-Now there is one.
+00:02:09,200 --> 00:02:10,900
+smashes every ship but his.
 
 64
-00:02:13,167 --> 00:02:14,233
-On the next island,
+00:02:11,233 --> 00:02:12,667
+Twelve ships left Troy.
 
 65
-00:02:14,233 --> 00:02:16,100
-Circe turns his men into pigs.
+00:02:13,000 --> 00:02:14,000
+Now there is one.
 
 66
-00:02:16,433 --> 00:02:17,967
-Pig bodies, human minds.
+00:02:15,000 --> 00:02:16,133
+On the next island,
 
 67
-00:02:18,300 --> 00:02:20,000
-Hermes gives Odysseus a herb
+00:02:16,133 --> 00:02:17,967
+Circe turns his men into pigs.
 
 68
-00:02:20,000 --> 00:02:21,200
-that blocks her magic.
+00:02:18,300 --> 00:02:19,767
+Pig bodies, human minds.
 
 69
-00:02:21,533 --> 00:02:22,267
-It works.
+00:02:20,100 --> 00:02:21,833
+Hermes gives Odysseus a herb
 
 70
-00:02:22,600 --> 00:02:24,000
-He stays a year anyway.
+00:02:21,833 --> 00:02:23,033
+that blocks her magic.
 
 71
-00:02:25,000 --> 00:02:26,333
-Then come the Sirens.
+00:02:23,367 --> 00:02:24,067
+It works.
 
 72
-00:02:26,667 --> 00:02:28,267
-In Homer there are just two,
+00:02:24,400 --> 00:02:25,833
+He stays a year anyway.
 
 73
-00:02:28,267 --> 00:02:29,867
-and what they promise is knowledge.
+00:02:26,833 --> 00:02:28,067
+Then come the Sirens.
 
 74
-00:02:30,200 --> 00:02:32,600
-Odysseus plugs his crew's ears with wax
+00:02:28,400 --> 00:02:29,933
+In Homer there are just two,
 
 75
-00:02:32,600 --> 00:02:34,433
-and has himself tied to the mast.
+00:02:29,933 --> 00:02:31,667
+and what they promise is knowledge.
 
 76
-00:02:34,767 --> 00:02:36,467
-Noise-cancelling for the crew,
+00:02:32,000 --> 00:02:34,500
+Odysseus plugs his crew's ears with wax
 
 77
-00:02:36,467 --> 00:02:38,167
-a live concert for the captain.
+00:02:34,500 --> 00:02:36,300
+and has himself tied to the mast.
 
 78
-00:02:39,167 --> 00:02:41,467
-Next, a strait with two bad options.
+00:02:36,633 --> 00:02:38,167
+Noise-cancelling for the crew,
 
 79
-00:02:41,800 --> 00:02:43,833
-Scylla, a monster with six heads,
+00:02:38,167 --> 00:02:39,833
+a live concert for the captain.
 
 80
-00:02:43,833 --> 00:02:45,567
-or Charybdis, a whirlpool
+00:02:40,833 --> 00:02:43,067
+Next, a strait with two bad options.
 
 81
-00:02:45,567 --> 00:02:47,800
-that swallows the sea three times a day.
+00:02:43,400 --> 00:02:45,467
+Scylla, a monster with six heads,
 
 82
-00:02:48,133 --> 00:02:49,733
-Scylla takes six of his men.
+00:02:45,467 --> 00:02:47,067
+or Charybdis, a whirlpool
 
 83
-00:02:50,733 --> 00:02:52,333
-On the island of the sun god,
+00:02:47,067 --> 00:02:49,300
+that swallows the sea three times a day.
 
 84
-00:02:52,333 --> 00:02:54,733
-the starving crew eats his sacred cattle.
+00:02:49,633 --> 00:02:51,233
+Scylla takes six of his men.
 
 85
-00:02:55,067 --> 00:02:57,133
-Zeus sinks the ship with a thunderbolt,
+00:02:52,233 --> 00:02:53,867
+On the island of the sun god,
 
 86
-00:02:57,133 --> 00:02:58,733
-and only Odysseus survives.
+00:02:53,867 --> 00:02:56,167
+the starving crew eats his sacred cattle.
 
 87
-00:02:59,733 --> 00:03:01,800
-He washes up on Calypso's island.
+00:02:56,500 --> 00:02:58,733
+Zeus sinks the ship with a thunderbolt,
 
 88
-00:03:02,133 --> 00:03:03,933
-She keeps him for seven years,
+00:02:58,733 --> 00:03:00,467
+and only Odysseus survives.
 
 89
-00:03:03,933 --> 00:03:05,600
-and offers to make him immortal.
+00:03:01,467 --> 00:03:03,500
+He washes up on Calypso's island.
 
 90
-00:03:05,933 --> 00:03:06,800
-He says no.
+00:03:03,833 --> 00:03:05,467
+She keeps him for seven years,
 
 91
-00:03:07,133 --> 00:03:08,400
-He wants to go home,
+00:03:05,467 --> 00:03:07,067
+and offers to make him immortal.
 
 92
-00:03:08,400 --> 00:03:10,400
-where his wife has a problem of her own.
+00:03:07,400 --> 00:03:08,333
+He says no.
 
 93
-00:03:12,233 --> 00:03:14,300
-So Odysseus is stuck on one island.
+00:03:08,667 --> 00:03:09,800
+He wants to go home,
 
 94
-00:03:14,633 --> 00:03:16,267
-Penelope is stuck on another.
+00:03:09,800 --> 00:03:11,700
+where his wife has a problem of her own.
 
 95
-00:03:16,600 --> 00:03:18,833
-A hundred and eight men want to marry her,
+00:03:13,533 --> 00:03:15,667
+So Odysseus is stuck on one island.
 
 96
-00:03:18,833 --> 00:03:20,967
-and they won't leave until she picks one.
+00:03:16,000 --> 00:03:17,600
+Penelope is stuck on another.
 
 97
-00:03:21,967 --> 00:03:24,700
-Meanwhile, they party in the palace every day,
+00:03:17,933 --> 00:03:19,933
+A hundred and eight men want to marry her,
 
 98
-00:03:24,700 --> 00:03:26,933
-on his cattle, his sheep and his wine.
+00:03:19,933 --> 00:03:21,900
+and they won't leave until she picks one.
 
 99
-00:03:27,267 --> 00:03:28,933
-They eat everything in sight,
+00:03:22,900 --> 00:03:25,433
+Meanwhile, they party in the palace every day,
 
 100
-00:03:28,933 --> 00:03:31,200
-and they'd still give the place one star.
+00:03:25,433 --> 00:03:27,500
+on his cattle, his sheep and his wine.
 
 101
-00:03:32,200 --> 00:03:33,400
-Penelope stalls.
+00:03:27,833 --> 00:03:29,367
+They eat everything in sight,
 
 102
-00:03:33,733 --> 00:03:35,767
-She'll choose a husband, she says,
+00:03:29,367 --> 00:03:31,500
+and they'd still give the place one star.
 
 103
-00:03:35,767 --> 00:03:37,500
-once she finishes weaving a shroud
+00:03:32,500 --> 00:03:33,633
+Penelope stalls.
 
 104
-00:03:37,500 --> 00:03:38,900
-for Odysseus's father.
+00:03:33,967 --> 00:03:35,733
+She'll choose a husband, she says,
 
 105
-00:03:39,233 --> 00:03:40,433
-She weaves it by day
+00:03:35,733 --> 00:03:37,367
+once she finishes weaving a shroud
 
 106
-00:03:40,433 --> 00:03:42,367
-and secretly unpicks it by night.
+00:03:37,367 --> 00:03:38,667
+for Odysseus's father.
 
 107
-00:03:42,700 --> 00:03:43,733
-For three years.
+00:03:39,000 --> 00:03:40,233
+She weaves it by day
 
 108
-00:03:44,733 --> 00:03:47,133
-In the fourth year, a maid gives her away.
+00:03:40,233 --> 00:03:42,167
+and secretly unpicks it by night.
 
 109
-00:03:47,467 --> 00:03:50,033
-Meanwhile, their son, the baby from the start,
+00:03:42,500 --> 00:03:43,467
+For three years.
 
 110
-00:03:50,033 --> 00:03:50,933
-is grown up.
+00:03:44,467 --> 00:03:46,567
+In the fourth year, a maid gives her away.
 
 111
-00:03:51,267 --> 00:03:53,533
-He sails off to find news of his father,
+00:03:46,900 --> 00:03:49,300
+Meanwhile, their son, the baby from the start,
 
 112
-00:03:53,533 --> 00:03:55,800
-guided by an old friend called Mentor.
+00:03:49,300 --> 00:03:50,067
+is grown up.
 
 113
-00:03:56,800 --> 00:03:59,167
-Mentor is really Athena in disguise,
+00:03:50,400 --> 00:03:52,733
+He sails off to find news of his father,
 
 114
-00:03:59,167 --> 00:04:01,433
-and that's where our word mentor comes from.
+00:03:52,733 --> 00:03:54,900
+guided by an old friend called Mentor.
 
 115
-00:04:01,767 --> 00:04:04,333
-The suitors plan to ambush him on his way home.
+00:03:55,900 --> 00:03:58,000
+Mentor is really Athena in disguise,
 
 116
-00:04:04,667 --> 00:04:06,833
-Now Penelope is out of excuses,
+00:03:58,000 --> 00:04:00,367
+and that's where our word mentor comes from.
 
 117
-00:04:06,833 --> 00:04:08,600
-the suitors are out of patience,
+00:04:00,700 --> 00:04:03,400
+The suitors plan to ambush him on his way home.
 
 118
-00:04:08,600 --> 00:04:10,300
-and Odysseus is out of ships.
+00:04:03,733 --> 00:04:05,833
+Now Penelope is out of excuses,
 
 119
-00:04:12,133 --> 00:04:14,800
-The gods finally order Calypso to let him go.
+00:04:05,833 --> 00:04:07,500
+the suitors are out of patience,
 
 120
-00:04:15,133 --> 00:04:16,733
-A kingdom of sailors carries him
+00:04:07,500 --> 00:04:09,200
+and Odysseus is out of ships.
 
 121
-00:04:16,733 --> 00:04:18,733
-the rest of the way, fast asleep.
+00:04:11,033 --> 00:04:13,567
+The gods finally order Calypso to let him go.
 
 122
-00:04:19,733 --> 00:04:21,267
-Twenty years after he left,
+00:04:13,900 --> 00:04:15,533
+A kingdom of sailors carries him
 
 123
-00:04:21,267 --> 00:04:22,467
-Odysseus is home.
+00:04:15,533 --> 00:04:17,467
+the rest of the way, fast asleep.
 
 124
-00:04:22,800 --> 00:04:25,033
-Late, alone, on someone else's ship.
+00:04:18,467 --> 00:04:19,967
+Twenty years after he left,
 
 125
-00:04:25,367 --> 00:04:27,567
-Exactly what the Cyclops asked for.
+00:04:19,967 --> 00:04:21,200
+Odysseus is home.
 
 126
-00:04:27,900 --> 00:04:28,933
-You have arrived.
+00:04:21,533 --> 00:04:23,633
+Late, alone, on someone else's ship.
 
 127
-00:04:29,933 --> 00:04:32,100
-Athena disguises him as an old beggar,
+00:04:23,967 --> 00:04:26,133
+Exactly what the Cyclops asked for.
 
 128
-00:04:32,100 --> 00:04:33,767
-so he can scout his own house.
+00:04:26,467 --> 00:04:27,367
+You have arrived.
 
 129
-00:04:34,100 --> 00:04:36,667
-His old dog, Argos, knows him at once,
+00:04:28,367 --> 00:04:30,567
+Athena disguises him as an old beggar,
 
 130
-00:04:36,667 --> 00:04:39,200
-wags his tail one last time, and dies.
+00:04:30,567 --> 00:04:32,233
+so he can scout his own house.
 
 131
-00:04:39,533 --> 00:04:42,100
-His old nurse knows him by a scar on his leg.
+00:04:32,567 --> 00:04:35,133
+His old dog, Argos, knows him at once,
 
 132
-00:04:43,100 --> 00:04:44,733
-Then Penelope sets a test.
+00:04:35,133 --> 00:04:37,600
+wags his tail one last time, and dies.
 
 133
-00:04:45,067 --> 00:04:47,233
-Whoever strings Odysseus's old bow
+00:04:37,933 --> 00:04:40,400
+His old nurse knows him by a scar on his leg.
 
 134
-00:04:47,233 --> 00:04:49,567
-and shoots an arrow through twelve axes
+00:04:41,400 --> 00:04:42,967
+Then Penelope sets a test.
 
 135
-00:04:49,567 --> 00:04:50,667
-will be her husband.
+00:04:43,300 --> 00:04:45,267
+Whoever strings Odysseus's old bow
 
 136
-00:04:51,000 --> 00:04:52,533
-The suitors try and fail.
+00:04:45,267 --> 00:04:47,333
+and shoots an arrow through twelve axes
 
 137
-00:04:52,867 --> 00:04:55,267
-The beggar strings it as easily as a lyre,
+00:04:47,333 --> 00:04:48,400
+will be her husband.
 
 138
-00:04:55,267 --> 00:04:57,067
-and shoots through all twelve.
+00:04:48,733 --> 00:04:50,233
+The suitors try and fail.
 
 139
-00:04:57,400 --> 00:04:58,667
-Then the rags come off,
+00:04:50,567 --> 00:04:53,000
+The beggar strings it as easily as a lyre,
 
 140
-00:04:58,667 --> 00:05:00,967
-and the suitors' very long party is over.
+00:04:53,000 --> 00:04:54,733
+and shoots through all twelve.
 
 141
-00:05:01,967 --> 00:05:03,700
-Penelope still isn't sure,
+00:04:55,067 --> 00:04:56,267
+Then the rags come off,
 
 142
-00:05:03,700 --> 00:05:05,900
-so she asks a servant to move their bed.
+00:04:56,267 --> 00:04:58,567
+and the suitors' very long party is over.
 
 143
-00:05:06,233 --> 00:05:09,367
-Odysseus is outraged: nobody can move that bed.
+00:04:59,567 --> 00:05:01,167
+Penelope still isn't sure,
 
 144
-00:05:09,700 --> 00:05:11,733
-One of its posts is an olive tree,
+00:05:01,167 --> 00:05:03,300
+so she asks a servant to move their bed.
 
 145
-00:05:11,733 --> 00:05:13,200
-still rooted in the ground.
+00:05:03,633 --> 00:05:06,567
+Odysseus is outraged: nobody can move that bed.
 
 146
-00:05:13,533 --> 00:05:15,533
-Only the real Odysseus would know that.
+00:05:06,900 --> 00:05:08,800
+One of its posts is an olive tree,
 
 147
-00:05:15,867 --> 00:05:17,900
-She has out-tricked the master trickster.
+00:05:08,800 --> 00:05:10,167
+still rooted in the ground.
 
 148
-00:05:18,900 --> 00:05:21,200
-When the suitors' families come for revenge,
+00:05:10,500 --> 00:05:12,433
+Only the real Odysseus would know that.
 
 149
-00:05:21,200 --> 00:05:23,467
-Athena makes both sides swear peace.
+00:05:12,767 --> 00:05:15,000
+She has out-tricked the master trickster.
 
 150
-00:05:23,800 --> 00:05:25,067
-The poem ends there.
+00:05:16,000 --> 00:05:18,300
+When the suitors' families come for revenge,
 
 151
-00:05:25,400 --> 00:05:26,433
-The story doesn't.
+00:05:18,300 --> 00:05:20,533
+Athena makes both sides swear peace.
 
 152
-00:05:28,267 --> 00:05:29,800
-It moved into our language.
+00:05:20,867 --> 00:05:22,067
+The poem ends there.
 
 153
-00:05:30,133 --> 00:05:32,433
-A long, hard journey is an odyssey,
+00:05:22,400 --> 00:05:23,467
+The story doesn't.
 
 154
-00:05:32,433 --> 00:05:35,533
-a meaning English has used since the late 1800s.
+00:05:25,300 --> 00:05:26,833
+It moved into our language.
 
 155
-00:05:35,867 --> 00:05:37,733
-Stuck between two dangers?
+00:05:27,167 --> 00:05:29,233
+A long, hard journey is an odyssey,
 
 156
-00:05:37,733 --> 00:05:39,533
-You're between Scylla and Charybdis.
+00:05:29,233 --> 00:05:32,033
+a meaning English has used since the late 1800s.
 
 157
-00:05:40,533 --> 00:05:43,267
-In 2017, Emily Wilson published
+00:05:32,367 --> 00:05:34,100
+Stuck between two dangers?
 
 158
-00:05:43,267 --> 00:05:45,333
-the first English translation of the poem
+00:05:34,100 --> 00:05:35,967
+You're between Scylla and Charybdis.
 
 159
-00:05:45,333 --> 00:05:46,067
-by a woman.
+00:05:36,967 --> 00:05:39,500
+In 2017, Emily Wilson published
 
 160
-00:05:46,400 --> 00:05:49,500
-Her first line: Tell me about a complicated man.
+00:05:39,500 --> 00:05:41,533
+the first English translation of the poem
 
 161
-00:05:49,833 --> 00:05:51,367
-The Greek word means, roughly,
+00:05:41,533 --> 00:05:42,300
+by a woman.
 
 162
-00:05:51,367 --> 00:05:52,733
-a man of many turns.
+00:05:42,633 --> 00:05:45,533
+Her first line: Tell me about a complicated man.
 
 163
-00:05:53,733 --> 00:05:55,567
-This summer, Christopher Nolan's film
+00:05:45,867 --> 00:05:47,633
+The Greek word means, roughly,
 
 164
-00:05:55,567 --> 00:05:58,300
-took in about 1.77 billion dollars.
+00:05:47,633 --> 00:05:49,033
+a man of many turns.
 
 165
-00:05:58,633 --> 00:06:01,300
-And by mid-July, before it even opened,
+00:05:50,033 --> 00:05:51,967
+This summer, Christopher Nolan's film
 
 166
-00:06:01,300 --> 00:06:02,867
-US print sales of the poem
+00:05:51,967 --> 00:05:54,767
+took in about 1.77 billion dollars.
 
 167
-00:06:02,867 --> 00:06:05,267
-were up 76 percent year to date.
+00:05:55,100 --> 00:05:57,700
+And by mid-July, before it even opened,
 
 168
-00:06:05,600 --> 00:06:08,067
-Just know the film skips the Nobody trick,
+00:05:57,700 --> 00:05:59,200
+US print sales of the poem
 
 169
-00:06:08,067 --> 00:06:10,333
-and on screen, Athena is the only god.
+00:05:59,200 --> 00:06:01,467
+were up 76 percent year to date.
 
 170
-00:06:11,333 --> 00:06:13,000
-Quick game: real or fake?
+00:06:01,800 --> 00:06:04,033
+Just know the film skips the Nobody trick,
 
 171
-00:06:13,333 --> 00:06:15,733
-One: the Trojan Horse is in the Odyssey.
+00:06:04,033 --> 00:06:06,167
+and on screen, Athena is the only god.
 
 172
-00:06:16,067 --> 00:06:18,667
-Two: Odysseus's dog recognizes him
+00:06:07,167 --> 00:06:08,833
+Quick game: real or fake?
 
 173
-00:06:18,667 --> 00:06:19,833
-after twenty years.
+00:06:09,167 --> 00:06:11,467
+One: the Trojan Horse is in the Odyssey.
 
 174
-00:06:20,167 --> 00:06:22,700
-Three: Homer says the Cyclops has one eye
+00:06:11,800 --> 00:06:14,300
+Two: Odysseus's dog recognizes him
 
 175
-00:06:22,700 --> 00:06:23,967
-in the middle of his forehead.
+00:06:14,300 --> 00:06:15,400
+after twenty years.
 
 176
-00:06:26,967 --> 00:06:28,367
-The fake is number three.
+00:06:15,733 --> 00:06:18,167
+Three: Homer says the Cyclops has one eye
 
 177
-00:06:28,700 --> 00:06:31,033
-Homer only mentions his eye, singular,
+00:06:18,167 --> 00:06:19,400
+in the middle of his forehead.
 
 178
-00:06:31,033 --> 00:06:32,567
-and never says where it is.
+00:06:22,400 --> 00:06:23,733
+The fake is number three.
 
 179
-00:06:32,900 --> 00:06:34,600
-The forehead comes from Hesiod,
+00:06:24,067 --> 00:06:26,300
+Homer only mentions his eye, singular,
 
 180
-00:06:34,600 --> 00:06:36,300
-describing different Cyclopes.
+00:06:26,300 --> 00:06:27,733
+and never says where it is.
 
 181
-00:06:36,633 --> 00:06:37,833
-The horse is real.
+00:06:28,067 --> 00:06:29,800
+The forehead comes from Hesiod,
 
 182
-00:06:38,167 --> 00:06:39,867
-It's in the Odyssey three times,
+00:06:29,800 --> 00:06:31,533
+describing different Cyclopes.
 
 183
-00:06:39,867 --> 00:06:41,100
-and never in the Iliad.
+00:06:31,867 --> 00:06:33,000
+The horse is real.
 
 184
-00:06:42,100 --> 00:06:44,333
-So why did a trip home take ten years?
+00:06:33,333 --> 00:06:35,100
+It's in the Odyssey three times,
 
 185
-00:06:44,667 --> 00:06:46,500
-One boast, one angry sea god,
+00:06:35,100 --> 00:06:36,433
+and never in the Iliad.
 
 186
-00:06:46,500 --> 00:06:47,967
-and some very long visits.
+00:06:37,433 --> 00:06:39,633
+So why did a trip home take ten years?
 
 187
-00:06:48,300 --> 00:06:50,000
-Next time you post where you are,
+00:06:39,967 --> 00:06:41,800
+One boast, one angry sea god,
 
 188
-00:06:50,000 --> 00:06:51,067
-think of Odysseus.
+00:06:41,800 --> 00:06:43,200
+and some very long visits.
 
 189
-00:06:52,067 --> 00:06:54,167
-But why was he at Troy in the first place?
+00:06:43,533 --> 00:06:45,267
+Next time you post where you are,
 
 190
-00:06:54,500 --> 00:06:55,800
-Blame a golden apple.
+00:06:45,267 --> 00:06:46,333
+think of Odysseus.
 
 191
-00:06:56,133 --> 00:06:58,267
+00:06:47,333 --> 00:06:49,333
+But why was he at Troy in the first place?
+
+192
+00:06:49,667 --> 00:06:50,967
+Blame a golden apple.
+
+193
+00:06:51,300 --> 00:06:53,400
 That's a later myth, and our next video.
+
+194
+00:06:54,400 --> 00:06:55,633
+Thanks for watching.
+
+195
+00:06:55,633 --> 00:06:57,033
+Subscribe so you don't miss it,
+
+196
+00:06:57,033 --> 00:06:58,067
+and see you next time.
 

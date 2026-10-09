@@ -35,7 +35,7 @@ export const VIDEO = {
   chapterTech: ['', '', '', '', ''],
   /** HUD right: chapter tag per chapter (storyboard G0). Shown from `chapterTagFromS`; swaps inside each chapter card. */
   chapterTags: ['01 / THE CYCLOPS', '02 / STOPS AT SEA', '03 / HOME IN ITHACA', '04 / THE RETURN', '05 / ODYSSEY TODAY'],
-  chapterTagFromS: 'S04',
+  chapterTagFromS: 'S05',
   /** 顶部 HUD 胶囊（当前小节名）：按句 id 区间；相邻条目之间自动无空档；跨章节卡自动淡出。下面两条对应模板 narration.txt 的两句，按本片重写。
    *  text 是导航标签：写「这一小节讲什么」的名词短语（`知识库构建` / `混合检索`），不要评价句或比喻（`感觉还行` / `两把尺子` 观众猜不出内容）。
    *  tech 是胶囊下面那行英文副标（灰色 22px 小字，`TechSub`）：只放真正需要露出的英文术语，中文能说清就别加——它是注脚，不是第二个标题。 */

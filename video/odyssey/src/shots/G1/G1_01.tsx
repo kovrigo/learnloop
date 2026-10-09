@@ -7,22 +7,22 @@ import {
 } from '../../paper';
 
 /**
- * SC01 · frames 1–499 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
+ * SC01 · frames 1–487 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
  * (a) map: sea chart print, Odysseus in his boat sliding along a yellow dotted route, ETA card "3 DAYS" → "10 YEARS".
  * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR"; Odysseus with a suitcase stands between them,
  *     HOUSEGUEST lands on his tunic as a badge; he looks to Calypso, then hops along a dotted arc toward Circe.
  * (c) Ithaca: house doors open on a long feast table of suitors, "+96" chip, counter card "GUESTS 108"; plates empty.
- * Exit: the sting's sky sheet drops over the frame in the last 9 frames.
+ * Exit: the sting's sky sheet drops over the frame from 478 (counter lands 433 → 45 frames hold).
  */
 const F0 = 1;
-const END = 499;
+const END = 487;
 // beats (subtitle-block starts, script/timeline.md)
-const B = {s01a: 86, s01b: 138, s02a: 186, s02b: 258, s02c: 323, s03a: 377, s03b: 423, s03c: 465};
-const PAN1 = {a: 186, len: 40};
+const B = {s01a: 86, s01b: 139, s02a: 186, s02b: 252, s02c: 314, s03a: 365, s03b: 411, s03c: 453};
+const PAN1 = {a: B.s02a, len: 40};
 const PAN2 = {a: B.s03a - 6, len: 36};
 const ST_B = {x: 1280, y: 0};
 const ST_C = {x: 2560, y: 300};
-const EXIT = 491; // counter lands 445 → 46 frames hold
+const EXIT = 478; // counter lands 433 → 45 frames hold
 
 // ---- station (a): chart print and route, chart-local coordinates (image 485×470 at screen 118,116, rotated −2.5°)
 const CH = {x: 118, y: 116, w: 485, h: 470, rot: -2.5};
@@ -76,7 +76,7 @@ export const G1_01: React.FC = () => {
 
 // ======================================================================== (a) map
 const StationA: React.FC<{N: number}> = ({N}) => {
-  const t = easeInOutPow(1.4)(clamp01((N - 1) / 185));
+  const t = easeInOutPow(1.4)(clamp01((N - 1) / (B.s02a - 1)));
   const k = {x: BOAT_A[0] + (BOAT_B[0] - BOAT_A[0]) * t, y: BOAT_A[1] + (BOAT_B[1] - BOAT_A[1]) * t};
   const boatRot = rock(N, 2, 70);
   const nod = N >= B.s01b - 2 ? 3 * Math.sin(clamp01((N - B.s01b + 2) / 14) * Math.PI) : 0; // head reacts when the ETA flips
@@ -130,7 +130,7 @@ const EtaCard: React.FC<{N: number; t: number}> = ({N, t}) => {
 // Odysseus stands world-fixed at the centre of station (b), suitcase in his left hand; HOUSEGUEST lands on his tunic as a badge.
 // PaperCharacter draws its 380×(cropY+20) viewBox into w × h·cropY/540, so 1 symbol unit = HB.sp px, centred horizontally (heroPt).
 const HB = (() => {
-  const h = 448, cropY = 540, bottom = 612; // bottom edge clear of the subtitle band (637)
+  const h = 448, cropY = 540, bottom = 612; // bottom edge clear of the bottom band (y 620)
   const w = (h * 380) / 540, sp = (h / 540) * (cropY / (cropY + 20));
   const y = bottom + (20 * h) / 540 - (h * cropY) / 540;
   const x = 640 - (w - 380 * sp) / 2 - 195 * sp; // body centre (symbol x 195) at station x 640
@@ -140,8 +140,8 @@ const HB = (() => {
 const heroPt = (u: number, v: number) => ({x: HB.x + (HB.w - 380 * HB.sp) / 2 + u * HB.sp, y: HB.y - (20 * HB.h) / 540 + (v + 20) * HB.sp});
 const CHEST = heroPt(195, 404); // badge centre
 const GRIP = {u: 44, v: 508, pivot: [62, 350] as [number, number]}; // left fist, shoulder pivot (BODIES.hero.armL)
-const ARM_L = -46; // left arm held out so the suitcase hangs above the subtitle band
-const HOP = {a: B.s02c + 5, len: 14, dx: 70, h: 48}; // take-off 328, lands 342
+const ARM_L = -46; // left arm held out so the suitcase hangs above the bottom band
+const HOP = {a: B.s02c + 5, len: 14, dx: 70, h: 48}; // take-off 319, lands 333
 const BADGE_S = 0.58; // HOUSEGUEST size 36 → badge ≈ 21 px type
 /** damped swing kicked at frame f */
 const kick = (N: number, f: number, amp: number, period = 22, decay = 18) => (N >= f ? amp * Math.sin(((N - f) / period) * Math.PI * 2) * Math.exp(-(N - f) / decay) : 0);
@@ -152,7 +152,7 @@ const StationB: React.FC<{N: number; p1: number; camX: number}> = ({N, p1, camX}
   const tagJiggle = bump(B.s02b) + bump(B.s02c);
   const ox = ST_B.x;
 
-  // ---- hop (S02.c3): anticipation dip 324–328, air 328–342 on a parabola, landing dip
+  // ---- hop (S02.c3): anticipation dip 315–319, air 319–333 on a parabola, landing dip
   const u = clamp01((N - HOP.a) / HOP.len);
   const air = N >= HOP.a && N < HOP.a + HOP.len;
   const hx = HOP.dx * u;
@@ -166,12 +166,12 @@ const StationB: React.FC<{N: number; p1: number; camX: number}> = ({N, p1, camX}
   const f1 = prog(N, B.s02b + 1, 6, easeInOutPow(2));
   const f2 = prog(N, B.s02c, 6, easeInOutPow(2));
   const headFlip = -1 + 2 * f1 - 2 * f2;
-  const headTilt = -7 * f1 + 13 * f2 + bumpAt(N, 238, 3, 10) + bumpAt(N, 292, -3, 10) + kick(N, HOP.a + HOP.len, 3, 14, 10) + bumpAt(N, 354, 3, 10);
+  const headTilt = -7 * f1 + 13 * f2 + bumpAt(N, B.s02b - 20, 3, 10) + bumpAt(N, B.s02b + 34, -3, 10) + kick(N, HOP.a + HOP.len, 3, 14, 10) + bumpAt(N, B.s02c + 31, 3, 10);
   const headTurn = 0.8 + 0.2 * Math.abs(headFlip);
 
   // ---- left arm with the suitcase: swings on speech beats; the case hangs plumb and lags (pendulum)
-  // negative = the case lifts first, so it never dips toward the subtitle band
-  const armBeats: Array<[number, number]> = [[PAN1.a, -5], [PAN1.a + PAN1.len, -4], [B.s02b, -7], [292, -4], [HOP.a + HOP.len, -4], [354, -4]];
+  // negative = the case lifts first, so it never dips toward the bottom band
+  const armBeats: Array<[number, number]> = [[PAN1.a, -5], [PAN1.a + PAN1.len, -4], [B.s02b, -7], [B.s02b + 34, -4], [HOP.a + HOP.len, -4], [B.s02c + 31, -4]];
   const armL = ARM_L + armBeats.reduce((acc, [f, a]) => acc + kick(N, f, a), 0);
   const swing = armBeats.reduce((acc, [f, a]) => acc + kick(N, f + 3, -1.6 * a), 0) + kick(N, HOP.a, 14, 18, 16) + kick(N, HOP.a + HOP.len, -8, 18, 20);
   const ar = (-armL * Math.PI) / 180; // PaperCharacter rotates armL by −armL (SVG, clockwise +)
@@ -247,7 +247,7 @@ const BookingCard: React.FC<{x: number; y: number; rot: number; n: number; dir: 
 const DOOR = {x: 220, y: 250, w: 420, h: 362};
 const StationC: React.FC<{N: number}> = ({N}) => {
   const ox = ST_C.x, oy = ST_C.y;
-  const open = prog(N, B.s03a + 1, 22, easeInOutPow(2.2)); // doors swing open as the camera arrives (pan 371–407)
+  const open = prog(N, B.s03a + 1, 22, easeInOutPow(2.2)); // doors swing open as the camera arrives (pan 359–395)
   const roll = 108 * easeOutCubic(clamp01((N - B.s03b) / 22));
   return (
     <div style={{position: 'absolute', left: ox, top: oy, width: 1280, height: 720}}>

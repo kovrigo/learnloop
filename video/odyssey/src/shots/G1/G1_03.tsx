@@ -4,31 +4,31 @@ import {clamp01, easeOutCubic, easeInOutPow} from '../../common';
 import {SET, SHAPES, IMG, SHADOW, SHADOW_S, C, PaperBg, PaperWipe, PaperTag, DottedPath, PaperCharacter, Boat, Ship, Waves, slapCss, prog, rock, samplePath} from '../../paper';
 
 /**
- * SC03 · frames 822–985 · S06 · source IN HOMER / BOOK 9.
+ * SC03 · frames 955–1110 · S07 · source IN HOMER / BOOK 9.
  * Sea palette (V2 waves). The Cleveland warship dinos (1971.46) stands centre-left as a whole-object cut-out.
- * 830 Odysseus slaps in on his paper boat in front of it, name tag 3 frames later (beat window +3), head turns to the viewer.
- * 900 (S06.c2 −3) twelve paper ships peel off the vase every 3 frames and sail right along a dotted path;
- * "12 SHIPS" slaps with the 12th ship (933). Parallax slide left from 903 (40 frames, sea layers at 3 speeds).
- * Hold: tag lands 943 → exit 978 (35 frames). Exit: the Ithaca sheet wipes over (978–985).
+ * 963 Odysseus slaps in on his paper boat in front of it, name tag 3 frames later (beat window +3), head turns to the viewer.
+ * 1024 (S07.c2 −3) twelve paper ships peel off the vase every 3 frames and sail right along a dotted path;
+ * "12 SHIPS" slaps with the 12th ship (1057). Parallax slide left from 1027 (40 frames, sea layers at 3 speeds).
+ * Hold: tag lands 1067 → exit 1103 (36 frames). Exit: the Ithaca sheet wipes over (1103–1110).
  */
-const F0 = 822;
-const END = 985;
-const B = {s06a: 830, s06b: 903};
-const SHIPS0 = B.s06b - 3;
-const EXIT = 978;
+const F0 = 955;
+const END = 1110;
+const B = {s07a: 963, s07b: 1027};
+const SHIPS0 = B.s07b - 3;
+const EXIT = 1103;
 const DINOS = {x: 318, y: 132, w: 420}; // PNG 1328×1156 → h 365
 const PATH = samplePath([[628, 222], [744, 316], [890, 390], [1060, 418], [1236, 410]]);
 const slotT = (i: number) => 0.97 - i * 0.074;
 
 export const G1_03: React.FC = () => {
   const N = useCurrentFrame() + F0;
-  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over SC02's terracotta (822–829)
-  const par = prog(N, B.s06b, 40, easeInOutPow(2.4)); // parallax slide left
+  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over SC02's terracotta (955–961)
+  const par = prog(N, B.s07b, 40, easeInOutPow(2.4)); // parallax slide left
   const shift: [number, number, number] = [-18 * par, -36 * par, -58 * par];
   const content = -30 * par;
   const wipe = prog(N, EXIT, END - EXIT, easeOutCubic);
   const boatRot = rock(N, 1.4, 96); // the big boat rocks slowly so the hold reads as settled
-  const nO = N - B.s06a;
+  const nO = N - B.s07a;
   const headTurn = nO < 0 ? 0.4 : 0.4 + 0.6 * easeOutCubic(clamp01((nO - 4) / 14));
   const headTilt = nO < 0 ? 0 : 5 * Math.sin(clamp01((nO - 4) / 18) * Math.PI) - 2;
   return (
@@ -69,11 +69,11 @@ export const G1_03: React.FC = () => {
         {nO >= 0 ? (
           <div style={{position: 'absolute', left: 0, top: 0, width: 1280, height: 720, ...slapCss(nO, 0, -1), transformOrigin: '344px 458px'}}>
             <Boat x={104} y={270} s={0.66} rot={boatRot} sailDx={150}>
-              <PaperCharacter variant="hero" x={-8} y={-147} h={500} cropY={450} head={headTilt} headTurn={headTurn} armR={6 * Math.sin((N - B.s06a) / 16)} armL={-3 * Math.sin((N - B.s06a) / 19)} />
+              <PaperCharacter variant="hero" x={-8} y={-147} h={500} cropY={450} head={headTilt} headTurn={headTurn} armR={6 * Math.sin((N - B.s07a) / 16)} armL={-3 * Math.sin((N - B.s07a) / 19)} />
             </Boat>
           </div>
         ) : null}
-        <PaperTag text="ODYSSEUS · KING OF ITHACA" x={356} y={556} rot={-3} size={24} n={N - (B.s06a + 3)} bg={C.cream2} color={C.navy} />
+        <PaperTag text="ODYSSEUS · KING OF ITHACA" x={356} y={556} rot={-3} size={24} n={N - (B.s07a + 3)} bg={C.cream2} color={C.navy} />
         <PaperTag text="12 SHIPS" x={1000} y={238} rot={4} size={72} n={N - (SHIPS0 + 33)} bg={C.yellow} color={C.navy} />
       </div>
       {/* exit: the Ithaca sheet */}
