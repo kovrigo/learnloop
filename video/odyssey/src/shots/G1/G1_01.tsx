@@ -9,9 +9,11 @@ import {
 /**
  * SC01 · frames 1–487 · cold open (S01–S03). One continuous paper tabletop, three stations left to right.
  * (a) map: sea chart print, Odysseus in his boat sliding along a yellow dotted route, ETA card "3 DAYS" → "10 YEARS".
- * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR"; Odysseus with a suitcase stands between them,
- *     HOUSEGUEST lands on his tunic as a badge; he looks to Calypso, then hops along a dotted arc toward Circe.
- * (c) Ithaca: house doors open on a long feast table of suitors, "+96" chip, counter card "GUESTS 108"; plates empty.
+ * (b) booking cards "CALYPSO'S ISLAND · 7 YEARS" and "CIRCE'S PALACE · 1 YEAR"; Odysseus, a half-length figure whose body runs off the bottom
+ *     edge, stands between them with a suitcase; HOUSEGUEST lands on his tunic as a badge; he looks to Calypso, then hops along a dotted arc toward Circe.
+ * (c) Ithaca: the house stands on green ground that runs off the bottom edge; its doors open on a long feast table of suitors,
+ *     "+96" chip, counter card "GUESTS 108"; plates empty.
+ * Text, numbers and faces stay above y 620 (YouTube's optional captions and controls); bodies, ground and set pieces use the full frame.
  * Exit: the sting's sky sheet drops over the frame from 478 (counter lands 433 → 45 frames hold).
  */
 const F0 = 1;
@@ -32,6 +34,10 @@ const ITHACA: [number, number] = [192, 224]; // next to Kefalonia (file px 790,9
 const BOAT_A: [number, number] = [600, 372];
 const BOAT_B: [number, number] = [458, 332];
 const ROUTE = samplePath([BOAT_A, BOAT_B, [372, 262], TROY, [318, 300], [372, 400], [300, 462], [170, 462], [98, 380], [122, 286], ITHACA]);
+
+// ground top edge (station (c) coordinates): gentle curve from (0, 622) under the house (y ≈ 596–603), then a fillet up into the old hill's slope
+// (the hill's first segment M780 720 Q860 470 1080 452 cut at t = 0.4, then T → explicit Q)
+const GROUND_TOP = 'M0 622C90 604 170 598 300 596C440 594 600 600 700 603C780 603 825.6 604.3 866.4 557.1Q948 462.8 1080 452Q1300 434 1500 380';
 
 const SUITOR_HEADS = ['suitor_met251524.png', 'suitor_met254640.png', 'suitor_met247994.png', 'suitor_met248895.png'];
 const TUNICS = ['#B7A6D9', '#C9785B', '#7FC4C0', '#E0B54A', '#8C647B', '#9CAE91'];
@@ -58,8 +64,11 @@ export const G1_01: React.FC = () => {
         <div style={{position: 'absolute', left: ST_B.x, top: -400, width: 640, height: 2000, background: SET.calypso.bg}} />
         <div style={{position: 'absolute', left: ST_B.x + 640, top: -400, width: 640, height: 2000, background: SET.circe.bg}} />
         <div style={{position: 'absolute', left: ST_C.x, top: -400, width: 1800, height: 2400, background: SET.ithaca.bg}} />
-        <svg width={1280} height={720} style={{position: 'absolute', left: ST_C.x, top: ST_C.y, overflow: 'visible'}}>
-          <path d="M780 720Q860 470 1080 452T1500 380V900H780Z" fill={SET.ithaca.shape} />
+        {/* Ithaca ground + hill, station (c) coordinates: starts at station x 0, top edge runs under the house (y ≈ 600) and bends up into the hill;
+            runs down to station y 1400, so its lower edge is never on screen (pan 2 slides station (c) down into view from above: lowest visible station y is 1020) */}
+        <svg width={1280} height={720} style={{position: 'absolute', left: ST_C.x, top: ST_C.y, overflow: 'visible', filter: SHADOW}}>
+          <path d={`${GROUND_TOP}V1400H0Z`} fill={SET.ithaca.shape} />
+          <path d={GROUND_TOP} fill="none" stroke="#fff" strokeWidth={10} strokeLinejoin="round" />
         </svg>
       </div>
       <Grain />
@@ -129,8 +138,11 @@ const EtaCard: React.FC<{N: number; t: number}> = ({N, t}) => {
 // ======================================================================== (b) booking cards + Odysseus the houseguest
 // Odysseus stands world-fixed at the centre of station (b), suitcase in his left hand; HOUSEGUEST lands on his tunic as a badge.
 // PaperCharacter draws its 380×(cropY+20) viewBox into w × h·cropY/540, so 1 symbol unit = HB.sp px, centred horizontally (heroPt).
+// Half-length figure: head and badge stay above y 620 (YouTube draws its optional captions and controls over y 620–720), the body runs off the
+// bottom edge. `bottom` is where the body's flat bottom edge (symbol y 540, white border included) would be; at 800 it stays below y 720 in every
+// frame (hop lift 48 px + lean 5° around the chest raise a bottom corner by about 66 px, so the highest it gets on screen is about 734).
 const HB = (() => {
-  const h = 448, cropY = 540, bottom = 612; // bottom edge clear of the bottom band (y 620)
+  const h = 620, cropY = 540, bottom = 800;
   const w = (h * 380) / 540, sp = (h / 540) * (cropY / (cropY + 20));
   const y = bottom + (20 * h) / 540 - (h * cropY) / 540;
   const x = 640 - (w - 380 * sp) / 2 - 195 * sp; // body centre (symbol x 195) at station x 640
@@ -138,9 +150,9 @@ const HB = (() => {
 })();
 /** symbol (u, v) of the hero body → station px */
 const heroPt = (u: number, v: number) => ({x: HB.x + (HB.w - 380 * HB.sp) / 2 + u * HB.sp, y: HB.y - (20 * HB.h) / 540 + (v + 20) * HB.sp});
-const CHEST = heroPt(195, 404); // badge centre
+const CHEST = heroPt(195, 330); // badge centre: upper chest, bottom of the badge stays above y 620 through the landing dips
 const GRIP = {u: 44, v: 508, pivot: [62, 350] as [number, number]}; // left fist, shoulder pivot (BODIES.hero.armL)
-const ARM_L = -46; // left arm held out so the suitcase hangs above the bottom band
+const ARM_L = -74; // left arm held out to the side so the whole suitcase hangs inside the frame (case bottom stays above y 720 by a margin)
 const HOP = {a: B.s02c + 5, len: 14, dx: 70, h: 48}; // take-off 319, lands 333
 const BADGE_S = 0.58; // HOUSEGUEST size 36 → badge ≈ 21 px type
 /** damped swing kicked at frame f */
@@ -170,7 +182,7 @@ const StationB: React.FC<{N: number; p1: number; camX: number}> = ({N, p1, camX}
   const headTurn = 0.8 + 0.2 * Math.abs(headFlip);
 
   // ---- left arm with the suitcase: swings on speech beats; the case hangs plumb and lags (pendulum)
-  // negative = the case lifts first, so it never dips toward the bottom band
+  // negative = the case lifts first, so it never dips toward the bottom edge
   const armBeats: Array<[number, number]> = [[PAN1.a, -5], [PAN1.a + PAN1.len, -4], [B.s02b, -7], [B.s02b + 34, -4], [HOP.a + HOP.len, -4], [B.s02c + 31, -4]];
   const armL = ARM_L + armBeats.reduce((acc, [f, a]) => acc + kick(N, f, a), 0);
   const swing = armBeats.reduce((acc, [f, a]) => acc + kick(N, f + 3, -1.6 * a), 0) + kick(N, HOP.a, 14, 18, 16) + kick(N, HOP.a + HOP.len, -8, 18, 20);
@@ -189,18 +201,21 @@ const StationB: React.FC<{N: number; p1: number; camX: number}> = ({N, p1, camX}
     </div>
   );
 
-  // ---- hop arc: yellow dots above his head top, from where he stands to where he lands
-  const top = heroPt(195, -6).y - 22;
+  // ---- hop arc: yellow dots above his head, from where he stands to where he lands. Its ends sit 14 px above the head top at the peak of the
+  //      hop (head top − HOP.h), its apex RISE higher: y ≈ 105, below the HUD row (y ≥ 100)
+  const RISE = 28;
+  const top = heroPt(195, -6).y - HOP.h - 14;
   const a0: [number, number] = [ox + 640 - 26, top], a1: [number, number] = [ox + 640 + HOP.dx + 20, top];
-  const arc = `M${a0[0]} ${a0[1]}Q${(a0[0] + a1[0]) / 2} ${top - 2 * 62} ${a1[0]} ${a1[1]}`;
-  const back = Math.atan2(-124, -(a1[0] - a0[0]) / 2); // reverse end tangent of the quadratic
+  const arc = `M${a0[0]} ${a0[1]}Q${(a0[0] + a1[0]) / 2} ${top - 2 * RISE} ${a1[0]} ${a1[1]}`;
+  const back = Math.atan2(-2 * RISE, -(a1[0] - a0[0]) / 2); // reverse end tangent of the quadratic
   const tip = (k: number) => `${a1[0] + 18 * Math.cos(back + k)} ${a1[1] + 18 * Math.sin(back + k)}`;
   const arrow = `M${tip(-0.52)}L${a1[0]} ${a1[1]}L${tip(0.52)}`;
 
   return (
     <>
-      <BookingCard x={ox + 95} y={135} rot={-4 + bump(B.s02c) * 0.6} n={N - B.s02b} dir={-1} img="calypso_rijks_RP-P-1975-75-49_crop.jpg" pos="50% 8%" title="CALYPSO'S ISLAND" big="7 YEARS" />
-      <BookingCard x={ox + 845} y={135} rot={4} n={N - B.s02c} dir={1} img="circe_met253627_crop.jpg" pos="70% 30%" title="CIRCE'S PALACE" big="1 YEAR" />
+      {/* cards moved from (95, 135) / (845, 135): left 20 px out and 25 up, right 30 px out and 20 up, to clear the wider half-length body, the raised arm and the hop landing */}
+      <BookingCard x={ox + 75} y={110} rot={-4 + bump(B.s02c) * 0.6} n={N - B.s02b} dir={-1} img="calypso_rijks_RP-P-1975-75-49_crop.jpg" pos="50% 8%" title="CALYPSO'S ISLAND" big="7 YEARS" />
+      <BookingCard x={ox + 875} y={115} rot={4} n={N - B.s02c} dir={1} img="circe_met253627_crop.jpg" pos="70% 30%" title="CIRCE'S PALACE" big="1 YEAR" />
       <div style={{position: 'absolute', left: 0, top: 0}}>
         <DottedPath d={arc} N={N} reveal={prog(N, B.s02c - 1, 10, easeOutCubic)} speed={0.5} width={7} arrow={arrow} />
       </div>
@@ -251,6 +266,8 @@ const StationC: React.FC<{N: number}> = ({N}) => {
   const roll = 108 * easeOutCubic(clamp01((N - B.s03b) / 22));
   return (
     <div style={{position: 'absolute', left: ox, top: oy, width: 1280, height: 720}}>
+      {/* contact shadow: the house base stands on the ground (GROUND_TOP, behind the house at y ≈ 596–603), light from the upper left */}
+      <div style={{position: 'absolute', left: 134, top: 604, width: 640, height: 26, borderRadius: 13, background: 'rgba(22,21,31,0.34)', filter: 'blur(5px)'}} />
       {/* house front */}
       <div style={{position: 'absolute', left: 0, top: 0, width: 1280, height: 720, filter: SHADOW}}>
         <svg width={1280} height={720} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
@@ -258,6 +275,8 @@ const StationC: React.FC<{N: number}> = ({N}) => {
           <rect x={124} y={190} width={612} height={422} fill={C.cream2} stroke="#fff" strokeWidth={10} />
           <rect x={DOOR.x - 12} y={DOOR.y - 12} width={DOOR.w + 24} height={DOOR.h + 12} fill={SET.ithaca.night} />
           <circle cx={430} cy={152} r={20} fill={C.cream} stroke="#fff" strokeWidth={6} />
+          {/* threshold slab in front of the doorway, on the ground */}
+          <rect x={DOOR.x - 22} y={612} width={DOOR.w + 44} height={20} rx={3} fill={C.cream} stroke="#fff" strokeWidth={6} strokeLinejoin="round" />
         </svg>
       </div>
       {/* interior seen through the doorway */}

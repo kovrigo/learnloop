@@ -278,7 +278,8 @@ export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h,
             <path d={hs.clip} />
           </clipPath>
           <clipPath id={`${id}b`}>
-            <rect x={-60} y={-60} width={500} height={cropY + 60} />
+            {/* clips the body at cropY; wide enough that an arm swung far out (e.g. a raised arm with a suitcase) is not cut at its side */}
+            <rect x={-400} y={-60} width={1180} height={cropY + 60} />
           </clipPath>
         </defs>
         <g clipPath={`url(#${id}b)`}>
