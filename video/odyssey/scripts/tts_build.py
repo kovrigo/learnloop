@@ -12,7 +12,7 @@
   public/assets/<slug>/audio.wav（48k 立体声 16bit；slug 读 src/config.ts）
   script/timeline.json / timeline.md
   src/common/subs.ts（字幕表）、src/common/timeline.ts（TOTAL_FRAMES / CHAPTER_STARTS / SENTENCES）
-逐句缓存于 audio/cache/（键含文本 + 声音 id + 模型 id），改一句只重合成一句。
+逐句缓存于 audio/cache/（键含文本 + 声音 id + 模型 id，设了 ELEVENLABS_VOICE_SETTINGS 时再加这组设置），改一句只重合成一句。
 
 配音引擎按服务器固定（TTS_ENGINE，env.sh 从 $EXPLAINER_HOME/voice.env 读），不必询问：
 默认 elevenlabs：
@@ -55,10 +55,10 @@ FPS = 30
 SR = 48000
 
 # <项目>/voice.env（scripts/new_short.sh 写）：这个项目沿用另一条片子的声音与模型，句缓存才对得上（缓存键含文本 + 声音 + 模型）。
-# 只认下面五个键，值盖过环境变量；没有这个文件时一切照旧。TTS_ENGINE：老片子用 openrouter，新片子不写 = elevenlabs。
+# 只认下面六个键，值盖过环境变量；没有这个文件时一切照旧。TTS_ENGINE：老片子用 openrouter，新片子不写 = elevenlabs。
 for _line in (open(f'{ROOT}/voice.env', encoding='utf-8').read().splitlines() if os.path.exists(f'{ROOT}/voice.env') else []):
     _k, _, _v = _line.partition('=')
-    if _k.strip() in ('TTS_ENGINE', 'ELEVENLABS_VOICE_ID', 'ELEVENLABS_MODEL', 'OPENROUTER_TTS_VOICE', 'OPENROUTER_TTS_MODEL') and _v.strip():
+    if _k.strip() in ('TTS_ENGINE', 'ELEVENLABS_VOICE_ID', 'ELEVENLABS_MODEL', 'ELEVENLABS_VOICE_SETTINGS', 'OPENROUTER_TTS_VOICE', 'OPENROUTER_TTS_MODEL') and _v.strip():
         os.environ[_k.strip()] = _v.strip()
 
 ENGINE = os.environ.get('TTS_ENGINE', 'elevenlabs')
@@ -66,6 +66,8 @@ ELEVENLABS_MODEL = os.environ.get('ELEVENLABS_MODEL', 'eleven_multilingual_v2')
 ELEVENLABS_VOICE_ID = os.environ.get('ELEVENLABS_VOICE_ID', 'JBFqnCBsd6RMkjVDRZzb')
 ELEVENLABS_ENV_FILE = os.environ.get('ELEVENLABS_ENV_FILE', '')
 ELEVENLABS_URL = os.environ.get('ELEVENLABS_URL', 'https://api.elevenlabs.io').rstrip('/')
+# 本片的声音设置（JSON 对象，如 {"stability":0.35,"style":0.35,"speed":1.08}）：设了才随请求发 voice_settings，并进缓存键；不设 = 声音自带设置，键不变。
+ELEVENLABS_VOICE_SETTINGS = os.environ.get('ELEVENLABS_VOICE_SETTINGS', '').strip()
 OPENROUTER_TTS_MODEL = os.environ.get('OPENROUTER_TTS_MODEL', 'openai/gpt-audio-mini')
 OPENROUTER_TTS_VOICE = os.environ.get('OPENROUTER_TTS_VOICE', 'alloy')
 OPENROUTER_ENV_FILE = os.environ.get('OPENROUTER_ENV_FILE', '')
@@ -189,9 +191,18 @@ def voice_model():
     return (OPENROUTER_TTS_VOICE, OPENROUTER_TTS_MODEL) if ENGINE == 'openrouter' else (ELEVENLABS_VOICE_ID, ELEVENLABS_MODEL)
 
 
+def voice_settings():
+    """ELEVENLABS_VOICE_SETTINGS -> 规范化 JSON 串（键排序），没设 / openrouter -> ''。"""
+    if ENGINE != 'elevenlabs' or not ELEVENLABS_VOICE_SETTINGS:
+        return ''
+    return json.dumps(json.loads(ELEVENLABS_VOICE_SETTINGS), sort_keys=True, separators=(',', ':'))
+
+
 def cache_path(text, ext):
     voice, model = voice_model()
     sig = f'{text}|{voice}|{model}'
+    if voice_settings():
+        sig += f'|{voice_settings()}'
     return f'{CACHE}/{hashlib.sha1(sig.encode()).hexdigest()[:16]}{ext}'
 
 
@@ -288,7 +299,10 @@ def synth_elevenlabs(text, api_key, lang):
     if os.path.exists(mp3) and os.path.exists(js):
         return mp3, json.load(open(js))
     url = f'{ELEVENLABS_URL}/v1/text-to-speech/{quote(ELEVENLABS_VOICE_ID, safe="")}/with-timestamps?output_format=mp3_44100_128'
-    body = json.dumps({'text': text, 'model_id': ELEVENLABS_MODEL}).encode('utf-8')
+    req = {'text': text, 'model_id': ELEVENLABS_MODEL}
+    if voice_settings():
+        req['voice_settings'] = json.loads(voice_settings())
+    body = json.dumps(req).encode('utf-8')
     headers = {'xi-api-key': api_key, 'Content-Type': 'application/json'}
     raw = None
     for attempt in range(4):
@@ -495,6 +509,11 @@ def main(narr):
         raise SetupError('ffmpeg missing')
     if not os.path.exists(narr):
         raise SetupError(f'narration not found: {narr}')
+    try:
+        if voice_settings() and not isinstance(json.loads(voice_settings()), dict):
+            raise ValueError
+    except ValueError:
+        raise SetupError('ELEVENLABS_VOICE_SETTINGS is not a JSON object')
     items = parse(narr)
     if not any(it['type'] == 'sent' for it in items):
         raise SetupError('narration has no sentences')
@@ -561,7 +580,7 @@ def main(narr):
         for sb, w in over[:5]:
             print(f"    f{sb['from']} (≈{w:.0f}px{'，会折两行' if w > SUB_MAX_W * 1.3 else ''}) {sb['text']}")
     tl = {'fps': FPS, 'total_frames': total, 'engine': ENGINE,
-          'voice': voice, 'rate': model,
+          'voice': voice, 'rate': model, **({'voice_settings': json.loads(voice_settings())} if voice_settings() else {}),
           'gap': GAP, 'para_gap': PARA_GAP, 'chapter_gap': CHAPTER_GAP, 'lead': LEAD, 'tail': TAIL,
           'lang': lang, 'chapters': chapters, 'sentences': sentences, 'chars': total_chars, 'words': total_words,
           'speech_sec': round(speech_sec, 2)}
