@@ -54,8 +54,8 @@ None. `kit.tsx` and `bg.tsx` are for G4 only.
 | shot | len | still% | longest still | hold | verdict |
 |---|---|---|---|---|---|
 | SC14 | 14.4 s | 1 % | 0.1 s | 36 f | OK |
-| SC15 | 12.4 s | 49 % | 2.1 s | 42 f | OK |
-| SC16 | 9.4 s | 9 % | 0.3 s | 51 f | OK |
+| SC15 | 12.4 s | 48 % | 2.1 s | 42 f | OK |
+| SC16 | 9.4 s | 2 % | 0.2 s | 51 f | OK |
 | SC17 | 10.5 s | 25 % | 1.7 s | 51 f | OK |
 
 `shots failing: 0`.
@@ -66,7 +66,7 @@ Same bundle, same minute: G1 frame 300 (approved) 13.9 s; SC17 frame 5560 18.3 s
 I switched parts of SC14 off one by one for a 20-frame render of 4589–4608 (full 25.6 s): without the singers 21.4 s, without the note bubbles 22.1 s, without meadow strip and front waves 21.1 s, without the rowers 21.9 s, all four 17.9 s. No single hot spot; the cost is spread over the shot's many drop-shadow elements (SHADOW filter) and the large moving layers.
 
 ## Deviations from the storyboard
-- SC14: four rowers (the row gives no number). The note-bubble stream stops emitting after frame 4640 (the last bubble arrives at the ear by about 4710) and the boat's rocking, oars, rower nods and Odysseus's strain tremor ease off from 4672–4720; this is so the hold (4709–4760) passes motion_check. The two dotted lines keep running.
+- SC14: four rowers (the row gives no number). The note-bubble stream stops emitting after frame 4601 (the last bubble arrives at the ear by about 4670) and the boat's rocking, oars, rower nods and Odysseus's strain tremor ease off from 4672–4720; this is so the hold (4709–4760) passes motion_check. The two dotted lines keep running.
 - SC15: the print is the MANIFEST crop at 360 × 281 px; the row gives no print size.
 - SC16: the tear zigzag is drawn only along the hull.
 - No picture was missing.
@@ -74,3 +74,10 @@ I switched parts of SC14 off one by one for a 20-frame render of 4589–4608 (fu
 ## Requests for shared files
 - `src/paper.tsx` line 241: the comment on the `PaperCharacter` arm props says "positive = outward"; in the rendered result a negative `armL`/`armR` swings the arm out to the side and a positive value pulls it in toward the body (checked on stills). The comment should be corrected (no code change needed).
 - `rock(N, amp, period, phase)` returns exactly 0 when `N + phase` is a multiple of half the period. Chrome then snaps the identity `rotate(0deg)` to the pixel grid and the boat jumps for 1–2 frames (seen in SC14 at frame 4725 with phase 0). I use phase 0.37 in SC14 and SC16; no change to the shared file is required.
+
+## Fixes
+Frame ranges, beat times and holds are unchanged. motion_check after the fixes: `shots failing: 0` (table above). Stills: `P/stills/G4fix/` (21 files); edge test (outer 3 px, all channels ≤ 12): 0 over 0.5 %.
+- SC14, text cut by the left frame edge: the push (4610–4652) carried the tags and singers into the left edge ("HOIR", a cut purple robe). Now the singers, the "2" tag and the "A DUET, NOT A CHOIR" tag peel off to the left over 4601–4608 (`PEEL` in `SC14.tsx`), before the push starts. The two dotted lines stay and fade out from their singer ends (CSS mask, 4601–4651) while they keep running to his ear. The note bubbles stop emitting at 4601 (they used to stop at 4640). No text is cut by an edge in any frame.
+- SC17, finger over the question: the hand now comes up from below (rot 12°, fingertip target y = NO button + 28), presses NO and leaves downward; same frames as before (in from 5596, press 5604–5610, out by 5622). "BECOME IMMORTAL?" stays fully readable.
+- SC17, hand read as a rude gesture (finger up, others folded toward the viewer): replaced by a side hand in `kit.tsx` `Hand` (index finger extended left, thumb on top, three fingers curled under, cream cuff), tilted -18°, entering from the right along its own axis; its fingertip presses the lower-right of NO (5602–5610, button dips), then it leaves right by 5622. Covers no text and no face. Same frames and beats. Stills: `P/stills/G4fix2/` (7 files, 5590–5630).
+- Calypso head `calypso_met254496.png`: orange-red pigment stain on the forehead retouched (soft-edged fill from the surrounding marble, fine grain added); only the area x 130–211, y 177–253 of 360×472 changed, alpha untouched. MANIFEST line extended.

@@ -8,7 +8,7 @@ import {Hand, Odometer4, heroMap, kick} from './kit';
 /**
  * SC17 · frames 5422–5735 · S51–S54 · source IN HOMER / BOOKS 5, 7. Mint island (the sheet SC16 wipes in), sea on the left, a second sea with a horizon on the far right.
  * 5430 Odysseus slides in from the water and crawls up the beach; 5491 Calypso slaps in, the counter "DAY 2,555" rolls; 5540 the dialog "BECOME IMMORTAL?" with YES / NO;
- * 5602 a finger presses NO (he shakes his head), the dialog closes; 5637 camera pans right toward the horizon (hand-over to chapter 3's map), he looks and points that way;
+ * 5602 a hand comes in from the right, nearly horizontal, and its index finger presses NO (he shakes his head; the question stays clear), the dialog closes; 5637 camera pans right toward the horizon (hand-over to chapter 3's map), he looks and points that way;
  * 5674 a dotted line runs from his hand to the horizon. Pan 5635–5675, ends 52 frames before the exit; the last element (dotted line) lands 5688, exit starts 5727 (39 frames).
  * Exit: the Ithaca sheet (#D9D3B7), the sheet of chapter card 3, wipes in over the last 8 frames.
  */
@@ -65,7 +65,13 @@ export const SC17: React.FC = () => {
   const fingerIn = easeOutCubic(clamp01((N - (B.no - 6)) / 10));
   const fingerOut = easeInOutPow(2)(clamp01((N - 5610) / 12));
   const pressK = N >= B.no + 2 && N < B.no + 8 ? Math.sin(((N - B.no - 2) / 6) * Math.PI) : 0;
-  const fy = -260 + (NO_BTN.y - 18 + 260) * fingerIn + 12 * pressK - 300 * fingerOut;
+  // a side hand (index finger extended to the left, thumb on top) slides in from the right along its own axis and presses the lower-right of NO,
+  // so "BECOME IMMORTAL?", YES, the NO label and both faces stay clear
+  const HAND_ROT = -18;
+  const HAND_DIR = {x: Math.cos((HAND_ROT * Math.PI) / 180), y: Math.sin((HAND_ROT * Math.PI) / 180)}; // from the fingertip toward the cuff
+  const TIP = {x: NO_BTN.x + 44, y: NO_BTN.y + 20};
+  const travel = 520 * (1 - fingerIn) + 540 * fingerOut - 12 * pressK; // along the hand's axis, away from the button
+  const tipX = TIP.x + HAND_DIR.x * travel, tipY = TIP.y + HAND_DIR.y * travel;
   const noPressed = N >= B.no + 3 && N < 5624 + 8;
 
   // ---- hand and arrow to the horizon
@@ -118,7 +124,7 @@ export const SC17: React.FC = () => {
             </ExampleCard>
           </div>
         ) : null}
-        {N >= B.no - 6 && fingerOut < 1 ? <Hand x={NO_BTN.x} y={fy} rot={190} s={1} /> : null}
+        {N >= B.no - 6 && fingerOut < 1 ? <Hand x={tipX} y={tipY} rot={HAND_ROT} s={0.9} /> : null}
 
         {/* dotted line from his hand to the horizon */}
         <DottedPath d={route} N={N} reveal={prog(N, B.line, 14, easeOutCubic)} speed={0.8} width={8} arrow={arrow} />

@@ -183,7 +183,8 @@ export const Rope: React.FC<{d: string; reveal: number; w?: number}> = ({d, reve
   );
 };
 
-// ------------------------------------------------------------------ pointing hand (finger presses a button). Local box 140×270, fingertip at (68, −6), sleeve at the bottom.
+// ------------------------------------------------------------------ pointing hand, seen from the side (like the pointing-hand emoji, mirrored): comes in from the right, index finger extended to the LEFT, thumb on top, three fingers curled under, cream cuff on the right.
+// Local origin = fingertip, the body extends to +x (hand + cuff about 420 long). rot: negative = the body rises toward the right (the tip points slightly down).
 export const Hand: React.FC<{x: number; y: number; rot?: number; s?: number; sleeve?: string}> = ({x, y, rot = 0, s = 1, sleeve = C.cream2}) => {
   const skin = C.skin, crease = '#B98A6C';
   const parts = (mode: 'border' | 'fill') => {
@@ -192,23 +193,24 @@ export const Hand: React.FC<{x: number; y: number; rot?: number; s?: number; sle
     const st = b ? {stroke: '#fff', strokeWidth: 14, strokeLinejoin: 'round' as const} : {};
     return (
       <>
-        <rect x={52} y={-6} width={32} height={140} rx={16} fill={f(skin)} {...st} />
-        <rect x={86} y={84} width={24} height={44} rx={12} fill={f(skin)} {...st} />
-        <rect x={108} y={92} width={24} height={44} rx={12} fill={f(skin)} {...st} />
-        <rect x={30} y={96} width={102} height={100} rx={32} fill={f(skin)} {...st} />
-        <ellipse cx={34} cy={146} rx={16} ry={27} transform="rotate(-24 34 146)" fill={f(skin)} {...st} />
-        <rect x={34} y={188} width={96} height={100} rx={8} fill={f(sleeve)} {...st} />
+        <rect x={0} y={-15} width={150} height={30} rx={15} fill={f(skin)} {...st} />
+        <rect x={70} y={14} width={110} height={24} rx={12} fill={f(skin)} {...st} />
+        <rect x={84} y={37} width={100} height={24} rx={12} fill={f(skin)} {...st} />
+        <rect x={98} y={60} width={90} height={24} rx={12} fill={f(skin)} {...st} />
+        <rect x={120} y={-40} width={112} height={124} rx={34} fill={f(skin)} {...st} />
+        <rect x={62} y={-42} width={140} height={27} rx={13.5} fill={f(skin)} {...st} />
+        <rect x={226} y={-50} width={200} height={146} rx={8} fill={f(sleeve)} {...st} />
       </>
     );
   };
   return (
-    <div style={{position: 'absolute', left: x - 68 * s, top: y + 6 * s, width: 140 * s, height: 280 * s, transform: `rotate(${rot}deg)`, transformOrigin: `${68 * s}px 0px`, filter: SHADOW}}>
-      <svg width={140 * s} height={280 * s} viewBox="0 0 140 280" style={{overflow: 'visible'}}>
-        <g transform="translate(0 6)">
+    <div style={{position: 'absolute', left: x, top: y, width: 0, height: 0, transform: `rotate(${rot}deg)`, transformOrigin: '0 0', filter: SHADOW}}>
+      <svg width={10} height={10} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
+        <g transform={`scale(${s})`}>
           {parts('border')}
           {parts('fill')}
-          <path d="M92 100V122M114 106V130M44 140q-4 12 2 22" fill="none" stroke={crease} strokeWidth={2.6} strokeLinecap="round" />
-          <path d="M34 200H130" stroke={C.rule} strokeWidth={3} />
+          <path d="M68 -15H150M72 14H132M86 37H138M100 60H142M70 -28H98" fill="none" stroke={crease} strokeWidth={2.6} strokeLinecap="round" />
+          <path d="M232 -50V96" stroke={C.rule} strokeWidth={3} />
         </g>
       </svg>
     </div>
