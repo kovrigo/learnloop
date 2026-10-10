@@ -65,11 +65,14 @@ export const G1_01: React.FC = () => {
         <div style={{position: 'absolute', left: ST_B.x + 640, top: -400, width: 640, height: 2000, background: SET.circe.bg}} />
         <div style={{position: 'absolute', left: ST_C.x, top: -400, width: 1800, height: 2400, background: SET.ithaca.bg}} />
         {/* Ithaca ground + hill, station (c) coordinates: starts at station x 0, top edge runs under the house (y ≈ 600) and bends up into the hill;
-            runs down to station y 1400, so its lower edge is never on screen (pan 2 slides station (c) down into view from above: lowest visible station y is 1020) */}
-        <svg width={1280} height={720} style={{position: 'absolute', left: ST_C.x, top: ST_C.y, overflow: 'visible', filter: SHADOW}}>
-          <path d={`${GROUND_TOP}V1400H0Z`} fill={SET.ithaca.shape} />
-          <path d={GROUND_TOP} fill="none" stroke="#fff" strokeWidth={10} strokeLinejoin="round" />
-        </svg>
+            runs down to station y 1400, so its lower edge is never on screen (pan 2 slides station (c) down into view from above: lowest visible station y is 1020).
+            Clipped to the Ithaca sheet: otherwise its stroke and shadow peek in at the right edge of station (b), frames 219–360 */}
+        <div style={{position: 'absolute', left: ST_C.x, top: -400, width: 1800, height: 2400, overflow: 'hidden'}}>
+          <svg width={1280} height={720} style={{position: 'absolute', left: 0, top: ST_C.y + 400, overflow: 'visible', filter: SHADOW}}>
+            <path d={`${GROUND_TOP}V1400H0Z`} fill={SET.ithaca.shape} />
+            <path d={GROUND_TOP} fill="none" stroke="#fff" strokeWidth={10} strokeLinejoin="round" />
+          </svg>
+        </div>
       </div>
       <Grain />
       {/* content (world) */}
