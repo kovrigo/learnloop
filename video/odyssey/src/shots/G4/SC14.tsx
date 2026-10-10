@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {clamp01, easeOutCubic, easeInOutPow} from '../../common';
-import {C, CAST, CREW_HEADS, Grain, PaperWipe, PaperTag, SpeechBubble, DottedPath, PaperCharacter, Boat, FONT, prog, rock, samplePath} from '../../paper';
+import {C, CAST, CREW_HEADS, Grain, PaperWipe, PaperTag, SpeechBubble, DottedPath, PaperCharacter, Boat, FONT, peelCss, prog, rock, samplePath} from '../../paper';
 import {Back14, Front14, Meadow14, Back15, BG15} from './bg';
 import {Siren, NoteBubble, Crew, Rope, heroMap, kick} from './kit';
 
@@ -11,12 +11,22 @@ import {Siren, NoteBubble, Crew, Rope, heroMap, kick} from './kit';
  * 4345 sirens slap in, the sea sheet and the boat slide in; 4390 "2" tag (+3: "A DUET, NOT A CHOIR"); 4446 two dotted lines run from the singers to the boat and
  * "knowledge" note bubbles stream along them; 4518 wax plugs pop into the rowers' ears; 4590 ropes wrap Odysseus, he strains;
  * 4657 headphones slap on the rowers; 4701 Odysseus's speech bubble. Camera: push-in to Odysseus 4610–4652, ends 108 frames before the shot's end.
+ * 4601–4608 the singers and both tags peel off to the left, before the push carries them to the frame edge (no text or robe is ever cut by an edge); the dotted lines fade out from their singer ends and keep running to his ear.
  * Hold: bubble opens 4701 → 4709, exit starts 4760 (51 frames). Exit: the strait's water sheet (#285F80) wipes in over the last 8 frames.
  */
 const F0 = 4337;
 const END = 4768;
 const EXIT = END - 8;
 const B = {sirens: 4345, two: 4390, notes: 4446, wax: 4518, rope: 4590, phones: 4657, bubble: 4701};
+const PEEL = {a: 4601, len: 8}; // singers and tags leave; the push starts 4610
+// once the singers have left, the dotted lines fade out from their singer ends (x grows 140 → 310) while the camera carries that end out of the frame
+const lineFade = (N: number): React.CSSProperties => {
+  if (N < PEEL.a) return {};
+  const x = 140 + 170 * prog(N, PEEL.a, 50, easeInOutPow(2));
+  const m = `linear-gradient(to right, transparent ${x.toFixed(1)}px, #000 ${(x + 36).toFixed(1)}px)`;
+  return {WebkitMaskImage: m, maskImage: m};
+};
+const peeling = (N: number, ox: number, oy: number): React.CSSProperties => ({position: 'absolute', left: 0, top: 0, width: 1280, height: 720, transformOrigin: `${ox}px ${oy}px`, ...(N >= PEEL.a ? peelCss(N - PEEL.a, PEEL.len, -1) : {})});
 const PUSH = {a: 4610, len: 42};
 const CAM0 = {x: 640, y: 360, s: 1};
 const CAM1 = {x: 900, y: 330, s: 1.22};
@@ -84,12 +94,18 @@ export const SC14: React.FC = () => {
       <Grain />
       <div style={world}>
         {/* the two singers on the meadow */}
-        <Siren cx={150} by={770} h={430} N={N} v={0} phase={0} n={N - (B.sirens - 2)} dir={-1} />
-        <Siren cx={322} by={770} h={430} N={N} v={1} phase={11} n={N - (B.sirens + 1)} dir={1} />
+        {N < PEEL.a + PEEL.len - 1 ? (
+          <div style={peeling(N, 236, 770)}>
+            <Siren cx={150} by={770} h={430} N={N} v={0} phase={0} n={N - (B.sirens - 2)} dir={-1} />
+            <Siren cx={322} by={770} h={430} N={N} v={1} phase={11} n={N - (B.sirens + 1)} dir={1} />
+          </div>
+        ) : null}
 
         {/* dotted lines and note bubbles */}
-        <DottedPath d={PATH_A.d} N={N} reveal={prog(N, B.notes - 2, 22, easeOutCubic)} speed={0.7} width={7} />
-        <DottedPath d={PATH_B.d} N={N} reveal={prog(N, B.notes + 2, 22, easeOutCubic)} speed={0.7} width={7} />
+        <div style={{position: 'absolute', left: 0, top: 0, width: 1280, height: 720, ...lineFade(N)}}>
+          <DottedPath d={PATH_A.d} N={N} reveal={prog(N, B.notes - 2, 22, easeOutCubic)} speed={0.7} width={7} />
+          <DottedPath d={PATH_B.d} N={N} reveal={prog(N, B.notes + 2, 22, easeOutCubic)} speed={0.7} width={7} />
+        </div>
         <Notes N={N} />
 
         {/* boat: hull, rowers, mast, Odysseus, oars */}
@@ -160,8 +176,12 @@ export const SC14: React.FC = () => {
         </div>
 
         {/* tags */}
-        <PaperTag text="2" x={118} y={250} rot={-6} size={96} n={N - B.two} bg={C.yellow} color={C.navy} />
-        <PaperTag text="A DUET, NOT A CHOIR" x={270} y={556} rot={-3} size={34} n={N - (B.two + 3)} dir={-1} color={C.navy} />
+        {N < PEEL.a + PEEL.len - 1 ? (
+          <div style={peeling(N, 240, 400)}>
+            <PaperTag text="2" x={118} y={250} rot={-6} size={96} n={N - B.two} bg={C.yellow} color={C.navy} />
+            <PaperTag text="A DUET, NOT A CHOIR" x={270} y={556} rot={-3} size={34} n={N - (B.two + 3)} dir={-1} color={C.navy} />
+          </div>
+        ) : null}
 
         {/* Odysseus's bubble */}
         {N >= B.bubble ? (
@@ -180,14 +200,14 @@ export const SC14: React.FC = () => {
 };
 
 /** Note bubbles stream along both dotted lines from 4446 on: one every 17 frames per line, 70 frames from mouth to ear.
- *  The last one leaves at 4640 and has arrived by 4710, so the hold (4709 → 4760) is calm. */
+ *  They stop with the singers (the last one leaves at 4599 and has arrived by 4669), so the hold (4709 → 4760) is calm. */
 const Notes: React.FC<{N: number}> = ({N}) => {
   const out: React.ReactNode[] = [];
   const lines: Array<[typeof PATH_A, number, string]> = [[PATH_A, B.notes, 'a'], [PATH_B, B.notes + 3, 'b']];
   for (const [path, start, tag] of lines) {
     for (let j = 0; j < 24; j++) {
       const e = start + j * 17;
-      if (e > 4640) break;
+      if (e > PEEL.a) break;
       const t = (N - e) / 70;
       if (t < 0 || t > 1) continue;
       const q = path.at(t);
