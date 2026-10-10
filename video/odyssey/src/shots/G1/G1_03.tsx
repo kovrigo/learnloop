@@ -4,25 +4,25 @@ import {clamp01, easeOutCubic, easeInOutPow} from '../../common';
 import {SET, SHAPES, IMG, SHADOW, SHADOW_S, C, PaperBg, PaperWipe, PaperTag, DottedPath, PaperCharacter, Boat, Ship, Waves, slapCss, prog, rock, samplePath} from '../../paper';
 
 /**
- * SC03 · frames 955–1110 · S07 · source IN HOMER / BOOK 9.
+ * SC03 · frames 926–1091 · S07 · source IN HOMER / BOOK 9.
  * Sea palette (V2 waves). The Cleveland warship dinos (1971.46) stands centre-left as a whole-object cut-out.
- * 963 Odysseus slaps in on his paper boat in front of it, name tag 3 frames later (beat window +3), head turns to the viewer.
- * 1024 (S07.c2 −3) twelve paper ships peel off the vase every 3 frames and sail right along a dotted path;
- * "12 SHIPS" slaps with the 12th ship (1057). Parallax slide left from 1027 (40 frames, sea layers at 3 speeds).
- * Hold: tag lands 1067 → exit 1103 (36 frames). Exit: the Ithaca sheet wipes over (1103–1110).
+ * 934 Odysseus slaps in on his paper boat in front of it, name tag 3 frames later (beat window +3), head turns to the viewer.
+ * 1001 (S07.c2 −3) twelve paper ships peel off the vase every 3 frames and sail right along a dotted path;
+ * "12 SHIPS" slaps with the 12th ship (1034). Parallax slide left from 1004 (40 frames, sea layers at 3 speeds).
+ * Hold: tag lands 1044 → exit 1084 (40 frames). Exit: the Ithaca sheet wipes over (1084–1091).
  */
-const F0 = 955;
-const END = 1110;
-const B = {s07a: 963, s07b: 1027};
+const F0 = 926;
+const END = 1091;
+const B = {s07a: 934, s07b: 1004};
 const SHIPS0 = B.s07b - 3;
-const EXIT = 1103;
+const EXIT = 1084;
 const DINOS = {x: 318, y: 132, w: 420}; // PNG 1328×1156 → h 365
 const PATH = samplePath([[628, 222], [744, 316], [890, 390], [1060, 418], [1236, 410]]);
 const slotT = (i: number) => 0.97 - i * 0.074;
 
 export const G1_03: React.FC = () => {
   const N = useCurrentFrame() + F0;
-  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over SC02's terracotta (955–961)
+  const enter = prog(N, F0, 7, easeOutCubic); // sea sheet slides over SC02's terracotta (926–932)
   const par = prog(N, B.s07b, 40, easeInOutPow(2.4)); // parallax slide left
   const shift: [number, number, number] = [-18 * par, -36 * par, -58 * par];
   const content = -30 * par;

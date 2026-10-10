@@ -7,10 +7,10 @@ import {Sting} from '../../overlay/Sting';
 // Shot components: N = useCurrentFrame() + F0 (F0 = the shot's from). Style library: '../../paper'.
 // source/beat feed the HUD's source label (src/overlay/Hud.tsx).
 export const SHOTS_G1: ShotDef[] = [
-  {id: 'SC01', from: 1, to: 487, Comp: G1_01},
-  {id: 'STING', from: 488, to: 746, Comp: Sting}, // = STING_RANGE (S03.to+3 → S05.from−9), literal for selfcheck.py
-  {id: 'SC02', from: 747, to: 954, Comp: G1_02},
-  {id: 'SC03', from: 955, to: 1110, Comp: G1_03, source: 'IN HOMER / BOOK 9', beat: 963},
+  {id: 'SC01', from: 1, to: 481, Comp: G1_01},
+  {id: 'STING', from: 482, to: 742, Comp: Sting}, // = STING_RANGE (S03.to+3 → S05.from−9), literal for selfcheck.py
+  {id: 'SC02', from: 743, to: 925, Comp: G1_02},
+  {id: 'SC03', from: 926, to: 1091, Comp: G1_03, source: 'IN HOMER / BOOK 9', beat: 934},
 ];
 export const BG_G1: BgSpec[] = [];
 export const FOOTAGE_G1: FootageSpec[] = [];
