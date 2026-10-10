@@ -245,10 +245,20 @@ export type PaperCharacterProps = {
   cropY?: number;
   shadow?: boolean;
   style?: React.CSSProperties;
+  /** cut-out head PNG in public/assets/odyssey/img (white paper border baked in): drawn instead of the variant's photo + clip path,
+   *  fitted into the variant's head box with its bottom at the neck, and tilted, turned and flipped on the same neck pivot */
+  headImg?: string;
+  /** override the body's robe fill / outline colour (see CAST for the roles) */
+  robeFill?: string;
+  robeLine?: string;
 };
 /** Photo head (clip path + white border) on a drawn paper body. Head and arms move on their own pivots. */
-export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h, head = 0, headTurn = 1, headFlip = 1, armL = 0, armR = 0, cropY = 540, shadow = true, style}) => {
+export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h, head = 0, headTurn = 1, headFlip = 1, armL = 0, armR = 0, cropY = 540, shadow = true, style, headImg, robeFill: robeFillProp, robeLine: robeLineProp}) => {
   const b = BODIES[variant];
+  const robeFill = robeFillProp ?? b.robeFill;
+  const robeLine = robeLineProp ?? b.robeLine;
+  // the hero collar has its own dark outline: follow the robe outline colour when it is overridden
+  const collar = robeLineProp && variant === 'hero' && React.isValidElement(b.collar) ? React.cloneElement(b.collar as React.ReactElement<{stroke?: string}>, {stroke: robeLineProp}) : b.collar;
   const id = usePaperId(`pc${variant}`);
   const w = (h * 380) / 540;
   const hs = b.head;
@@ -260,8 +270,8 @@ export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h,
       <g transform={t}>
         <path d={a.d} fill="none" stroke="#fff" strokeWidth={16} strokeLinejoin="round" />
         {a.hand ? <path d={a.hand} fill="none" stroke="#fff" strokeWidth={14} strokeLinejoin="round" /> : null}
-        <path d={a.d} fill={C.skin} stroke={b.robeLine} strokeWidth={6} />
-        {a.hand ? <path d={a.hand} fill={C.skin} stroke={b.robeLine} strokeWidth={5} /> : null}
+        <path d={a.d} fill={C.skin} stroke={robeLine} strokeWidth={6} />
+        {a.hand ? <path d={a.hand} fill={C.skin} stroke={robeLine} strokeWidth={5} /> : null}
       </g>
     ) : (
       <g transform={t}>
@@ -284,31 +294,54 @@ export const PaperCharacter: React.FC<PaperCharacterProps> = ({variant, x, y, h,
         </defs>
         <g clipPath={`url(#${id}b)`}>
           <path d={b.border} fill="#fff" stroke="#fff" strokeWidth={b.borderW} strokeLinejoin={b.borderJoin} />
-          <path d={b.robe} fill={b.robeFill} stroke={b.robeLine} strokeWidth={5} />
-          {b.collar}
+          <path d={b.robe} fill={robeFill} stroke={robeLine} strokeWidth={5} />
+          {collar}
           {arm(b.armL, armL, 1)}
           {arm(b.armR, armR, -1)}
-          {b.neck}
+          {headImg ? null : b.neck}
         </g>
         <g transform={`rotate(${head.toFixed(2)} ${nx} ${ny}) translate(${nx} ${ny}) scale(${((0.82 + 0.18 * headTurn) * headFlip).toFixed(3)} 1) translate(${-nx} ${-ny})`}>
-          <svg x={hs.x} y={hs.y} width={hs.w} height={hs.h} viewBox={`0 0 ${hs.vbW} ${hs.vbH}`} overflow="visible">
-            <path d={hs.clip} fill="white" stroke="white" strokeWidth={hs.stroke} strokeLinejoin="bevel" />
-            <image href={IMG(hs.file)} width={hs.vbW} height={hs.vbH} preserveAspectRatio="none" clipPath={`url(#${id}c)`} />
-            {hs.band ? (
-              <>
-                <path d="M66 215h342v166H66Z" fill="#41364a" stroke="#f9f4ea" strokeWidth={10} />
-                <ellipse cx={236} cy={300} rx={93} ry={63} fill="#f7f4e9" />
-                <ellipse cx={236} cy={300} rx={46} ry={57} fill="#7295a1" />
-                <ellipse cx={236} cy={300} rx={20} ry={43} fill="#25344b" />
-                <circle cx={217} cy={278} r={13} fill="white" />
-              </>
-            ) : null}
-          </svg>
+          {headImg ? (
+            <image href={IMG(headImg)} x={hs.x} y={hs.y} width={hs.w} height={hs.h} preserveAspectRatio="xMidYMax meet" />
+          ) : (
+            <svg x={hs.x} y={hs.y} width={hs.w} height={hs.h} viewBox={`0 0 ${hs.vbW} ${hs.vbH}`} overflow="visible">
+              <path d={hs.clip} fill="white" stroke="white" strokeWidth={hs.stroke} strokeLinejoin="bevel" />
+              <image href={IMG(hs.file)} width={hs.vbW} height={hs.vbH} preserveAspectRatio="none" clipPath={`url(#${id}c)`} />
+              {hs.band ? (
+                <>
+                  <path d="M66 215h342v166H66Z" fill="#41364a" stroke="#f9f4ea" strokeWidth={10} />
+                  <ellipse cx={236} cy={300} rx={93} ry={63} fill="#f7f4e9" />
+                  <ellipse cx={236} cy={300} rx={46} ry={57} fill="#7295a1" />
+                  <ellipse cx={236} cy={300} rx={20} ry={43} fill="#25344b" />
+                  <circle cx={217} cy={278} r={13} fill="white" />
+                </>
+              ) : null}
+            </svg>
+          )}
         </g>
       </svg>
     </div>
   );
 };
+
+/** Cast: one head per role for the whole video (public/assets/odyssey/img/MANIFEST.md). Male roles use the `hero` body, female roles `penelope`.
+ *  Use as <PaperCharacter x y h {...CAST.mentor} />. Robe colours come from the storyboard palette families and stay readable on the settings where the role appears.
+ *  Odysseus, Penelope and Polyphemus keep their approved photo heads (no CAST entry). See the "Cast" composition (src/overlay/CastSheet.tsx). */
+export type CastRole = 'athena' | 'calypso' | 'telemachus' | 'mentor' | 'maid' | 'crewA' | 'crewB' | 'phaeacianM' | 'phaeacianW';
+export const CAST: Record<CastRole, {variant: 'hero' | 'penelope'; headImg: string; robeFill: string; robeLine: string}> = {
+  athena: {variant: 'penelope', headImg: 'athena_met248642.png', robeFill: '#2C6E73', robeLine: '#173D40'}, // sirens deep teal: reads on Ithaca sand, warm grey and pale gold
+  calypso: {variant: 'penelope', headImg: 'calypso_met254496.png', robeFill: '#C9785B', robeLine: '#5E3326'}, // troy terracotta: reads on mint and sea
+  telemachus: {variant: 'hero', headImg: 'telemachus_met248901.png', robeFill: '#E0B54A', robeLine: '#6B5016'}, // night/feast gold: reads on Ithaca sand and sage
+  mentor: {variant: 'hero', headImg: 'mentor_met255420.png', robeFill: '#6E5470', robeLine: '#3A2B3B'}, // circe plum: reads on sand, sea and warm grey
+  maid: {variant: 'penelope', headImg: 'maid_met255423.png', robeFill: '#B7A6D9', robeLine: '#4E4170'}, // circe lavender: reads on sand and warm sand
+  crewA: {variant: 'hero', headImg: 'crewA_met248801.png', robeFill: '#7FC4C0', robeLine: '#2C6E73'}, // sirens turquoise: reads on cave pink, sea and lavender
+  crewB: {variant: 'hero', headImg: 'crewB_met250744.png', robeFill: '#9CAE91', robeLine: '#44553C'}, // ithaca sage: reads on cave pink, sea and lavender
+  phaeacianM: {variant: 'hero', headImg: 'phaeacianM_met255979.png', robeFill: '#E8D9B8', robeLine: '#6B5A3A'}, // troy sand: reads on the plum feast
+  phaeacianW: {variant: 'penelope', headImg: 'phaeacianW_met254639.png', robeFill: '#E881A0', robeLine: '#7A2F47'}, // loop pink: reads on the plum feast
+};
+/** Head PNGs for CrowdFigure: the four suitors (G1_01 uses the same files) and the two crew heads (crew A, crew B). */
+export const SUITOR_HEADS = ['suitor_met251524.png', 'suitor_met254640.png', 'suitor_met247994.png', 'suitor_met248895.png'];
+export const CREW_HEADS = [CAST.crewA.headImg, CAST.crewB.headImg];
 
 /** Small crowd figure: a cut-out head PNG (white border baked in) on a simple paper tunic. (cx, by) = bottom centre; h = total height.
  *  arm (deg): outer arm rotation about the shoulder, 0 = raised up-and-out, ~70 = lowered; children are drawn at the hand (local 100×150 units). */

@@ -1,22 +1,22 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {clamp01, TOTAL_FRAMES} from '../common';
+import {clamp01} from '../common';
 import type {ShotDef} from '../common';
 import {VIDEO} from '../config';
 import {FONT, C} from '../paper';
-import {S, CHAPTER_CARDS} from './Overlay';
+import {S, CHAPTER_CARDS, VIDEO_FRAMES} from './Overlay';
 import {STING_RANGE} from './Sting';
 
 /**
  * LearnLoop HUD (storyboard G0), drawn above the shots and below the progress bar:
- * - "LEARNLOOP" at x 42, baseline 47, Inter Black 19, caps, spacing 2, white — frames 1–TOTAL, hidden during the sting (it shows the big word);
+ * - "LEARNLOOP" at x 42, baseline 47, Inter Black 19, caps, spacing 2, white — frames 1–VIDEO_FRAMES, hidden during the sting (it shows the big word);
  * - chapter tag right-aligned at x 1238, baseline 47, Inter Black 18 — from config.chapterTagFromS, swaps at each chapter card's midpoint;
  * - source label (second line) at x 42, baseline 78, Inter Black 16, cream — read from each shot's ShotDef.source (its only source).
  */
 export type TagSpan = {text: string; from: number; to: number};
 export const CHAPTER_TAGS: TagSpan[] = (() => {
   const starts = [S(VIDEO.chapterTagFromS).from, ...CHAPTER_CARDS.map((c) => Math.round((c.from + c.to) / 2))];
-  return starts.map((f, i) => ({text: VIDEO.chapterTags[i] ?? '', from: f, to: i < starts.length - 1 ? starts[i + 1] - 1 : TOTAL_FRAMES}));
+  return starts.map((f, i) => ({text: VIDEO.chapterTags[i] ?? '', from: f, to: i < starts.length - 1 ? starts[i + 1] - 1 : VIDEO_FRAMES}));
 })();
 
 const hudText = (x: number, y: number, size: number, fill: string, anchor: 'start' | 'end', op: number, text: string, key?: string) =>

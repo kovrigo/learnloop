@@ -2,7 +2,7 @@
 
 Frames are 1-based and inclusive. `python3 scripts/render_storyboard.py` fills the tokens from `script/timeline.json` into `分镜表.md`. Narration and subtitle blocks: `script/timeline.md`.
 
-Total frames {TOTAL} (30 fps). Chapter starts: C1 {C1} / C2 {C2} / C3 {C3} / C4 {C4} / C5 {C5}. Voice: Charlie on ElevenLabs eleven_multilingual_v2, default voice settings (`voice.env`, the owner's sample B), full run of 10 October 2026.
+Total frames {TOTAL} (30 fps); the video is {S116.to+452} frames with the 15 s end screen. Chapter starts: C1 {C1} / C2 {C2} / C3 {C3} / C4 {C4} / C5 {C5}. Voice: Charlie on ElevenLabs eleven_multilingual_v2, default voice settings (`voice.env`, the owner's sample B), full run of 10 October 2026.
 
 Style source: `brand/brandbook.md` and the approved frames `brand/examples/V1.png`, `V2.png`, `V3.png`. Approved frame code: `reference/mockups/make_scenes.py` and `make_revised.py` (clip paths, paper bodies, shadow and grain filters).
 
@@ -65,13 +65,13 @@ Museum object photos (all on the verified list in `research/sources/museum-image
 | Element | Frames | Notes |
 |---|---|---|
 | Template title card | none | Disabled. Shot SC01 owns frames 1–{S03.to+2}. |
-| HUD left | 1–{TOTAL} | "LEARNLOOP" at x 42, baseline y 47, Inter Black 19 px, caps, spacing 2, white. Hidden during the sting, which shows the big word: out over 6 frames from {S03.to+3}, back over 8 frames from {S05.from-8}. |
-| HUD right: chapter tag | {S05.from}–{TOTAL} | "01 / THE CYCLOPS", "02 / STOPS AT SEA", "03 / HOME IN ITHACA", "04 / THE RETURN", "05 / ODYSSEY TODAY". Right-aligned at x 1238, baseline y 47, Inter Black 18 px. Changes inside each chapter card. Hidden during the cold open and the sting. |
+| HUD left | 1–{S116.to+452} | "LEARNLOOP" at x 42, baseline y 47, Inter Black 19 px, caps, spacing 2, white. Hidden during the sting, which shows the big word: out over 6 frames from {S03.to+3}, back over 8 frames from {S05.from-8}. |
+| HUD right: chapter tag | {S05.from}–12981 | "01 / THE CYCLOPS", "02 / STOPS AT SEA", "03 / HOME IN ITHACA", "04 / THE RETURN", "05 / ODYSSEY TODAY". Right-aligned at x 1238, baseline y 47, Inter Black 18 px. Changes inside each chapter card. Hidden during the cold open and the sting. |
 | Source label | per shot (Source column) | Second HUD line: x 42, baseline y 78, Inter Black 16 px, caps, spacing 2, cream #FFFDF3. Fades in 8 frames after the shot's first beat, out with the shot. Format "IN HOMER / BOOK 9". |
 | Chapter cards ×4 | {S27.to+3}–{S28.from-9} / {S54.to+3}–{S55.from-9} / {S69.to+3}–{S70.from-9} / {S91.to+3}–{S92.from-9} | A new background sheet wipes in. Big paper tag with "02" and the chapter name, Inter Black. The chapter tag in the HUD swaps here. Chapter 5 card adds a small "THE LOOP" tag. |
 | Subtitles | none in the picture | The owner removed the burned-in subtitles. Optional YouTube captions: `script/subtitles.srt`, made from `script/timeline.json` by `scripts/make_srt.py`. |
 | Progress bar | none | The owner removed the bottom progress line. |
-| End screen | after SC36 | Delivery stage. 15–20 s, no voice. Paper background with space for YouTube end-screen elements; Odysseus waves from his boat. |
+| End screen | {S116.to+3}–{S116.to+452} | G8 shot END, 15 s, no voice. Paper background with space for YouTube end-screen elements; Odysseus waves from his boat. |
 
 ## G1（cold open, LearnLoop sting and opening, pilot, first 30 s: SC01, STING, SC02–SC03）
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useCurrentFrame} from 'remotion';
-import {emphasisPulse, SENTENCES, TOTAL_FRAMES, CHAPTER_STARTS, clamp01, W} from '../common';
-import {CText, Pill, ArrowH, PURPLE, GREY, GREY_MID, WHITE, GLOW_PURPLE_S, fadeIn, slideUp} from '../ui';
+import {emphasisPulse, SENTENCES, CHAPTER_STARTS, clamp01, W} from '../common';
+import {Pill, ArrowH, PURPLE, GREY, GREY_MID, WHITE, GLOW_PURPLE_S, fadeIn, slideUp} from '../ui';
 import {VIDEO} from '../config';
 const clampFrames = (n: number, len: number) => clamp01(n / len);
 
@@ -57,47 +57,10 @@ export const Rail: React.FC<{spec: RailSpec}> = ({spec}) => {
   );
 };
 
-// ---------- 片尾 ----------
-// 压黑层挂在内容之上（Main 里 SHOTS_OVERLAY_TOP 排在所有内容组之后、进度条之下），从末句结束前 endingFade 帧起压黑，末镜头内容在被完全盖住后才结束；
-// 最后 30 帧再用 aboveBar 层把进度条也压黑 → 末段纯黑。
-const LAST_TO = SENTENCES[SENTENCES.length - 1]?.to ?? TOTAL_FRAMES - 60;
-export const ENDING_RANGE: [number, number] = [LAST_TO - VIDEO.endingFade, TOTAL_FRAMES];
-export const Ending: React.FC = () => {
-  const N = useCurrentFrame() + ENDING_RANGE[0];
-  const n = N - ENDING_RANGE[0];
-  const op = fadeIn(n, VIDEO.endingFade);
-  return <div style={{position: 'absolute', inset: 0, background: '#000', opacity: op}} />;
-};
-/** 片尾署名（压黑之后、进度条压黑之前）：完整书名 / 作者 / 出版社，停 ≈3 s，让片头 tagline 读不完的信息在这里补齐（QC v1 C1 #1） */
-export const END_CREDIT_RANGE: [number, number] = [LAST_TO + 1, TOTAL_FRAMES - 26];  // 9110–9182：末句字幕 9109 结束、内容已全黑后再出署名卡（满态 ≈56 帧）；之后 26 帧纯黑
-export const EndCredit: React.FC = () => {
-  const N = useCurrentFrame() + END_CREDIT_RANGE[0];
-  const n = N - END_CREDIT_RANGE[0];
-  const len = END_CREDIT_RANGE[1] - END_CREDIT_RANGE[0];
-  const op = Math.min(fadeIn(n, 8), 1 - clampFrames(N - (END_CREDIT_RANGE[1] - 8), 8));
-  const c = VIDEO.credit;
-  const by = VIDEO.builtBy;
-  if (!c && !by) return null;
-  return (
-    <div style={{position: 'absolute', inset: 0, opacity: op}}>
-      {c ? (
-        <>
-          <CText cx={W / 2} cy={300} size={26} weight={500} color={GREY} letterSpacing={4}>{c.kicker}</CText>
-          <CText cx={W / 2} cy={352} size={40} weight={700} color={WHITE}>{c.title}</CText>
-          <CText cx={W / 2} cy={404} size={26} weight={500} color={GREY}>{c.byline}</CText>
-          <div style={{position: 'absolute', left: W / 2 - 80, top: 440, width: 160, height: 2, background: 'rgba(255,255,255,0.35)', transform: `scaleX(${fadeIn(n - 6, 16)})`}} />
-          <CText cx={W / 2} cy={476} size={22} weight={500} color={GREY}>{c.note}</CText>
-        </>
-      ) : null}
-      {/* 片尾署名行（config.builtBy，默认开）：有署名卡时排在卡下方，没有卡时单独居中 */}
-      {by ? <CText cx={W / 2} cy={c ? 524 : 384} size={22} weight={500} color={GREY_MID} letterSpacing={2}>{by}</CText> : null}
-    </div>
-  );
-};
-// QC v1 C4 #2：进度条不能在画面全黑后孤悬 2 s → 进度条随 endingFade 一起压黑（aboveBar 层），署名卡在其上（见 index.ts 层序）
-export const ENDING_TOP_RANGE: [number, number] = [LAST_TO - VIDEO.endingFade, TOTAL_FRAMES];
-export const EndingTop: React.FC = () => {
-  const N = useCurrentFrame() + ENDING_TOP_RANGE[0];
-  const op = fadeIn(N - ENDING_TOP_RANGE[0], VIDEO.endingFade);
-  return <div style={{position: 'absolute', inset: 0, background: '#000', opacity: op}} />;
-};
+// ---------- end screen ----------
+// 15 s after the last sentence, no voice: G8 draws it as shot END (Odysseus waves from his boat). The video ends on that picture, not on black
+// (no end fade, no end credit). The voice track simply ends before the video does.
+const LAST_TO = SENTENCES[SENTENCES.length - 1].to;
+export const END_SCREEN_RANGE: [number, number] = [LAST_TO + 3, LAST_TO + 452];
+/** Frames of the whole video (voice frames + the end screen). TOTAL_FRAMES (common/timeline.ts) is the voice length only. */
+export const VIDEO_FRAMES = END_SCREEN_RANGE[1];
